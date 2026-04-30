@@ -23,11 +23,9 @@
         <p><b>NIK:</b> <span id="nik"></span></p>
         <p><b>Nama:</b> <span id="nama"></span></p>
         <p><b>Alamat:</b> <span id="alamat"></span></p>
+        <p><b>Pekerjaan:</b> <span id="pekerjaan"></span></p>
         <p><b>Penghasilan:</b> <span id="penghasilan"></span></p>
         <p><b>Tanggungan:</b> <span id="tanggungan"></span></p>
-        <p><b>Kondisi Rumah:</b> <span id="kondisi_rumah"></span></p>
-        <p><b>Status Kepemilikan:</b> <span id="status_kepemilikan"></span></p>
-        <p><b>Pekerjaan:</b> <span id="pekerjaan"></span></p>
 
     </div>
 </div>
@@ -40,10 +38,6 @@
 
     <div class="mb-2">
         <input type="text" name="jenis_bantuan" class="form-control" placeholder="Jenis Bantuan" required>
-    </div>
-
-    <div class="mb-2">
-        <textarea name="keterangan" class="form-control" placeholder="Keterangan"></textarea>
     </div>
 
     <button class="btn btn-success">Ajukan Bantuan</button>
@@ -72,11 +66,9 @@ function onScanSuccess(decodedText) {
                 document.getElementById('nik').innerText = w.nik;
                 document.getElementById('nama').innerText = w.nama;
                 document.getElementById('alamat').innerText = w.alamat;
+                document.getElementById('pekerjaan').innerText = w.pekerjaan;
                 document.getElementById('penghasilan').innerText = w.penghasilan;
                 document.getElementById('tanggungan').innerText = w.tanggungan;
-                document.getElementById('kondisi_rumah').innerText = w.kondisi_rumah;
-                document.getElementById('status_kepemilikan').innerText = w.status_kepemilikan;
-                document.getElementById('pekerjaan').innerText = w.pekerjaan;
 
 
 
