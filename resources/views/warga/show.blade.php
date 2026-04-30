@@ -12,11 +12,9 @@
 <p><b>NIK:</b> {{ $warga->nik }}</p>
 <p><b>Nama:</b> {{ $warga->nama }}</p>
 <p><b>Alamat:</b> {{ $warga->alamat }}</p>
+<p><b>Pekerjaan:</b> {{ $warga->pekerjaan }}</p>
 <p><b>Penghasilan:</b> {{ $warga->penghasilan }}</p>
 <p><b>Tanggungan:</b> {{ $warga->tanggungan }}</p>
-<p><b>Kondisi Rumah:</b> {{ $warga->kondisi_rumah }}</p>
-<p><b>Status Kepemilikan:</b> {{ $warga->status_kepemilikan }}</p>
-<p><b>Pekerjaan:</b> {{ $warga->pekerjaan }}</p>
 
 
 <h5>QR Code</h5>

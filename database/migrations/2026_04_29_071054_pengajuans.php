@@ -15,7 +15,9 @@ return new class extends Migration
         $table->id();
         $table->foreignId('warga_id')->constrained()->onDelete('cascade');
         $table->string('jenis_bantuan');
-        $table->text('keterangan')->nullable();
+        $table->string('foto_rumah')->nullable();
+        $table->string('hasil_ai')->nullable();
+        $table->float('confidence')->nullable();
         $table->enum('status', ['pending', 'diterima', 'ditolak'])->default('pending');
         $table->timestamps();
     });

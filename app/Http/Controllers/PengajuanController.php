@@ -28,7 +28,6 @@ class PengajuanController extends Controller
         Pengajuan::create([
             'warga_id' => $request->warga_id,
             'jenis_bantuan' => $request->jenis_bantuan,
-            'keterangan' => $request->keterangan
         ]);
 
         return redirect()->back()->with('success', 'Pengajuan berhasil!');

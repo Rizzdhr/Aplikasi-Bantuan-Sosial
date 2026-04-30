@@ -10,8 +10,8 @@ class Warga extends Model
         'nik',
         'nama',
         'alamat',
+        'pekerjaan',
         'penghasilan',
-        'jumlah_tanggungan',
-        'foto_rumah'
+        'tanggungan'
     ];
 }
