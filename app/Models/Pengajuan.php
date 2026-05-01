@@ -10,6 +10,7 @@ class Pengajuan extends Model
         'warga_id',
         'jenis_bantuan',
         'foto_rumah',
+        'kepemilikan_rumah',
         'hasil_ai',
         'confidence',
         'status'

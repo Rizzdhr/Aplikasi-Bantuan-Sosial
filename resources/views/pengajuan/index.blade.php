@@ -31,13 +31,35 @@
 </div>
 
 <!-- FORM PENGAJUAN -->
-<form id="formPengajuan" action="{{ route('pengajuan.store') }}" method="POST" style="display:none;">
+@if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
+<form id="formPengajuan" action="{{ route('pengajuan.store') }}" method="POST" enctype="multipart/form-data" style="display:none;">
     @csrf
 
     <input type="hidden" name="warga_id" id="warga_id">
 
+
     <div class="mb-2">
-        <input type="text" name="jenis_bantuan" class="form-control" placeholder="Jenis Bantuan" required>
+        <label>Upload Foto Rumah</label>
+        <input type="file" name="foto_rumah" class="form-control" required>
+    </div>
+
+    <img id="preview" width="200" style="display:none; margin-top:10px;">
+
+    <label>Kepemilikan Rumah</label>
+    <select name="kepemilikan_rumah" class="form-control" required>
+        <option value="">-- Pilih --</option>
+        <option value="milik_sendiri">Milik Sendiri</option>
+        <option value="kontrak">Kontrak</option>
+        <option value="menumpang">Menumpang</option>
+    </select>
+
+    <div class="mb-2">
+        <label for="">Jenis Bantuan</label>
+        <input type="text" name="jenis_bantuan" class="form-control" placeholder="" required>
     </div>
 
     <button class="btn btn-success">Ajukan Bantuan</button>
@@ -86,6 +108,16 @@ let html5QrcodeScanner = new Html5QrcodeScanner(
 );
 
 html5QrcodeScanner.render(onScanSuccess);
+</script>
+
+<script>
+document.querySelector('input[name="foto_rumah"]').addEventListener('change', function(e) {
+    let file = e.target.files[0];
+    let preview = document.getElementById('preview');
+
+    preview.src = URL.createObjectURL(file);
+    preview.style.display = 'block';
+});
 </script>
 
 </body>
