@@ -16,10 +16,6 @@
     <input type="text" name="nik" value="{{ $warga->nik }}" class="form-control mb-2">
     <input type="text" name="nama" value="{{ $warga->nama }}" class="form-control mb-2">
     <input type="text" name="alamat" value="{{ $warga->alamat }}" class="form-control mb-2">
-    <input type="text" name="pekerjaan" value="{{ $warga->pekerjaan}}" class="form-control mb-2" placeholder="Pekerjaan">
-    <input type="number" name="penghasilan" value="{{ $warga->penghasilan }}" class="form-control mb-2">
-    <input type="number" name="tanggungan" value="{{ $warga->tanggungan }}" class="form-control mb-2">
-
 
     <button class="btn btn-success">Update</button>
 </form>

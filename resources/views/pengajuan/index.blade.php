@@ -6,6 +6,19 @@
     <script src="https://unpkg.com/html5-qrcode"></script>
 </head>
 
+
+@if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+
+    <div class="alert alert-info">
+        <b>Kondisi Rumah:</b> {{ session('kondisi_rumah') }} <br>
+        <b>Status:</b> {{ session('status') }} <br>
+        <b>Skor:</b> {{ session('skor_kelayakan') ?? '-' }}
+    </div>
+@endif
+
 <body class="container mt-4">
 
 <h3>Pengajuan Bantuan (Scan QR)</h3>
@@ -23,24 +36,48 @@
         <p><b>NIK:</b> <span id="nik"></span></p>
         <p><b>Nama:</b> <span id="nama"></span></p>
         <p><b>Alamat:</b> <span id="alamat"></span></p>
-        <p><b>Pekerjaan:</b> <span id="pekerjaan"></span></p>
-        <p><b>Penghasilan:</b> <span id="penghasilan"></span></p>
-        <p><b>Tanggungan:</b> <span id="tanggungan"></span></p>
-
     </div>
 </div>
 
 <!-- FORM PENGAJUAN -->
-@if(session('success'))
+{{-- @if(session('success'))
     <div class="alert alert-success">
         {{ session('success') }}
     </div>
-@endif
+@endif --}}
 <form id="formPengajuan" action="{{ route('pengajuan.store') }}" method="POST" enctype="multipart/form-data" style="display:none;">
     @csrf
 
     <input type="hidden" name="warga_id" id="warga_id">
 
+    <div class="mb-2">
+        <label for="">Program Bantuan</label>
+        <select name="program_bantuan" class="form-control" required>
+            <option value="jkn">Bantuan Iuran JKN (kesehatan)</option>
+            <option value="bpnt">Bantuan Pangan Non-Tunai (BPNT) (pangan)</option>
+            <option value="blt">Bantuan Langsung Tunai (BLT) (tunai)</option>
+        </select>
+    </div>
+
+    <div class="mb-2">
+        <label>Penghasilan Bulanan (Rp)</label>
+        <input type="number" name="penghasilan" class="form-control" required>
+    </div>
+
+    <div class="mb-2">
+        <label for="">Usia</label>
+        <input type="number" name="usia" class="form-control" required>
+    </div>
+
+
+    <div class="mb-2">
+        <label>Pekerjaan</label>
+        <select name="pekerjaan" class="form-control" required>
+            <option value="tidak_bekerja">Tidak Bekerja</option>
+            <option value="buruh_harian">Buruh Harian</option>
+            <option value="pegawai/karyawan">Pegawai / Karyawan</option>
+        </select>
+    </div>
 
     <div class="mb-2">
         <label>Upload Foto Rumah</label>
@@ -49,20 +86,7 @@
 
     <img id="preview" width="200" style="display:none; margin-top:10px;">
 
-    <label>Kepemilikan Rumah</label>
-    <select name="kepemilikan_rumah" class="form-control" required>
-        <option value="">-- Pilih --</option>
-        <option value="milik_sendiri">Milik Sendiri</option>
-        <option value="kontrak">Kontrak</option>
-        <option value="menumpang">Menumpang</option>
-    </select>
-
-    <div class="mb-2">
-        <label for="">Jenis Bantuan</label>
-        <input type="text" name="jenis_bantuan" class="form-control" placeholder="" required>
-    </div>
-
-    <button class="btn btn-success">Ajukan Bantuan</button>
+    <button type="submit" class="btn btn-success">Ajukan Bantuan</button>
     <a href="{{ route('pengajuan.index') }}" class="btn btn-secondary">Kembali</a>
 
 </form>
@@ -88,10 +112,6 @@ function onScanSuccess(decodedText) {
                 document.getElementById('nik').innerText = w.nik;
                 document.getElementById('nama').innerText = w.nama;
                 document.getElementById('alamat').innerText = w.alamat;
-                document.getElementById('pekerjaan').innerText = w.pekerjaan;
-                document.getElementById('penghasilan').innerText = w.penghasilan;
-                document.getElementById('tanggungan').innerText = w.tanggungan;
-
 
 
                 document.getElementById('warga_id').value = w.id;

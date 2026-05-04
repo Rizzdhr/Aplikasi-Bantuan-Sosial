@@ -73,9 +73,9 @@ class WargaController extends Controller
     }
 
     public function generateQR($nik)
-{
-    $warga = Warga::where('nik', $nik)->first();
+    {
+        $warga = Warga::where('nik', $nik)->first();
 
-    return QrCode::size(300)->generate($warga->nik);
-}
+        return QrCode::size(300)->generate($warga->nik);
+    }
 }

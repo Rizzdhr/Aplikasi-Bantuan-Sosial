@@ -12,10 +12,6 @@
 <p><b>NIK:</b> {{ $warga->nik }}</p>
 <p><b>Nama:</b> {{ $warga->nama }}</p>
 <p><b>Alamat:</b> {{ $warga->alamat }}</p>
-<p><b>Pekerjaan:</b> {{ $warga->pekerjaan }}</p>
-<p><b>Penghasilan:</b> {{ $warga->penghasilan }}</p>
-<p><b>Tanggungan:</b> {{ $warga->tanggungan }}</p>
-
 
 <h5>QR Code</h5>
 

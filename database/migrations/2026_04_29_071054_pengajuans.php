@@ -11,16 +11,33 @@ return new class extends Migration
      */
     public function up(): void
     {
-    Schema::create('pengajuans', function (Blueprint $table) {
-        $table->id();
-        $table->foreignId('warga_id')->constrained()->onDelete('cascade');
-        $table->string('jenis_bantuan');
-        $table->string('foto_rumah')->nullable();
-        $table->string('hasil_ai')->nullable();
-        $table->float('confidence')->nullable();
-        $table->enum('status', ['pending', 'diterima', 'ditolak'])->default('pending');
-        $table->timestamps();
-    });
+        Schema::create('pengajuans', function (Blueprint $table) {
+            $table->id();
+
+            // Relasi ke warga
+            $table->foreignId('warga_id')->constrained()->onDelete('cascade');
+
+            // Bantuan
+            $table->enum('program_bantuan', ['kip', 'jkn', 'pkh', 'bpnt', 'blt']);
+
+            // Input manual
+            $table->integer('penghasilan');
+            $table->integer('usia');
+
+            // Upload & AI
+            $table->string('foto_rumah');
+
+            $table->enum('pekerjaan', ['tidak_bekerja','buruh_harian', 'pegawai/karyawan']);
+
+            // Hasil AI / ML
+            $table->string('kondisi_rumah')->nullable(); // buruk/baik
+            $table->float('skor_kelayakan')->nullable();
+
+            // Status
+            $table->enum('status', ['pending', 'diproses', 'diterima', 'ditolak'])->default('pending');
+
+            $table->timestamps();
+        });
     }
 
     /**

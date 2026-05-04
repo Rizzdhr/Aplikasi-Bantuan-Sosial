@@ -16,9 +16,7 @@
         <tr>
             <th>NIK</th>
             <th>Nama</th>
-            <th>Pekerjaan</th>
-            <th>Penghasilan</th>
-            <th>Tanggungan</th>
+            <th>Alamat</th>
             <th>Aksi</th>
         </tr>
     </thead>
@@ -28,9 +26,7 @@
         <tr>
             <td>{{ $w->nik }}</td>
             <td>{{ $w->nama }}</td>
-            <td>{{ $w->pekerjaan }}</td>
-            <td>{{ $w->penghasilan }}</td>
-            <td>{{ $w->tanggungan }}</td>
+            <td>{{ $w->alamat }}</td>
 
             <td>
                 <a href="{{ route('warga.show', $w->id) }}" class="btn btn-info btn-sm">Detail</a>

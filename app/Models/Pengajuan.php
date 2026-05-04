@@ -8,10 +8,12 @@ class Pengajuan extends Model
 {
     protected $fillable = [
         'warga_id',
-        'jenis_bantuan',
+        'pekerjaan',
+        'penghasilan',
+        'usia',
+        'program_bantuan',
         'foto_rumah',
-        'kepemilikan_rumah',
-        'hasil_ai',
+        'kondisi_rumah',
         'confidence',
         'status'
     ];
