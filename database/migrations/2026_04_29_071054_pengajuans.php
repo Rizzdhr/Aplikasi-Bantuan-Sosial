@@ -30,7 +30,7 @@ return new class extends Migration
             $table->enum('pekerjaan', ['tidak_bekerja','buruh_harian', 'pegawai/karyawan']);
 
             // Hasil AI / ML
-            $table->string('kondisi_rumah')->nullable(); // buruk/baik
+            $table->string('kondisi_rumah')->nullable(); // buruk/sedang/baik
             $table->float('skor_kelayakan')->nullable();
 
             // Status
