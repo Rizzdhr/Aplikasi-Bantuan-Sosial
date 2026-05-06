@@ -29,6 +29,14 @@ class PengajuanController extends Controller
             'foto_rumah' => 'required|image'
         ]);
 
+        $programMap = [
+            'jkn' => 'Bantuan Iuran JKN (kesehatan)',
+            'bpnt' => 'Bantuan Pangan Non-Tunai (BPNT) (pangan)',
+            'blt' => 'Bantuan Langsung Tunai (BLT) (tunai)'
+        ];
+
+        $programNama = $programMap[$request->program_bantuan] ?? '-';
+
         // =========================
         // 1. Upload foto ke storage
         // =========================
@@ -118,8 +126,12 @@ class PengajuanController extends Controller
 
         // return back()->with('success', 'Pengajuan diproses: ' . $hasil);
 
+        $warga = Warga::find($request->warga_id);
+
         return redirect()->back()->with([
-            'success' => 'Pengajuan berhasil diproses!',
+            // 'success' => 'Pengajuan berhasil diproses!',
+            'nama' => $warga->nama,
+            'program' => $programNama,
             'kondisi_rumah' => $label,
             'skor_kelayakan' => $skor,
             'status' => $hasil

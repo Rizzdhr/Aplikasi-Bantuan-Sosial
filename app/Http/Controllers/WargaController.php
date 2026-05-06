@@ -11,11 +11,19 @@ class WargaController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('warga.index', [
-            'wargas' => Warga::all()
-        ]);
+        $query = Warga::query();
+
+        if ($request->search) {
+            $query->where('nama', 'like', '%' . $request->search . '%')
+                ->orWhere('nik', 'like', '%' . $request->search . '%');
+        }
+
+        $wargas = $query->latest()->paginate(10);
+
+        return view('warga.index', compact('wargas'));
+
     }
 
     /**
@@ -31,8 +39,21 @@ class WargaController extends Controller
      */
     public function store(Request $request)
     {
-        Warga::create($request->all());
-        return redirect()->route('warga.index');
+        $request->validate([
+            'nik' => 'required|unique:wargas,nik',
+            'nama' => 'required',
+            'alamat' => 'required'
+        ]);
+
+        Warga::create([
+            'nik' => $request->nik,
+            'nama' => $request->nama,
+            'alamat' => $request->alamat
+        ]);
+
+        return redirect()->route('warga.index')
+            ->with('success', 'Data warga berhasil ditambahkan');
+
     }
     /**
      * Display the specified resource.
@@ -57,11 +78,22 @@ class WargaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $warga = Warga::findOrFail($id);
-        $warga->update($request->all());
+        $request->validate([
+            'nik' => 'required|unique:wargas,nik,' . $id,
+            'nama' => 'required',
+            'alamat' => 'required'
+        ]);
 
-        return redirect()->route('warga.index');
-    }
+        $warga = Warga::findOrFail($id);
+
+        $warga->update([
+            'nik' => $request->nik,
+            'nama' => $request->nama,
+            'alamat' => $request->alamat
+        ]);
+
+        return redirect()->route('warga.index')
+            ->with('success', 'Data warga berhasil diupdate');    }
 
     /**
      * Remove the specified resource from storage.
@@ -74,7 +106,7 @@ class WargaController extends Controller
 
     public function generateQR($nik)
     {
-        $warga = Warga::where('nik', $nik)->first();
+        $warga = Warga::where('nik', $nik)->firstOrFail();
 
         return QrCode::size(300)->generate($warga->nik);
     }

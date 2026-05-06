@@ -1,119 +1,195 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Pengajuan Bantuan</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://unpkg.com/html5-qrcode"></script>
-</head>
+@extends('layouts.main')
+@section('judul', 'Pengajuan')
 
+@section('content')
 
-@if(session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
+<div class="space-y-6">
+
+    <!-- ALERT -->
+    @if(session('success'))
+        <div class="bg-green-100 text-green-700 p-4 rounded-lg">
+            {{ session('success') }}
+        </div>
+
+        <div class="bg-blue-100 text-blue-700 p-4 rounded-lg">
+            <b>Kondisi Rumah:</b> {{ session('kondisi_rumah') }} <br>
+            <b>Status:</b> {{ session('status') }} <br>
+            <b>Skor:</b> {{ session('skor_kelayakan') ?? '-' }}
+        </div>
+    @endif
+
+    <!-- TITLE -->
+    <h2 class="text-xl font-semibold text-gray-700">
+        Form Pengajuan Bantuan
+    </h2>
+
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+    <!-- ========================= -->
+    <!-- KIRI (2/3): SCAN + FORM -->
+    <!-- ========================= -->
+    <div class="lg:col-span-2 flex flex-col gap-3">
+
+        <!-- SCANNER -->
+        <div id="scannerBox" class="bg-white p-4 rounded-2xl shadow">
+            <h4 class="font-semibold mb-2">Scan QR Warga</h4>
+            <div id="reader" class="w-full max-w-sm"></div>
+        </div>
+
+        <!-- DATA WARGA -->
+        <div id="wargaCard" class="bg-white p-4 rounded-2xl shadow hidden">
+            <h5 class="font-semibold mb-1">Data Warga</h5>
+            <p><b>NIK:</b> <span id="nik"></span></p>
+            <p><b>Nama:</b> <span id="nama"></span></p>
+            <p><b>Alamat:</b> <span id="alamat"></span></p>
+        </div>
+
+        <!-- FORM -->
+        <form id="formPengajuan" action="{{ route('pengajuan.store') }}" method="POST" enctype="multipart/form-data" class="bg-white p-6 rounded-2xl shadow hidden space-y-4">
+
+            @csrf
+            <input type="hidden" name="warga_id" id="warga_id">
+
+            <div>
+                <label class="text-sm">Program Bantuan</label>
+                <select name="program_bantuan" class="w-full border rounded-lg p-2">
+                    <option value="jkn">Bantuan Iuran JKN (kesehatan)</option>
+                    <option value="bpnt">Bantuan Pangan Non-Tunai (BPNT) (pangan)</option>
+                    <option value="blt">Bantuan Langsung Tunai (BLT) (tunai)</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="text-sm">Penghasilan</label>
+                <input type="number" name="penghasilan" class="w-full border rounded-lg p-2">
+            </div>
+
+            <div>
+                <label class="text-sm">Usia</label>
+                <input type="number" name="usia" class="w-full border rounded-lg p-2">
+            </div>
+
+            <div>
+                <label class="text-sm">Pekerjaan</label>
+                <select name="pekerjaan" class="w-full border rounded-lg p-2">
+                    <option value="tidak_bekerja">Tidak Bekerja</option>
+                    <option value="buruh_harian">Buruh Harian</option>
+                    <option value="pegawai/karyawan">Pegawai</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="text-sm">Foto Rumah</label>
+                <input type="file" name="foto_rumah" class="w-full border rounded-lg p-2">
+            </div>
+
+            <img id="preview" class="w-40 hidden rounded-lg">
+
+            <button class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 w-full">
+                Ajukan Bantuan
+            </button>
+        </form>
+
     </div>
 
-    <div class="alert alert-info">
-        <b>Kondisi Rumah:</b> {{ session('kondisi_rumah') }} <br>
-        <b>Status:</b> {{ session('status') }} <br>
-        <b>Skor:</b> {{ session('skor_kelayakan') ?? '-' }}
+    <!-- ========================= -->
+    <!-- KANAN (1/3): HASIL -->
+    <!-- ========================= -->
+    <div class="space-y-6">
+
+        <!-- HASIL STATUS -->
+        <div class="bg-white p-5 rounded-2xl shadow">
+            <h4 class="font-semibold mb-4">Hasil Pengajuan</h4>
+
+            <div class="space-y-2 text-sm">
+                <p><span class="text-gray-500">Pemohon</span><br>
+                <b>{{ session('nama') ?? '-' }}</b></p>
+
+                <p><span class="text-gray-500">Program</span><br>
+                <b>{{ session('program') ?? '-' }}</b></p>
+
+                <p><span class="text-gray-500">Status</span><br>
+                    @if(session('status') == 'diterima')
+                        <span class="bg-green-100 text-green-600 px-3 py-1 rounded-lg text-xs">Diterima</span>
+                    @elseif(session('status') == 'ditolak')
+                        <span class="bg-red-100 text-red-600 px-3 py-1 rounded-lg text-xs">Ditolak</span>
+                    @else
+                        -
+                    @endif
+                </p>
+            </div>
+        </div>
+
+        <!-- SKOR ML -->
+        <div class="bg-white p-5 rounded-2xl shadow">
+            <h4 class="font-semibold mb-4">Skor Penilaian</h4>
+
+            <div class="grid grid-cols-3 gap-3 text-center">
+
+                <!-- KONDISI RUMAH -->
+                <div class="bg-yellow-100 p-3 rounded-xl">
+                    <p class="text-xs text-gray-500">Kondisi Rumah</p>
+
+                    @if(session('kondisi_rumah') == 'rumah_buruk')
+                        <p class="text-lg font-bold text-green-600">Buruk</p>
+                    @elseif(session('kondisi_rumah') == 'rumah_sedang')
+                        <p class="text-lg font-bold text-red-600">Sedang</p>
+                    @elseif(session('kondisi_rumah') == 'rumah_baik')
+                    <p class="text-lg font-bold text-red-600">Baik</p>
+                    @else
+                        <p class="text-lg font-bold text-gray-500">-</p>
+                    @endif
+                </div>
+
+                <div class="bg-green-100 p-3 rounded-xl">
+                    <p class="text-xs text-gray-500">Kelayakan</p>
+                    <p class="text-lg font-bold text-green-600">
+                        {{ session('skor_kelayakan') ?? '0.0' }}
+                    </p>
+                </div>
+
+                {{-- <div class="bg-red-100 p-3 rounded-xl">
+                    <p class="text-xs text-gray-500">Fraud</p>
+                    <p class="text-lg font-bold text-red-600">0.0</p>
+                </div> --}}
+
+                {{-- <div class="bg-blue-100 p-3 rounded-xl">
+                    <p class="text-xs text-gray-500">Overall</p>
+                    <p class="text-lg font-bold text-blue-600">
+                        {{ session('skor_kelayakan') ?? '0.0' }}
+                    </p>
+                </div> --}}
+
+            </div>
+        </div>
+
     </div>
-@endif
 
-<body class="container mt-4">
-
-<h3>Pengajuan Bantuan (Scan QR)</h3>
-
-<!-- SCANNER -->
-<div class="mb-4">
-    <h5>Scan QR Warga</h5>
-    <div id="reader" style="width:300px;"></div>
 </div>
 
-<!-- INFO WARGA -->
-<div id="wargaCard" class="card mb-4" style="display:none;">
-    <div class="card-body">
-        <h5>Data Warga</h5>
-        <p><b>NIK:</b> <span id="nik"></span></p>
-        <p><b>Nama:</b> <span id="nama"></span></p>
-        <p><b>Alamat:</b> <span id="alamat"></span></p>
-    </div>
-</div>
-
-<!-- FORM PENGAJUAN -->
-{{-- @if(session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-@endif --}}
-<form id="formPengajuan" action="{{ route('pengajuan.store') }}" method="POST" enctype="multipart/form-data" style="display:none;">
-    @csrf
-
-    <input type="hidden" name="warga_id" id="warga_id">
-
-    <div class="mb-2">
-        <label for="">Program Bantuan</label>
-        <select name="program_bantuan" class="form-control" required>
-            <option value="jkn">Bantuan Iuran JKN (kesehatan)</option>
-            <option value="bpnt">Bantuan Pangan Non-Tunai (BPNT) (pangan)</option>
-            <option value="blt">Bantuan Langsung Tunai (BLT) (tunai)</option>
-        </select>
-    </div>
-
-    <div class="mb-2">
-        <label>Penghasilan Bulanan (Rp)</label>
-        <input type="number" name="penghasilan" class="form-control" required>
-    </div>
-
-    <div class="mb-2">
-        <label for="">Usia</label>
-        <input type="number" name="usia" class="form-control" required>
-    </div>
-
-
-    <div class="mb-2">
-        <label>Pekerjaan</label>
-        <select name="pekerjaan" class="form-control" required>
-            <option value="tidak_bekerja">Tidak Bekerja</option>
-            <option value="buruh_harian">Buruh Harian</option>
-            <option value="pegawai/karyawan">Pegawai / Karyawan</option>
-        </select>
-    </div>
-
-    <div class="mb-2">
-        <label>Upload Foto Rumah</label>
-        <input type="file" name="foto_rumah" class="form-control" required>
-    </div>
-
-    <img id="preview" width="200" style="display:none; margin-top:10px;">
-
-    <button type="submit" class="btn btn-success">Ajukan Bantuan</button>
-    <a href="{{ route('pengajuan.index') }}" class="btn btn-secondary">Kembali</a>
-
-</form>
+<!-- SCRIPT -->
+<script src="https://unpkg.com/html5-qrcode"></script>
 
 <script>
 function onScanSuccess(decodedText) {
-    // STOP scanner setelah berhasil
     html5QrcodeScanner.clear();
 
-    let nik = decodedText;
+    // 🔥 hapus scanner dari DOM (lebih bersih)
+    document.getElementById('scannerBox').remove();
 
-    fetch('/scan/' + nik)
+    fetch('/scan/' + decodedText)
         .then(res => res.json())
         .then(res => {
             if(res.status === 'success') {
 
                 let w = res.data;
 
-                // tampilkan data warga
-                document.getElementById('wargaCard').style.display = 'block';
-                document.getElementById('formPengajuan').style.display = 'block';
+                document.getElementById('wargaCard').classList.remove('hidden');
+                document.getElementById('formPengajuan').classList.remove('hidden');
 
                 document.getElementById('nik').innerText = w.nik;
                 document.getElementById('nama').innerText = w.nama;
                 document.getElementById('alamat').innerText = w.alamat;
-
-
                 document.getElementById('warga_id').value = w.id;
 
             } else {
@@ -136,9 +212,8 @@ document.querySelector('input[name="foto_rumah"]').addEventListener('change', fu
     let preview = document.getElementById('preview');
 
     preview.src = URL.createObjectURL(file);
-    preview.style.display = 'block';
+    preview.classList.remove('hidden');
 });
 </script>
 
-</body>
-</html>
+@endsection

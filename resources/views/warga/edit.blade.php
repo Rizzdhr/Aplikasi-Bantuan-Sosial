@@ -1,24 +1,86 @@
-<!-- resources/views/warga/edit.blade.php -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Edit Warga</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body class="container mt-4">
+@extends('layouts.main')
+@section('judul', 'Edit Warga')
 
-<h3>Edit Warga</h3>
+@section('content')
 
-<form action="{{ route('warga.update', $warga->id) }}" method="POST">
-    @csrf
-    @method('PUT')
+<div class="max-w-xl mx-auto space-y-6">
 
-    <input type="text" name="nik" value="{{ $warga->nik }}" class="form-control mb-2">
-    <input type="text" name="nama" value="{{ $warga->nama }}" class="form-control mb-2">
-    <input type="text" name="alamat" value="{{ $warga->alamat }}" class="form-control mb-2">
+    <!-- HEADER -->
+    <div class="flex justify-between items-center">
+        <h2 class="text-xl font-semibold text-gray-700">Edit Warga</h2>
 
-    <button class="btn btn-success">Update</button>
-</form>
+        <a href="{{ route('warga.index') }}"
+           class="bg-gray-200 px-4 py-2 rounded-lg hover:bg-gray-300">
+            ← Kembali
+        </a>
+    </div>
 
-</body>
-</html>
+    @if(session('success'))
+    <div class="bg-green-100 text-green-700 p-3 rounded-lg">
+        {{ session('success') }}
+    </div>
+    @endif
+
+    <!-- FORM -->
+    <div class="bg-white p-6 rounded-2xl shadow">
+
+        <form action="{{ route('warga.update', $warga->id) }}" method="POST" class="space-y-4">
+            @csrf
+            @method('PUT')
+
+            <!-- NIK -->
+            <div>
+                <label class="text-sm text-gray-600">NIK</label>
+                <input type="text" name="nik"
+                       value="{{ old('nik', $warga->nik) }}"
+                       class="w-full border rounded-lg p-2 mt-1 focus:ring focus:ring-blue-200">
+
+                @error('nik')
+                    <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                @enderror
+            </div>
+
+            <!-- Nama -->
+            <div>
+                <label class="text-sm text-gray-600">Nama</label>
+                <input type="text" name="nama"
+                       value="{{ old('nama', $warga->nama) }}"
+                       class="w-full border rounded-lg p-2 mt-1 focus:ring focus:ring-blue-200">
+
+                @error('nama')
+                    <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                @enderror
+            </div>
+
+            <!-- Alamat -->
+            <div>
+                <label class="text-sm text-gray-600">Alamat</label>
+                <textarea name="alamat"
+                          class="w-full border rounded-lg p-2 mt-1 focus:ring focus:ring-blue-200">{{ old('alamat', $warga->alamat) }}</textarea>
+
+                @error('alamat')
+                    <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                @enderror
+            </div>
+
+            <!-- BUTTON -->
+            <div class="flex justify-end gap-2">
+                <a href="{{ route('warga.index') }}"
+                   class="px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300">
+                    Batal
+                </a>
+
+                <button type="submit"
+                    class="px-4 py-2 bg-green-500 text-white rounded-lg"
+                    onclick="this.disabled=true; this.form.submit();">
+                    Update
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+@endsection
