@@ -18,6 +18,25 @@ class PengajuanController extends Controller
         return view('pengajuan.index', compact('pengajuans', 'wargas'));
     }
 
+    private function hitungJarak($lat1, $lon1, $lat2, $lon2)
+    {
+        $earth = 6371;
+
+        $dLat = deg2rad($lat2 - $lat1);
+        $dLon = deg2rad($lon2 - $lon1);
+
+        $a =
+            sin($dLat / 2) * sin($dLat / 2) +
+            cos(deg2rad($lat1)) *
+            cos(deg2rad($lat2)) *
+            sin($dLon / 2) *
+            sin($dLon / 2);
+
+        $c = 2 * atan2(sqrt($a), sqrt(1 - $a));
+
+        return $earth * $c;
+    }
+
     public function store(Request $request)
     {
         $request->validate([
@@ -28,6 +47,26 @@ class PengajuanController extends Controller
             'pekerjaan' => 'required',
             'foto_rumah' => 'required|image'
         ]);
+
+        $warga = Warga::find($request->warga_id);
+
+        $jarak = $this->hitungJarak(
+            $warga->latitude_rumah,
+            $warga->longitude_rumah,
+
+            $request->latitude_pengajuan,
+            $request->longitude_pengajuan
+        );
+
+        if($jarak <= 0.1){
+            $status_lokasi = 'valid';
+        }
+        elseif($jarak <= 1){
+            $status_lokasi = 'mencurigakan';
+        }
+        else{
+            $status_lokasi = 'fraud';
+        }
 
         $programMap = [
             'jkn' => 'Bantuan Iuran JKN (kesehatan)',
@@ -108,6 +147,11 @@ class PengajuanController extends Controller
         // =========================
         Pengajuan::create([
             'warga_id' => $request->warga_id,
+            'latitude_pengajuan' => $request->latitude_pengajuan,
+            'longitude_pengajuan' => $request->longitude_pengajuan,
+            'jarak_lokasi' => $jarak,
+            'status_lokasi' => $status_lokasi,
+
             'program_bantuan' => $request->program_bantuan,
             'penghasilan' => $request->penghasilan,
             'usia' => $request->usia,
@@ -126,13 +170,13 @@ class PengajuanController extends Controller
 
         // return back()->with('success', 'Pengajuan diproses: ' . $hasil);
 
-        $warga = Warga::find($request->warga_id);
 
         return redirect()->back()->with([
             // 'success' => 'Pengajuan berhasil diproses!',
             'nama' => $warga->nama,
             'program' => $programNama,
             'kondisi_rumah' => $label,
+            'status_lokasi' => $status_lokasi,
             'skor_kelayakan' => $skor,
             'status' => $hasil
         ]);

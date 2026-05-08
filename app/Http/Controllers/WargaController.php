@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Warga;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
+use Illuminate\Support\Facades\Http;
 
 class WargaController extends Controller
 {
@@ -45,10 +46,30 @@ class WargaController extends Controller
             'alamat' => 'required'
         ]);
 
+        $alamat = $request->alamat;
+
+        $response = Http::withHeaders([
+            'User-Agent' => 'BansosApp'
+        ])->get('https://nominatim.openstreetmap.org/search', [
+            'q' => $alamat,
+            'format' => 'json',
+            'limit' => 1
+        ]);
+
+        // dd($response->json());
+
+        $data = $response->json();
+
+        $latitude = $data[0]['lat'] ?? null;
+        $longitude = $data[0]['lon'] ?? null;
+
+
         Warga::create([
             'nik' => $request->nik,
             'nama' => $request->nama,
-            'alamat' => $request->alamat
+            'alamat' => $request->alamat,
+            'latitude_rumah' => $latitude,
+            'longitude_rumah' => $longitude
         ]);
 
         return redirect()->route('warga.index')

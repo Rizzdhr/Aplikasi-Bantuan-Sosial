@@ -14,8 +14,12 @@ class Pengajuan extends Model
         'program_bantuan',
         'foto_rumah',
         'kondisi_rumah',
-        'confidence',
-        'status'
+        'skor_kelayakan',
+        'status',
+        'latitude_pengajuan',
+        'longitude_pengajuan',
+        'jarak_lokasi',
+        'status_lokasi',
     ];
 
     public function warga()

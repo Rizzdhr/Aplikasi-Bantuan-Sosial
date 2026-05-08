@@ -9,6 +9,8 @@ class Warga extends Model
     protected $fillable = [
         'nik',
         'nama',
-        'alamat'
+        'alamat',
+        'latitude_rumah',
+        'longitude_rumah'
     ];
 }

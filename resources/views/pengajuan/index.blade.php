@@ -50,6 +50,44 @@
             @csrf
             <input type="hidden" name="warga_id" id="warga_id">
 
+            <input type="hidden" name="latitude_pengajuan" id="latitude_pengajuan">
+            <input type="hidden" name="longitude_pengajuan" id="longitude_pengajuan">
+            <!-- BUTTON VERIFIKASI LOKASI -->
+            <button
+                type="button"
+                onclick="ambilLokasi()"
+                id="btnLokasi"
+                class="w-full flex items-center justify-center gap-2
+                    bg-blue-600 hover:bg-blue-700
+                    text-white font-semibold
+                    px-5 py-3 rounded-xl
+                    shadow-md transition duration-300">
+
+                <!-- ICON -->
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    class="w-5 h-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor">
+
+                    <path stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"/>
+
+                    <path stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+
+                </svg>
+
+                <span id="textLokasi">
+                    Verifikasi Lokasi
+                </span>
+
+            </button>
+
             <div>
                 <label class="text-sm">Program Bantuan</label>
                 <select name="program_bantuan" class="w-full border rounded-lg p-2">
@@ -85,9 +123,20 @@
 
             <img id="preview" class="w-40 hidden rounded-lg">
 
-            <button class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 w-full">
+            <button id="btnAjukan" class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 w-full" disabled>
                 Ajukan Bantuan
             </button>
+
+            @if(session('error'))
+
+            <div class="bg-red-100 border border-red-400
+                        text-red-700 px-4 py-3 rounded mb-4">
+
+                {{ session('error') }}
+
+            </div>
+
+            @endif
         </form>
 
     </div>
@@ -120,33 +169,72 @@
             </div>
         </div>
 
-        <!-- SKOR ML -->
+        <!-- SKOR PENILAIAN -->
         <div class="bg-white p-5 rounded-2xl shadow">
             <h4 class="font-semibold mb-4">Skor Penilaian</h4>
 
-            <div class="grid grid-cols-3 gap-3 text-center">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
 
-                <!-- KONDISI RUMAH -->
-                <div class="bg-yellow-100 p-3 rounded-xl">
-                    <p class="text-xs text-gray-500">Kondisi Rumah</p>
+                <!-- STATUS LOKASI -->
+                <div class="bg-blue-100 p-4 rounded-2xl min-h-[120px] flex flex-col justify-center">
 
-                    @if(session('kondisi_rumah') == 'rumah_buruk')
-                        <p class="text-lg font-bold text-green-600">Buruk</p>
-                    @elseif(session('kondisi_rumah') == 'rumah_sedang')
-                        <p class="text-lg font-bold text-red-600">Sedang</p>
-                    @elseif(session('kondisi_rumah') == 'rumah_baik')
-                    <p class="text-lg font-bold text-red-600">Baik</p>
+                    <p class="text-sm text-gray-500 mb-2">
+                        Status Lokasi
+                    </p>
+                    @if(session('status_lokasi') == 'valid')
+                        <p class="text-xl font-bold text-green-600 break-words leading-tight">
+                            Valid
+                        </p>
+                    @elseif(session('status_lokasi') == 'mencurigakan')
+                        <p class="text-xl font-bold text-yellow-600 break-words leading-tight">
+                            Mencurigakan
+                        </p>
+                    @elseif(session('status_lokasi') == 'fraud')
+                        <p class="text-xl font-bold text-red-600 break-words leading-tight">
+                            Fraud
+                        </p>
                     @else
-                        <p class="text-lg font-bold text-gray-500">-</p>
+                        <p class="text-xl font-bold text-gray-500">
+                            -
+                        </p>
                     @endif
                 </div>
 
-                <div class="bg-green-100 p-3 rounded-xl">
-                    <p class="text-xs text-gray-500">Kelayakan</p>
-                    <p class="text-lg font-bold text-green-600">
+                <!-- KONDISI RUMAH -->
+                <div class="bg-yellow-100 p-4 rounded-2xl min-h-[120px] flex flex-col justify-center">
+                    <p class="text-sm text-gray-500 mb-2">
+                        Kondisi Rumah
+                    </p>
+                    @if(session('kondisi_rumah') == 'rumah_buruk')
+                        <p class="text-xl font-bold text-green-600">
+                            Buruk
+                        </p>
+                    @elseif(session('kondisi_rumah') == 'rumah_sedang')
+                        <p class="text-xl font-bold text-yellow-600">
+                            Sedang
+                        </p>
+                    @elseif(session('kondisi_rumah') == 'rumah_baik')
+                        <p class="text-xl font-bold text-red-600">
+                            Baik
+                        </p>
+                    @else
+                        <p class="text-xl font-bold text-gray-500">
+                            -
+                        </p>
+                    @endif
+                </div>
+
+                <!-- SKOR KELAYAKAN -->
+                <div class="bg-green-100 p-4 rounded-2xl min-h-[120px] flex flex-col justify-center">
+                    <p class="text-sm text-gray-500 mb-2">
+                        Kelayakan
+                    </p>
+                    <p class="text-2xl font-bold text-green-600">
                         {{ session('skor_kelayakan') ?? '0.0' }}
                     </p>
                 </div>
+            </div>
+        </div>
 
                 {{-- <div class="bg-red-100 p-3 rounded-xl">
                     <p class="text-xs text-gray-500">Fraud</p>
@@ -217,3 +305,58 @@ document.querySelector('input[name="foto_rumah"]').addEventListener('change', fu
 </script>
 
 @endsection
+
+<script>
+
+function ambilLokasi()
+{
+    const btn = document.getElementById('btnLokasi');
+    const text = document.getElementById('textLokasi');
+
+    btn.disabled = true;
+
+    text.innerHTML = 'Mengambil lokasi...';
+
+    if(navigator.geolocation)
+    {
+        navigator.geolocation.getCurrentPosition(
+
+            function(position)
+            {
+                document.getElementById('latitude_pengajuan').value =
+                    position.coords.latitude;
+
+                document.getElementById('longitude_pengajuan').value =
+                    position.coords.longitude;
+
+                btn.classList.remove(
+                    'bg-blue-600',
+                    'hover:bg-blue-700'
+                );
+
+                btn.classList.add(
+                    'bg-green-600'
+                );
+
+                text.innerHTML = 'Lokasi Berhasil Diverifikasi';
+
+                alert('Lokasi berhasil diambil');
+
+                document.getElementById('btnAjukan')
+                    .disabled = false;
+            },
+
+            function(error)
+            {
+                btn.disabled = false;
+
+                text.innerHTML = 'Verifikasi Lokasi';
+
+                alert('Gagal mengambil lokasi');
+            }
+
+        );
+    }
+}
+
+</script>
