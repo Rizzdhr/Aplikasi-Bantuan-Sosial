@@ -181,17 +181,17 @@
                     <p class="text-sm text-gray-500 mb-2">
                         Status Lokasi
                     </p>
-                    @if(session('status_lokasi') == 'valid')
+                    @if(session('status_lokasi') == 'sesuai_area')
                         <p class="text-xl font-bold text-green-600 break-words leading-tight">
-                            Valid
+                            Sesuai Area
                         </p>
-                    @elseif(session('status_lokasi') == 'mencurigakan')
+                    @elseif(session('status_lokasi') == 'area_dekat')
                         <p class="text-xl font-bold text-yellow-600 break-words leading-tight">
-                            Mencurigakan
+                            Area Dekat
                         </p>
-                    @elseif(session('status_lokasi') == 'fraud')
+                    @elseif(session('status_lokasi') == 'di_luar_area')
                         <p class="text-xl font-bold text-red-600 break-words leading-tight">
-                            Fraud
+                            Area Dekat
                         </p>
                     @else
                         <p class="text-xl font-bold text-gray-500">

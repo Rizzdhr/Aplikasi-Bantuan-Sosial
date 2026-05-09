@@ -59,13 +59,13 @@ class PengajuanController extends Controller
         );
 
         if($jarak <= 0.1){
-            $status_lokasi = 'valid';
+            $status_lokasi = 'sesuai_area';
         }
         elseif($jarak <= 1){
-            $status_lokasi = 'mencurigakan';
+            $status_lokasi = 'area_dekat';
         }
         else{
-            $status_lokasi = 'fraud';
+            $status_lokasi = 'di_luar_area';
         }
 
         $programMap = [

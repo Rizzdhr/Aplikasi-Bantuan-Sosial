@@ -19,9 +19,9 @@ return new class extends Migration
             $table->double('jarak_lokasi')->nullable();
 
             $table->enum('status_lokasi', [
-                'valid',
-                'mencurigakan',
-                'fraud'
+                'sesuai_area',
+                'area_dekat',
+                'di_luar_area'
             ])->nullable();
 
         });
