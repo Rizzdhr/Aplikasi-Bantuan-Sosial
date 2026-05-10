@@ -1,6 +1,6 @@
-# Aplikasi Smart Bantuan Sosial
+# Aplikasi Bantuan Sosial
 
-Aplikasi berbasis Laravel untuk membantu proses pengajuan dan pengelolaan bantuan sosial.
+Aplikasi berbasis Laravel untuk membantu proses pengajuan bantuan sosial.
 
 ## Fitur
 
@@ -114,9 +114,7 @@ php artisan serve
 
 Buka browser:
 
-```text
 http://127.0.0.1:8000
-```
 
 ---
 
