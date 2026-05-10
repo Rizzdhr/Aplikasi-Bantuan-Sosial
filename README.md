@@ -2,6 +2,17 @@
 
 Aplikasi berbasis Laravel untuk membantu proses pengajuan bantuan sosial.
 
+Aplikasi ini menggunakan AI untuk membantu proses penilaian kelayakan penerima bantuan sosial, yaitu:
+
+- Menggunakan model Computer Vision dari Roboflow untuk mendeteksi kondisi rumah warga (`kondisi_rumah`) melalui foto rumah.
+- Menggunakan Machine Learning berbasis Python untuk menentukan kelayakan penerima bantuan berdasarkan beberapa parameter:
+  - `penghasilan`
+  - `usia`
+  - `pekerjaan`
+  - `kondisi_rumah`
+
+Hasil klasifikasi digunakan sebagai pendukung keputusan dalam proses seleksi penerima bantuan sosial.
+
 ## Fitur
 
 - CRUD Data Warga
