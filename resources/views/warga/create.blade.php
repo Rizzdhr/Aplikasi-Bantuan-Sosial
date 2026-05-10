@@ -53,18 +53,31 @@
                 @enderror
             </div>
 
-            <!-- Alamat -->
+            <!-- ALAMAT -->
             <div>
-                <label class="text-sm text-gray-600">Alamat</label>
+                <label class="text-sm text-gray-600">
+                    Alamat
+                </label>
+
                 <textarea name="alamat"
-                          placeholder="Masukkan alamat"
-                          class="w-full border rounded-lg p-2 mt-1 focus:ring focus:ring-blue-200">{{ old('alamat') }}</textarea>
+                        id="alamat"
+                        placeholder="cth: Cipayung, Depok"
+                        class="w-full border rounded-lg p-2 mt-1 focus:ring focus:ring-blue-200">{{ old('alamat') }}</textarea>
+
+                <!-- STATUS -->
+                {{-- <p id="alamatStatus"
+                class="text-sm mt-2 hidden"></p> --}}
 
                 @error('alamat')
-                    <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                    <p class="text-red-500 text-xs mt-1">
+                        {{ $message }}
+                    </p>
                 @enderror
             </div>
 
+            <!-- KOORDINAT -->
+            <input type="hidden" name="latitude" id="latitude">
+            <input type="hidden" name="longitude" id="longitude">
             <!-- BUTTON -->
             <div class="flex justify-end gap-2">
                 <a href="{{ route('warga.index') }}"
@@ -83,4 +96,70 @@
 
 </div>
 
+<script>
+
+let alamatInput = document.getElementById('alamat');
+let alamatStatus = document.getElementById('alamatStatus');
+let submitButton = document.querySelector('button[type="submit"]');
+
+alamatInput.addEventListener('change', function () {
+
+    let alamat = this.value;
+
+    // reset
+    alamatStatus.classList.remove(
+        'hidden',
+        'text-green-600',
+        'text-red-600'
+    );
+
+    fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${alamat}`)
+
+    .then(res => res.json())
+
+    .then(data => {
+
+        if(data.length > 0){
+
+            let lokasi = data[0];
+
+            // isi koordinat
+            document.getElementById('latitude').value =
+                lokasi.lat;
+
+            document.getElementById('longitude').value =
+                lokasi.lon;
+
+            // notif sukses
+            alamatStatus.innerHTML =
+                '✅ Alamat ditemukan';
+
+            alamatStatus.classList.add('text-green-600');
+
+            // aktifkan tombol
+            submitButton.disabled = false;
+
+        } else {
+
+            // kosongkan koordinat
+            document.getElementById('latitude').value = '';
+
+            document.getElementById('longitude').value = '';
+
+            // notif gagal
+            alamatStatus.innerHTML =
+                '❌ Alamat tidak ditemukan';
+
+            alamatStatus.classList.add('text-red-600');
+
+            // disable tombol
+            submitButton.disabled = true;
+
+        }
+
+    });
+
+});
+
+</script>
 @endsection

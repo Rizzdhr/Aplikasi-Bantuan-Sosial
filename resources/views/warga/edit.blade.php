@@ -52,14 +52,19 @@
                 @enderror
             </div>
 
-            <!-- Alamat -->
+            <!-- ALAMAT -->
             <div>
-                <label class="text-sm text-gray-600">Alamat</label>
+                <label class="text-sm text-gray-600">
+                    Alamat
+                </label>
+
                 <textarea name="alamat"
-                          class="w-full border rounded-lg p-2 mt-1 focus:ring focus:ring-blue-200">{{ old('alamat', $warga->alamat) }}</textarea>
+                        class="w-full border rounded-lg p-2 mt-1 focus:ring focus:ring-blue-200">{{ old('alamat', $warga->alamat) }}</textarea>
 
                 @error('alamat')
-                    <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                    <p class="text-red-500 text-xs mt-1">
+                        {{ $message }}
+                    </p>
                 @enderror
             </div>
 

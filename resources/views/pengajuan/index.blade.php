@@ -191,7 +191,7 @@
                         </p>
                     @elseif(session('status_lokasi') == 'di_luar_area')
                         <p class="text-xl font-bold text-red-600 break-words leading-tight">
-                            Area Dekat
+                            Di luar Area
                         </p>
                     @else
                         <p class="text-xl font-bold text-gray-500">

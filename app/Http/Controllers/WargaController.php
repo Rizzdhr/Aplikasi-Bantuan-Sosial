@@ -57,11 +57,22 @@ class WargaController extends Controller
         ]);
 
         // dd($response->json());
-
         $data = $response->json();
 
-        $latitude = $data[0]['lat'] ?? null;
-        $longitude = $data[0]['lon'] ?? null;
+        // alamat tidak ditemukan
+        if(empty($data)){
+
+            return back()
+                ->withInput()
+                ->withErrors([
+                    'alamat' => 'Alamat tidak ditemukan atau tidak valid'
+                ]);
+
+        }
+
+        // ambil hasil geocoding
+        $latitude = $data[0]['lat'];
+        $longitude = $data[0]['lon'];
 
 
         Warga::create([
@@ -107,14 +118,46 @@ class WargaController extends Controller
 
         $warga = Warga::findOrFail($id);
 
+        // geocoding alamat
+        $response = Http::withHeaders([
+            'User-Agent' => 'BansosApp'
+        ])->get('https://nominatim.openstreetmap.org/search', [
+            'q' => $request->alamat . ', Indonesia',
+            'format' => 'json',
+            'limit' => 1
+        ]);
+
+        $data = $response->json();
+
+        // cek apakah alamat ditemukan
+        if(!$response->successful() || !isset($data[0])){
+
+            return back()
+                ->withInput()
+                ->withErrors([
+                    'alamat' => 'Alamat tidak ditemukan atau tidak valid'
+                ]);
+
+        }
+
+        // ambil koordinat
+        $latitude = $data[0]['lat'];
+        $longitude = $data[0]['lon'];
+
+        // update data warga
         $warga->update([
             'nik' => $request->nik,
             'nama' => $request->nama,
-            'alamat' => $request->alamat
+            'alamat' => $request->alamat,
+
+            'latitude_rumah' => $latitude,
+            'longitude_rumah' => $longitude
         ]);
 
-        return redirect()->route('warga.index')
-            ->with('success', 'Data warga berhasil diupdate');    }
+        return redirect()
+            ->route('warga.index')
+            ->with('success', 'Data warga berhasil diupdate');
+    }
 
     /**
      * Remove the specified resource from storage.
