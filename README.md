@@ -20,6 +20,12 @@ Aplikasi berbasis Laravel untuk membantu proses pengajuan dan pengelolaan bantua
 - Bootstrap
 - JavaScript
 
+## Dataset & Model AI
+
+Dataset dan model tersedia di Roboflow Universe:
+
+https://universe.roboflow.com/rizkys-workspace-uddts/klasifikasi-rumah
+
 ---
 
 ## Cara Menjalankan Project
@@ -36,14 +42,20 @@ Masuk ke folder project:
 cd Aplikasi-Bantuan-Sosial
 ```
 
-### 2. Install Dependency
+### 2. Install Dependency Laravel
 
 ```bash
 composer install
 npm install
 ```
 
-### 3. Copy File Environment
+### 3. Install Dependency Python
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Copy File Environment
 
 Windows:
 
@@ -56,34 +68,41 @@ Linux / MacOS:
 cp .env.example .env
 ```
 
-### 4. Generate Key
+### 5. Generate Key
 
 ```bash
 php artisan key:generate
 ```
 
-### 5. Buat Database
+### 6. Buat Database
 
-Buat database baru di phpMyAdmin, lalu sesuaikan file .env
+Buat database baru di phpMyAdmin, lalu sesuaikan file `.env`
 
-```bash
+```env
 DB_DATABASE=db_bansos
 DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-### 6. Jalankan Migration
+### 7. Konfigurasi Roboflow
+
+Tambahkan konfigurasi berikut pada file `.env`
+
+```env
+ROBOFLOW_URL=https://detect.roboflow.com/klasifikasi-rumah/1?api_key=your_api_key
+```
+
+### 8. Jalankan Migration
 
 ```bash
 php artisan migrate
 ```
 
-### 7. Jalankan Project
+### 9. Jalankan Project
 
 Menjalankan AI Python
 
 ```bash
-pip install -r requirements.txt
 python app.py
 ```
 
