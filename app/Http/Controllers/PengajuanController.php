@@ -182,6 +182,12 @@ class PengajuanController extends Controller
         ]);
     }
 
+    public function show($id)
+    {
+        $pengajuan = Pengajuan::with('warga')->findOrFail($id);
+        return view('pengajuan.show', compact('pengajuan'));
+    }
+
     public function update(Request $request, $id)
     {
         $pengajuan = Pengajuan::findOrFail($id);

@@ -1,165 +1,95 @@
-@extends('layouts.main')
-@section('judul', 'Tambah Warga')
+<x-app-layout>
+    <x-slot name="header">
+        <div class="space-y-1">
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">Tambah Warga</h2>
+            <p class="text-sm text-gray-500">Tambahkan data warga baru ke sistem.</p>
+        </div>
+    </x-slot>
 
-@section('content')
+    <div class="py-12">
+        <div class="max-w-3xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 bg-white border-b border-gray-200 space-y-6">
+                    <div class="flex items-center justify-between gap-4">
+                        <div class="space-y-1">
+                            <h3 class="text-lg font-semibold text-gray-900">Form Tambah Warga</h3>
+                            <p class="text-sm text-gray-500">Isi semua field untuk menyimpan data warga baru.</p>
+                        </div>
+                        <a href="{{ route('warga.index') }}" class="inline-flex items-center rounded-lg bg-gray-100 px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-200">
+                            ← Kembali
+                        </a>
+                    </div>
 
-<div class="max-w-xl mx-auto space-y-6">
+                    @if(session('success'))
+                        <div class="rounded-2xl bg-green-50 border border-green-200 p-4 text-sm text-green-700">
+                            {{ session('success') }}
+                        </div>
+                    @endif
 
-    <!-- HEADER -->
-    <div class="flex justify-between items-center">
-        <h2 class="text-xl font-semibold text-gray-700">Tambah Warga</h2>
+                    <form action="{{ route('warga.store') }}" method="POST" class="space-y-6">
+                        @csrf
 
-        <a href="{{ route('warga.index') }}"
-           class="bg-gray-200 px-4 py-2 rounded-lg hover:bg-gray-300">
-            ← Kembali
-        </a>
+                        <div>
+                            <label for="nik" class="block text-sm font-medium text-gray-700">NIK</label>
+                            <input id="nik" name="nik" type="text" value="{{ old('nik') }}" placeholder="Masukkan NIK" class="mt-1 block w-full rounded-xl border border-gray-300 bg-white px-4 py-2 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-100" autofocus>
+                            @error('nik') <p class="mt-2 text-sm text-red-600">{{ $message }}</p> @enderror
+                        </div>
+
+                        <div>
+                            <label for="nama" class="block text-sm font-medium text-gray-700">Nama</label>
+                            <input id="nama" name="nama" type="text" value="{{ old('nama') }}" placeholder="Masukkan nama" class="mt-1 block w-full rounded-xl border border-gray-300 bg-white px-4 py-2 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-100">
+                            @error('nama') <p class="mt-2 text-sm text-red-600">{{ $message }}</p> @enderror
+                        </div>
+
+                        <div>
+                            <label for="alamat" class="block text-sm font-medium text-gray-700">Alamat</label>
+                            <textarea id="alamat" name="alamat" rows="4" placeholder="cth: Cipayung, Depok" class="mt-1 block w-full rounded-xl border border-gray-300 bg-white px-4 py-2 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-100">{{ old('alamat') }}</textarea>
+                            <p id="alamatStatus" class="mt-2 text-sm text-gray-500 hidden"></p>
+                            @error('alamat') <p class="mt-2 text-sm text-red-600">{{ $message }}</p> @enderror
+                        </div>
+
+                        <input type="hidden" name="latitude" id="latitude">
+                        <input type="hidden" name="longitude" id="longitude">
+
+                        <div class="flex flex-col gap-3 sm:flex-row sm:justify-end">
+                            <a href="{{ route('warga.index') }}" class="inline-flex items-center justify-center rounded-xl border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50">Batal</a>
+                            <button type="submit" class="inline-flex items-center justify-center rounded-xl bg-green-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-700">Simpan</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 
-    @if(session('success'))
-    <div class="bg-green-100 text-green-700 p-3 rounded-lg">
-        {{ session('success') }}
-    </div>
-    @endif
+    <script>
+        const alamatInput = document.getElementById('alamat');
+        const alamatStatus = document.getElementById('alamatStatus');
+        const submitButton = document.querySelector('button[type="submit"]');
 
-    <!-- FORM -->
-    <div class="bg-white p-6 rounded-2xl shadow">
+        if (alamatInput) {
+            alamatInput.addEventListener('change', function () {
+                const alamat = this.value;
+                alamatStatus.classList.remove('hidden', 'text-green-600', 'text-red-600');
 
-        <form action="{{ route('warga.store') }}" method="POST" class="space-y-4">
-            @csrf
-
-            <!-- NIK -->
-            <div>
-                <label class="text-sm text-gray-600">NIK</label>
-                <input type="text" name="nik"
-                       value="{{ old('nik') }}"
-                       placeholder="Masukkan NIK"
-                       class="w-full border rounded-lg p-2 mt-1 focus:ring focus:ring-blue-200" autofocus>
-
-                @error('nik')
-                    <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
-                @enderror
-            </div>
-
-            <!-- Nama -->
-            <div>
-                <label class="text-sm text-gray-600">Nama</label>
-                <input type="text" name="nama"
-                       value="{{ old('nama') }}"
-                       placeholder="Masukkan nama"
-                       class="w-full border rounded-lg p-2 mt-1 focus:ring focus:ring-blue-200">
-
-                @error('nama')
-                    <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
-                @enderror
-            </div>
-
-            <!-- ALAMAT -->
-            <div>
-                <label class="text-sm text-gray-600">
-                    Alamat
-                </label>
-
-                <textarea name="alamat"
-                        id="alamat"
-                        placeholder="cth: Cipayung, Depok"
-                        class="w-full border rounded-lg p-2 mt-1 focus:ring focus:ring-blue-200">{{ old('alamat') }}</textarea>
-
-                <!-- STATUS -->
-                {{-- <p id="alamatStatus"
-                class="text-sm mt-2 hidden"></p> --}}
-
-                @error('alamat')
-                    <p class="text-red-500 text-xs mt-1">
-                        {{ $message }}
-                    </p>
-                @enderror
-            </div>
-
-            <!-- KOORDINAT -->
-            <input type="hidden" name="latitude" id="latitude">
-            <input type="hidden" name="longitude" id="longitude">
-            <!-- BUTTON -->
-            <div class="flex justify-end gap-2">
-                <a href="{{ route('warga.index') }}"
-                   class="px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300">
-                    Batal
-                </a>
-
-                <button class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600">
-                    Simpan
-                </button>
-            </div>
-
-        </form>
-
-    </div>
-
-</div>
-
-<script>
-
-let alamatInput = document.getElementById('alamat');
-let alamatStatus = document.getElementById('alamatStatus');
-let submitButton = document.querySelector('button[type="submit"]');
-
-alamatInput.addEventListener('change', function () {
-
-    let alamat = this.value;
-
-    // reset
-    alamatStatus.classList.remove(
-        'hidden',
-        'text-green-600',
-        'text-red-600'
-    );
-
-    fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${alamat}`)
-
-    .then(res => res.json())
-
-    .then(data => {
-
-        if(data.length > 0){
-
-            let lokasi = data[0];
-
-            // isi koordinat
-            document.getElementById('latitude').value =
-                lokasi.lat;
-
-            document.getElementById('longitude').value =
-                lokasi.lon;
-
-            // notif sukses
-            alamatStatus.innerHTML =
-                '✅ Alamat ditemukan';
-
-            alamatStatus.classList.add('text-green-600');
-
-            // aktifkan tombol
-            submitButton.disabled = false;
-
-        } else {
-
-            // kosongkan koordinat
-            document.getElementById('latitude').value = '';
-
-            document.getElementById('longitude').value = '';
-
-            // notif gagal
-            alamatStatus.innerHTML =
-                '❌ Alamat tidak ditemukan';
-
-            alamatStatus.classList.add('text-red-600');
-
-            // disable tombol
-            submitButton.disabled = true;
-
+                fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(alamat)}`)
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.length > 0) {
+                            const lokasi = data[0];
+                            document.getElementById('latitude').value = lokasi.lat;
+                            document.getElementById('longitude').value = lokasi.lon;
+                            alamatStatus.textContent = '✅ Alamat ditemukan';
+                            alamatStatus.classList.add('text-green-600');
+                            submitButton.disabled = false;
+                        } else {
+                            document.getElementById('latitude').value = '';
+                            document.getElementById('longitude').value = '';
+                            alamatStatus.textContent = '❌ Alamat tidak ditemukan';
+                            alamatStatus.classList.add('text-red-600');
+                            submitButton.disabled = true;
+                        }
+                    });
+            });
         }
-
-    });
-
-});
-
-</script>
-@endsection
+    </script>
+</x-app-layout>
