@@ -2,7 +2,7 @@
     <x-slot name="header">
         <div class="space-y-1">
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">Pengajuan Bantuan</h2>
-            <p class="text-sm text-gray-500">Scan QR warga dan kirim pengajuan bantuan sosial dengan tampilan Breeze.</p>
+            <p class="text-sm text-gray-500">Scan QR warga dan kirim pengajuan bantuan sosial.</p>
         </div>
     </x-slot>
 
