@@ -15,12 +15,13 @@
                             <h3 class="text-lg font-semibold text-gray-900">Form Tambah Warga</h3>
                             <p class="text-sm text-gray-500">Isi semua field untuk menyimpan data warga baru.</p>
                         </div>
-                        <a href="{{ route('warga.index') }}" class="inline-flex items-center rounded-lg bg-gray-100 px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-200">
+                        <a href="{{ route('warga.index') }}"
+                            class="inline-flex items-center rounded-lg bg-gray-100 px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-200">
                             ← Kembali
                         </a>
                     </div>
 
-                    @if(session('success'))
+                    @if (session('success'))
                         <div class="rounded-2xl bg-green-50 border border-green-200 p-4 text-sm text-green-700">
                             {{ session('success') }}
                         </div>
@@ -31,29 +32,74 @@
 
                         <div>
                             <label for="nik" class="block text-sm font-medium text-gray-700">NIK</label>
-                            <input id="nik" name="nik" type="text" value="{{ old('nik') }}" placeholder="Masukkan NIK" class="mt-1 block w-full rounded-xl border border-gray-300 bg-white px-4 py-2 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-100" autofocus>
-                            @error('nik') <p class="mt-2 text-sm text-red-600">{{ $message }}</p> @enderror
+                            <input id="nik" name="nik" type="text" value="{{ old('nik') }}"
+                                placeholder="Masukkan NIK"
+                                class="mt-1 block w-full rounded-xl border border-gray-300 bg-white px-4 py-2 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-100"
+                                autofocus>
+                            @error('nik')
+                                <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                            @enderror
                         </div>
 
                         <div>
                             <label for="nama" class="block text-sm font-medium text-gray-700">Nama</label>
-                            <input id="nama" name="nama" type="text" value="{{ old('nama') }}" placeholder="Masukkan nama" class="mt-1 block w-full rounded-xl border border-gray-300 bg-white px-4 py-2 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-100">
-                            @error('nama') <p class="mt-2 text-sm text-red-600">{{ $message }}</p> @enderror
+                            <input id="nama" name="nama" type="text" value="{{ old('nama') }}"
+                                placeholder="Masukkan nama"
+                                class="mt-1 block w-full rounded-xl border border-gray-300 bg-white px-4 py-2 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-100">
+                            @error('nama')
+                                <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                            @enderror
                         </div>
 
                         <div>
                             <label for="alamat" class="block text-sm font-medium text-gray-700">Alamat</label>
-                            <textarea id="alamat" name="alamat" rows="4" placeholder="cth: Cipayung, Depok" class="mt-1 block w-full rounded-xl border border-gray-300 bg-white px-4 py-2 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-100">{{ old('alamat') }}</textarea>
-                            <p id="alamatStatus" class="mt-2 text-sm text-gray-500 hidden"></p>
-                            @error('alamat') <p class="mt-2 text-sm text-red-600">{{ $message }}</p> @enderror
+                            <textarea id="alamat" name="alamat" rows="4" placeholder="cth: Jl. H. Ganeng Griya Ganeng No.128"
+                                class="mt-1 block w-full rounded-xl border border-gray-300 bg-white px-4 py-2 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-100">{{ old('alamat') }}</textarea>
+                        </div>
+                        <div>
+                            <label for="kecamatan" class="block text-sm font-medium text-gray-700">
+                                Kecamatan
+                            </label>
+
+                            <input id="kecamatan" name="kecamatan" type="text" value="{{ old('kecamatan') }}"
+                                placeholder="cth: Cipayung"
+                                class="mt-1 block w-full rounded-xl border border-gray-300 bg-white px-4 py-2 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-100">
+
+                            @error('kecamatan')
+                                <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                            @enderror
                         </div>
 
+                        <div>
+                            <label for="kota" class="block text-sm font-medium text-gray-700">
+                                Kota
+                            </label>
+
+                            <input id="kota" name="kota" type="text" value="{{ old('kota') }}"
+                                placeholder="cth: Depok"
+                                class="mt-1 block w-full rounded-xl border border-gray-300 bg-white px-4 py-2 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-100">
+
+                            @error('kota')
+                                <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                            @enderror
+                            <p id="lokasiStatus" class="mt-2 text-sm hidden">
+                            </p>
+                        </div>
                         <input type="hidden" name="latitude" id="latitude">
                         <input type="hidden" name="longitude" id="longitude">
 
                         <div class="flex flex-col gap-3 sm:flex-row sm:justify-end">
-                            <a href="{{ route('warga.index') }}" class="inline-flex items-center justify-center rounded-xl border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50">Batal</a>
-                            <button type="submit" class="inline-flex items-center justify-center rounded-xl bg-green-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-700">Simpan</button>
+                            <a href="{{ route('warga.index') }}"
+                                class="inline-flex items-center justify-center rounded-xl border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50">Batal</a>
+                            <button type="submit" id="submitButton" disabled
+                                class="inline-flex items-center justify-center rounded-xl
+           bg-green-600 px-4 py-2 text-sm font-semibold
+           text-white shadow-sm hover:bg-green-700
+           disabled:opacity-50 disabled:cursor-not-allowed">
+
+                                Simpan
+
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -61,35 +107,127 @@
         </div>
     </div>
 
-    <script>
-        const alamatInput = document.getElementById('alamat');
-        const alamatStatus = document.getElementById('alamatStatus');
-        const submitButton = document.querySelector('button[type="submit"]');
+<script>
 
-        if (alamatInput) {
-            alamatInput.addEventListener('change', function () {
-                const alamat = this.value;
-                alamatStatus.classList.remove('hidden', 'text-green-600', 'text-red-600');
+    const kecamatanInput = document.getElementById('kecamatan');
+    const kotaInput = document.getElementById('kota');
 
-                fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(alamat)}`)
-                    .then(res => res.json())
-                    .then(data => {
-                        if (data.length > 0) {
-                            const lokasi = data[0];
-                            document.getElementById('latitude').value = lokasi.lat;
-                            document.getElementById('longitude').value = lokasi.lon;
-                            alamatStatus.textContent = '✅ Alamat ditemukan';
-                            alamatStatus.classList.add('text-green-600');
-                            submitButton.disabled = false;
-                        } else {
-                            document.getElementById('latitude').value = '';
-                            document.getElementById('longitude').value = '';
-                            alamatStatus.textContent = '❌ Alamat tidak ditemukan';
-                            alamatStatus.classList.add('text-red-600');
-                            submitButton.disabled = true;
-                        }
-                    });
-            });
+    const lokasiStatus = document.getElementById('lokasiStatus');
+
+    const submitButton = document.getElementById('submitButton');
+
+    function validasiLokasi()
+    {
+        const kecamatan = kecamatanInput.value.trim();
+        const kota = kotaInput.value.trim();
+
+        // reset jika kosong
+        if(!kecamatan || !kota)
+        {
+            lokasiStatus.classList.add('hidden');
+
+            submitButton.disabled = true;
+
+            return;
         }
-    </script>
+
+        const query =
+            `${kecamatan}, ${kota}, Indonesia`;
+
+        lokasiStatus.classList.remove(
+            'hidden',
+            'text-green-600',
+            'text-red-600'
+        );
+
+        lokasiStatus.classList.add('text-gray-500');
+
+        lokasiStatus.innerHTML =
+            '⏳ Memvalidasi lokasi...';
+
+        fetch(
+            `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}`
+        )
+
+        .then(response => response.json())
+
+        .then(data => {
+
+            if(data.length > 0)
+            {
+                const lokasi = data[0];
+
+                document.getElementById('latitude').value =
+                    lokasi.lat;
+
+                document.getElementById('longitude').value =
+                    lokasi.lon;
+
+                lokasiStatus.classList.remove(
+                    'text-gray-500',
+                    'text-red-600'
+                );
+
+                lokasiStatus.classList.add(
+                    'text-green-600'
+                );
+
+                lokasiStatus.innerHTML =
+                    '✅ Area lokasi ditemukan';
+
+                submitButton.disabled = false;
+            }
+            else
+            {
+                document.getElementById('latitude').value = '';
+
+                document.getElementById('longitude').value = '';
+
+                lokasiStatus.classList.remove(
+                    'text-gray-500',
+                    'text-green-600'
+                );
+
+                lokasiStatus.classList.add(
+                    'text-red-600'
+                );
+
+                lokasiStatus.innerHTML =
+                    '❌ Area lokasi tidak ditemukan';
+
+                submitButton.disabled = true;
+            }
+
+        })
+
+        .catch(error => {
+
+            lokasiStatus.classList.remove(
+                'text-gray-500',
+                'text-green-600'
+            );
+
+            lokasiStatus.classList.add(
+                'text-red-600'
+            );
+
+            lokasiStatus.innerHTML =
+                '❌ Gagal terhubung ke server lokasi';
+
+            submitButton.disabled = true;
+
+        });
+    }
+
+    kecamatanInput.addEventListener(
+        'keyup',
+        validasiLokasi
+    );
+
+    kotaInput.addEventListener(
+        'keyup',
+        validasiLokasi
+    );
+
+</script>
 </x-app-layout>

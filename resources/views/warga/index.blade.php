@@ -42,6 +42,8 @@
                                     <th class="px-4 py-3 text-left">NIK</th>
                                     <th class="px-4 py-3 text-left">Nama</th>
                                     <th class="px-4 py-3 text-left">Alamat</th>
+                                    <th class="px-4 py-3 text-left">Kecamatan</th>
+                                    <th class="px-4 py-3 text-left">Kota</th>
                                     <th class="px-4 py-3 text-center">Aksi</th>
                                 </tr>
                             </thead>
@@ -51,6 +53,8 @@
                                     <td class="px-4 py-4 font-medium text-gray-700">{{ $w->nik }}</td>
                                     <td class="px-4 py-4 text-gray-700">{{ $w->nama }}</td>
                                     <td class="px-4 py-4 text-gray-600">{{ $w->alamat }}</td>
+                                    <td class="px-4 py-4 text-gray-600">{{ $w->kecamatan }}</td>
+                                    <td class="px-4 py-4 text-gray-600">{{ $w->kota }}</td>
                                     <td class="px-4 py-4 text-center space-x-2">
                                         <a href="{{ route('warga.show', $w->id) }}" class="inline-flex items-center rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-700 hover:bg-blue-200">Detail</a>
                                         <a href="{{ route('warga.edit', $w->id) }}" class="inline-flex items-center rounded-full bg-yellow-100 px-3 py-1 text-xs font-semibold text-yellow-700 hover:bg-yellow-200">Edit</a>

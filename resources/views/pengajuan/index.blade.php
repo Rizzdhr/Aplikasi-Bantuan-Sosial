@@ -50,6 +50,14 @@
                                 <p class="text-sm text-gray-500">Alamat</p>
                                 <p class="mt-1 font-semibold text-gray-900" id="alamat"></p>
                             </div>
+                            <div class="rounded-2xl bg-gray-50 p-4">
+                                <p class="text-sm text-gray-500">Kecamatan</p>
+                                <p class="mt-1 font-semibold text-gray-900" id="kecamatan"></p>
+                            </div>
+                            <div class="rounded-2xl bg-gray-50 p-4">
+                                <p class="text-sm text-gray-500">Kota</p>
+                                <p class="mt-1 font-semibold text-gray-900" id="kota"></p>
+                            </div>
                         </div>
                     </div>
 
@@ -252,6 +260,8 @@
                         document.getElementById('nik').innerText = w.nik;
                         document.getElementById('nama').innerText = w.nama;
                         document.getElementById('alamat').innerText = w.alamat;
+                        document.getElementById('kecamatan').innerText = w.kecamatan;
+                        document.getElementById('kota').innerText = w.kota;
                         document.getElementById('warga_id').value = w.id;
                     } else {
                         alert('Warga tidak ditemukan');

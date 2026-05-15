@@ -17,14 +17,15 @@ class WargaController extends Controller
         $query = Warga::query();
 
         if ($request->search) {
+
             $query->where('nama', 'like', '%' . $request->search . '%')
                 ->orWhere('nik', 'like', '%' . $request->search . '%');
+
         }
 
         $wargas = $query->latest()->paginate(10);
 
         return view('warga.index', compact('wargas'));
-
     }
 
     /**
@@ -41,58 +42,83 @@ class WargaController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+
             'nik' => 'required|unique:wargas,nik',
             'nama' => 'required',
-            'alamat' => 'required'
+            'alamat' => 'required',
+            'kecamatan' => 'required',
+            'kota' => 'required'
+
         ]);
 
-        $alamat = $request->alamat;
+        /*
+        |--------------------------------------------------------------------------
+        | Geocoding berbasis area
+        |--------------------------------------------------------------------------
+        | Yang dikirim ke OpenStreetMap hanya:
+        | kecamatan + kota + Indonesia
+        */
 
-        $response = Http::withHeaders([
-            'User-Agent' => 'BansosApp'
-        ])->get('https://nominatim.openstreetmap.org/search', [
-            'q' => $alamat,
-            'format' => 'json',
-            'limit' => 1
-        ]);
+        $lokasiGeo =
+            $request->kecamatan . ', ' .
+            $request->kota . ', Indonesia';
 
-        // dd($response->json());
+        $response = Http::withoutVerifying()
+            ->withHeaders([
+                'User-Agent' => 'BansosApp'
+            ])
+            ->get('https://nominatim.openstreetmap.org/search', [
+
+                'q' => $lokasiGeo,
+                'format' => 'json',
+                'limit' => 1
+
+            ]);
+
         $data = $response->json();
 
-        // alamat tidak ditemukan
+        // lokasi tidak ditemukan
         if(empty($data)){
 
             return back()
                 ->withInput()
                 ->withErrors([
-                    'alamat' => 'Alamat tidak ditemukan atau tidak valid'
+                    'alamat' => 'Lokasi tidak ditemukan'
                 ]);
 
         }
 
-        // ambil hasil geocoding
+        // ambil koordinat area
         $latitude = $data[0]['lat'];
         $longitude = $data[0]['lon'];
 
-
+        // simpan data warga
         Warga::create([
+
             'nik' => $request->nik,
             'nama' => $request->nama,
+
             'alamat' => $request->alamat,
+            'kecamatan' => $request->kecamatan,
+            'kota' => $request->kota,
+
             'latitude_rumah' => $latitude,
             'longitude_rumah' => $longitude
+
         ]);
 
-        return redirect()->route('warga.index')
+        return redirect()
+            ->route('warga.index')
             ->with('success', 'Data warga berhasil ditambahkan');
-
     }
+
     /**
      * Display the specified resource.
      */
     public function show($id)
     {
         $warga = Warga::findOrFail($id);
+
         return view('warga.show', compact('warga'));
     }
 
@@ -102,6 +128,7 @@ class WargaController extends Controller
     public function edit($id)
     {
         $warga = Warga::findOrFail($id);
+
         return view('warga.edit', compact('warga'));
     }
 
@@ -111,31 +138,48 @@ class WargaController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
+
             'nik' => 'required|unique:wargas,nik,' . $id,
             'nama' => 'required',
-            'alamat' => 'required'
+            'alamat' => 'required',
+            'kecamatan' => 'required',
+            'kota' => 'required'
+
         ]);
 
         $warga = Warga::findOrFail($id);
 
-        // geocoding alamat
-        $response = Http::withHeaders([
-            'User-Agent' => 'BansosApp'
-        ])->get('https://nominatim.openstreetmap.org/search', [
-            'q' => $request->alamat . ', Indonesia',
-            'format' => 'json',
-            'limit' => 1
-        ]);
+        /*
+        |--------------------------------------------------------------------------
+        | Geocoding berbasis area
+        |--------------------------------------------------------------------------
+        */
+
+        $lokasiGeo =
+            $request->kecamatan . ', ' .
+            $request->kota . ', Indonesia';
+
+        $response = Http::withoutVerifying()
+            ->withHeaders([
+                'User-Agent' => 'BansosApp'
+            ])
+            ->get('https://nominatim.openstreetmap.org/search', [
+
+                'q' => $lokasiGeo,
+                'format' => 'json',
+                'limit' => 1
+
+            ]);
 
         $data = $response->json();
 
-        // cek apakah alamat ditemukan
-        if(!$response->successful() || !isset($data[0])){
+        // cek apakah lokasi ditemukan
+        if(empty($data)){
 
             return back()
                 ->withInput()
                 ->withErrors([
-                    'alamat' => 'Alamat tidak ditemukan atau tidak valid'
+                    'alamat' => 'Lokasi tidak ditemukan'
                 ]);
 
         }
@@ -146,12 +190,17 @@ class WargaController extends Controller
 
         // update data warga
         $warga->update([
+
             'nik' => $request->nik,
             'nama' => $request->nama,
+
             'alamat' => $request->alamat,
+            'kecamatan' => $request->kecamatan,
+            'kota' => $request->kota,
 
             'latitude_rumah' => $latitude,
             'longitude_rumah' => $longitude
+
         ]);
 
         return redirect()
@@ -165,9 +214,13 @@ class WargaController extends Controller
     public function destroy($id)
     {
         Warga::destroy($id);
+
         return redirect()->route('warga.index');
     }
 
+    /**
+     * Generate QR
+     */
     public function generateQR($nik)
     {
         $warga = Warga::where('nik', $nik)->firstOrFail();

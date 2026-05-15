@@ -10,6 +10,8 @@ class Warga extends Model
         'nik',
         'nama',
         'alamat',
+        'kecamatan',
+        'kota',
         'latitude_rumah',
         'longitude_rumah'
     ];

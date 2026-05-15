@@ -35,6 +35,14 @@
                                 <p class="text-sm font-medium text-gray-500">Alamat</p>
                                 <p class="mt-2 text-lg font-semibold text-gray-900">{{ $warga->alamat }}</p>
                             </div>
+                            <div>
+                                <p class="text-sm font-medium text-gray-500">Kecamatan</p>
+                                <p class="mt-2 text-lg font-semibold text-gray-900">{{ $warga->kecamatan }}</p>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium text-gray-500">Kota</p>
+                                <p class="mt-2 text-lg font-semibold text-gray-900">{{ $warga->kota }}</p>
+                            </div>
                         </div>
 
                         <div class="rounded-2xl border border-gray-200 bg-white p-6 text-center">

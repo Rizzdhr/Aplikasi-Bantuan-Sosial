@@ -58,10 +58,10 @@ class PengajuanController extends Controller
             $request->longitude_pengajuan
         );
 
-        if($jarak <= 0.1){
+        if($jarak <= 2){
             $status_lokasi = 'sesuai_area';
         }
-        elseif($jarak <= 1){
+        elseif($jarak <= 10){
             $status_lokasi = 'area_dekat';
         }
         else{
