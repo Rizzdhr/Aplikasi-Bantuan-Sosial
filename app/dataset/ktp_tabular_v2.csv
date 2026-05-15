@@ -1,4 +1,4 @@
-Provinsi,NIK,Nama,Jenis-Kelamin,Gol-Darah,Alamat,Kel/Desa,Kecamatan,Agama,Status-Pernikahan,Pekerjaan,Kewarganegaraan,Tempat-Lahir,Tanggal-Lahir
+provinsi,nik,nama,jenis_kelamin,gol_darah,alamat,kel_desa,kecamatan,agama,status_pernikahan,pekerjaan,kewarganegaraan,tempat_lahir,tanggal_lahir
 Aceh,1101234567890123,Ani Pranoto,Perempuan,O,Jl.Merdeka No.1,Merdeka,Kuta Alam,Islam,Menikah,Petani,WNI,Banda Aceh,01-01-1980
 Aceh,1102234567890124,Budi Wijaya,Laki-laki,A,Jl.Sisingamangaraja No.2,Kampung Baru,Banda Aceh,Kristen,Belum Menikah,Pegawai Negeri,WNI,Banda Aceh,02-02-1981
 Aceh,1103234567890125,Citra Handayani,Perempuan,B,Jl.Diponegoro No.3,Padang Pasir,Kuta Alam,Hindu,Menikah,Wiraswasta,WNI,Banda Aceh,03-03-1982

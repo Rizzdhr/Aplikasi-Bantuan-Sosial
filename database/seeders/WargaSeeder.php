@@ -38,35 +38,35 @@ class WargaSeeder extends Seeder
             $row = array_map('trim', $row);
             $data = array_combine($header, $row);
 
-            if (empty($data['NIK']) || empty($data['Nama'])) {
+            if (empty($data['nik']) || empty($data['nama'])) {
                 continue;
             }
 
             // Parse tanggal lahir format DD-MM-YYYY to YYYY-MM-DD
             $tanggalLahir = null;
-            if (!empty($data['Tanggal-Lahir'])) {
+            if (!empty($data['tanggal_lahir'])) {
                 try {
-                    $tanggalLahir = \DateTime::createFromFormat('d-m-Y', $data['Tanggal-Lahir'])?->format('Y-m-d');
+                    $tanggalLahir = \DateTime::createFromFormat('d-m-Y', $data['tanggal_lahir'])?->format('Y-m-d');
                 } catch (\Exception $e) {
                     $tanggalLahir = null;
                 }
             }
 
             Warga::updateOrCreate(
-                ['nik' => $data['NIK']],
+                ['nik' => $data['nik']],
                 [
-                    'nama' => $data['Nama'],
-                    'alamat' => $data['Alamat'] ?? '',
-                    'provinsi' => $data['Provinsi'] ?? null,
-                    'jenis_kelamin' => $data['Jenis-Kelamin'] ?? null,
-                    'gol_darah' => $data['Gol-Darah'] ?? null,
-                    'kel_desa' => $data['Kel/Desa'] ?? null,
-                    'kecamatan' => $data['Kecamatan'] ?? null,
-                    'agama' => $data['Agama'] ?? null,
-                    'status_pernikahan' => $data['Status-Pernikahan'] ?? null,
-                    'pekerjaan' => $data['Pekerjaan'] ?? null,
-                    'kewarganegaraan' => $data['Kewarganegaraan'] ?? null,
-                    'tempat_lahir' => $data['Tempat-Lahir'] ?? null,
+                    'nama' => $data['nama'],
+                    'alamat' => $data['alamat'] ?? '',
+                    'provinsi' => $data['provinsi'] ?? null,
+                    'jenis_kelamin' => $data['jenis_kelamin'] ?? null,
+                    'gol_darah' => $data['gol_darah'] ?? null,
+                    'kel_desa' => $data['kel_desa'] ?? null,
+                    'kecamatan' => $data['kecamatan'] ?? null,
+                    'agama' => $data['agama'] ?? null,
+                    'status_pernikahan' => $data['status_pernikahan'] ?? null,
+                    'pekerjaan' => $data['pekerjaan'] ?? null,
+                    'kewarganegaraan' => $data['kewarganegaraan'] ?? null,
+                    'tempat_lahir' => $data['tempat_lahir'] ?? null,
                     'tanggal_lahir' => $tanggalLahir,
                 ]
             );
