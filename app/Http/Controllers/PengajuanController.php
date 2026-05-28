@@ -18,63 +18,67 @@ class PengajuanController extends Controller
         return view('pengajuan.index', compact('pengajuans', 'wargas'));
     }
 
-    private function hitungJarak($lat1, $lon1, $lat2, $lon2)
-    {
-        $earth = 6371;
+    // private function hitungJarak($lat1, $lon1, $lat2, $lon2)
+    // {
+    //     $earth = 6371;
 
-        $dLat = deg2rad($lat2 - $lat1);
-        $dLon = deg2rad($lon2 - $lon1);
+    //     $dLat = deg2rad($lat2 - $lat1);
+    //     $dLon = deg2rad($lon2 - $lon1);
 
-        $a =
-            sin($dLat / 2) * sin($dLat / 2) +
-            cos(deg2rad($lat1)) *
-            cos(deg2rad($lat2)) *
-            sin($dLon / 2) *
-            sin($dLon / 2);
+    //     $a =
+    //         sin($dLat / 2) * sin($dLat / 2) +
+    //         cos(deg2rad($lat1)) *
+    //         cos(deg2rad($lat2)) *
+    //         sin($dLon / 2) *
+    //         sin($dLon / 2);
 
-        $c = 2 * atan2(sqrt($a), sqrt(1 - $a));
+    //     $c = 2 * atan2(sqrt($a), sqrt(1 - $a));
 
-        return $earth * $c;
-    }
+    //     return $earth * $c;
+    // }
 
     public function store(Request $request)
     {
         $request->validate([
             'warga_id' => 'required',
-            'program_bantuan' => 'required',
-            'penghasilan' => 'required|numeric',
-            'usia' => 'required|numeric',
-            'pekerjaan' => 'required',
+            // 'program_bantuan' => 'required',
+            // 'penghasilan' => 'required|numeric',
+            // 'usia' => 'required|numeric',
+            // 'pekerjaan' => 'required',
             'foto_rumah' => 'required|image'
         ]);
 
         $warga = Warga::find($request->warga_id);
 
-        $jarak = $this->hitungJarak(
-            $warga->latitude_rumah,
-            $warga->longitude_rumah,
+        $usia = \Carbon\Carbon::parse($warga->tanggal_lahir)->age;
+        $penghasilan = $warga->penghasilan;
+        $pekerjaan   = $warga->pekerjaan;
 
-            $request->latitude_pengajuan,
-            $request->longitude_pengajuan
-        );
+        // $jarak = $this->hitungJarak(
+        //     $warga->latitude_rumah,
+        //     $warga->longitude_rumah,
 
-        if($jarak <= 2){
-            $status_lokasi = 'sesuai_area';
-        }
-        elseif($jarak <= 10){
-            $status_lokasi = 'area_dekat';
-        }
-        else{
-            $status_lokasi = 'di_luar_area';
-        }
+        //     $request->latitude_pengajuan,
+        //     $request->longitude_pengajuan
+        // );
 
-        $programMap = [
-            'jkn' => 'Bantuan Iuran JKN (kesehatan)',
-            'bpnt' => 'Bantuan Pangan Non-Tunai (BPNT) (pangan)',
-            'blt' => 'Bantuan Langsung Tunai (BLT) (tunai)'
-        ];
+        // if($jarak <= 2){
+        //     $status_lokasi = 'sesuai_area';
+        // }
+        // elseif($jarak <= 10){
+        //     $status_lokasi = 'area_dekat';
+        // }
+        // else{
+        //     $status_lokasi = 'di_luar_area';
+        // }
 
-        $programNama = $programMap[$request->program_bantuan] ?? '-';
+        // $programMap = [
+        //     'jkn' => 'Bantuan Iuran JKN (kesehatan)',
+        //     'bpnt' => 'Bantuan Pangan Non-Tunai (BPNT) (pangan)',
+        //     'blt' => 'Bantuan Langsung Tunai (BLT) (tunai)'
+        // ];
+
+        // $programNama = $programMap[$request->program_bantuan] ?? '-';
 
         // =========================
         // 1. Upload foto ke storage
@@ -111,8 +115,9 @@ class PengajuanController extends Controller
         // 4. Mapping kondisi rumah
         // =========================
         $mapRumah = [
-            'layak' => 0, // rumah_buruk
-            'tidak_layak' => 1, // rumah_baik
+            'rumah_buruk' => 0, // rumah_buruk
+            'rumah_sedang' => 1, // rumah_baik
+            'rumah_baik' => 2, // rumah_baik
         ];
 
         $kondisiRumah = $mapRumah[$label] ?? 1; // default sedang
@@ -121,18 +126,88 @@ class PengajuanController extends Controller
         // 5. Mapping pekerjaan
         // =========================
         $mapPekerjaan = [
-            'tidak_bekerja' => 0,
-            'buruh_harian' => 1,
-            'pegawai/karyawan' => 2
+            // Kelompok 0 — Tidak/belum bekerja
+            'BELUM/TIDAK BEKERJA'      => 0,
+            'PELAJAR/MAHASISWA'        => 0,
+            'IBU RUMAH TANGGA'         => 0,
+            'PENSIUNAN'                => 0,
+
+            // Kelompok 1 — Buruh / pekerja harian
+            'BURUH HARIAN LEPAS'       => 1,
+            'BURUH TANI/PERKEBUNAN'    => 1,
+            'BURUH NELAYAN/PERIKANAN'  => 1,
+            'BURUH PETERNAKAN'         => 1,
+            'PETANI/PEKEBUN'           => 1,
+            'NELAYAN/PERIKANAN'        => 1,
+            'PETERNAK'                 => 1,
+            'TUKANG BATU'              => 1,
+            'TUKANG KAYU'              => 1,
+            'TUKANG SOL SEPATU'        => 1,
+            'TUKANG CUKUR'             => 1,
+            'TUKANG LAS/PANDAI BESI'   => 1,
+            'TUKANG LISTRIK'           => 1,
+            'TUKANG JAHIT'             => 1,
+            'TUKANG GIGI'              => 1,
+            'MEKANIK'                  => 1,
+            'PEMBANTU RUMAH TANGGA'    => 1,
+            'TUKANG OJEK'              => 1,
+
+            // Kelompok 2 — Pegawai / karyawan
+            'KARYAWAN SWASTA'          => 2,
+            'KARYAWAN BUMN'            => 2,
+            'KARYAWAN BUMD'            => 2,
+            'KARYAWAN HONORER'         => 2,
+            'PEGAWAI NEGERI SIPIL'     => 2,
+            'TENTARA NASIONAL INDONESIA' => 2,
+            'KEPOLISIAN RI'            => 2,
+            'PERDAGANGAN'              => 2,
+            'WIRASWASTA'               => 2,
+            'TRANSPORTASI'             => 2,
+            'INDUSTRI'                 => 2,
+            'KONSTRUKSI'               => 2,
+
+            // Kelompok 3 — Profesional / tenaga ahli
+            'DOKTER'                   => 3,
+            'BIDAN'                    => 3,
+            'PERAWAT'                  => 3,
+            'APOTEKER'                 => 3,
+            'PSIKIATER/PSIKOLOG'       => 3,
+            'DOKTER GIGI'              => 3,
+            'GURU/DOSEN'               => 3,
+            'PENGACARA'                => 3,
+            'NOTARIS'                  => 3,
+            'AKUNTAN'                  => 3,
+            'KONSULTAN'                => 3,
+            'SENIMAN'                  => 3,
+            'WARTAWAN'                 => 3,
+            'USTADZ/MUBALIGH'          => 3,
+            'PASTOR'                   => 3,
+            'PENDETA'                  => 3,
+            'POLITIKUS'                => 3,
+            'ANGGOTA DPR-RI'           => 3,
+            'ANGGOTA DPRD'             => 3,
+            'KEPALA DESA'              => 3,
+            'PERANGKAT DESA'           => 3,
+            'PELAUT'                   => 3,
+            'PILOT'                    => 3,
+
+            // Kelompok 4 — Pengusaha / pejabat tinggi
+            'PENELITI'                 => 4,
+            'PEJABAT NEGARA'           => 4,
+            'ANGGOTA BPK'              => 4,
+            'DUTA BESAR'               => 4,
+            'GUBERNUR'                 => 4,
+            'BUPATI/WALIKOTA'          => 4,
+            'LAINNYA'                  => 2,
         ];
 
         // =========================
         // 6. Kirim ke ML Python
         // =========================
         $ml = Http::post('http://127.0.0.1:5000/predict', [
-            'penghasilan' => (int)$request->penghasilan,
-            'usia' => (int)$request->usia,
-            'pekerjaan' => $mapPekerjaan[$request->pekerjaan],
+            'penghasilan'   => (int)$penghasilan,
+            'usia'  => $usia,
+            'pekerjaan'     => $mapPekerjaan[$pekerjaan] ?? 0,
             'kondisi_rumah' => $kondisiRumah
         ]);
 
@@ -147,15 +222,15 @@ class PengajuanController extends Controller
         // =========================
         Pengajuan::create([
             'warga_id' => $request->warga_id,
-            'latitude_pengajuan' => $request->latitude_pengajuan,
-            'longitude_pengajuan' => $request->longitude_pengajuan,
-            'jarak_lokasi' => $jarak,
-            'status_lokasi' => $status_lokasi,
+            // 'latitude_pengajuan' => $request->latitude_pengajuan,
+            // 'longitude_pengajuan' => $request->longitude_pengajuan,
+            // 'jarak_lokasi' => $jarak,
+            // 'status_lokasi' => $status_lokasi,
 
-            'program_bantuan' => $request->program_bantuan,
-            'penghasilan' => $request->penghasilan,
-            'usia' => $request->usia,
-            'pekerjaan' => $request->pekerjaan,
+            // 'program_bantuan' => $request->program_bantuan,
+            'penghasilan' => $penghasilan,
+            'usia' => $usia,
+            'pekerjaan'   => $pekerjaan,
             'foto_rumah' => $path,
             'kondisi_rumah' => $label,
             'skor_kelayakan' => $skor,
@@ -174,9 +249,13 @@ class PengajuanController extends Controller
         return redirect()->back()->with([
             // 'success' => 'Pengajuan berhasil diproses!',
             'nama' => $warga->nama,
-            'program' => $programNama,
+            'penghasilan' => $penghasilan,
+            'usia' => $usia,
+            'pekerjaan' => $pekerjaan,
+            // 'program' => $programNama,
+            'foto_rumah' => $path,
             'kondisi_rumah' => $label,
-            'status_lokasi' => $status_lokasi,
+            // 'status_lokasi' => $status_lokasi,
             'skor_kelayakan' => $skor,
             'status' => $hasil
         ]);

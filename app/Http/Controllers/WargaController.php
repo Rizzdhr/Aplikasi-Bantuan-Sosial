@@ -14,16 +14,12 @@ class WargaController extends Controller
      */
     public function index(Request $request)
     {
-        $query = Warga::query();
+        $search = $request->search;
 
-        if ($request->search) {
-
-            $query->where('nama', 'like', '%' . $request->search . '%')
-                ->orWhere('nik', 'like', '%' . $request->search . '%');
-
-        }
-
-        $wargas = $query->latest()->paginate(10);
+        $wargas = Warga::when($search, function ($query) use ($search) {
+            $query->where('nik', 'like', "%{$search}%")
+                ->orWhere('nama', 'like', "%{$search}%");
+        })->paginate(10);
 
         return view('warga.index', compact('wargas'));
     }

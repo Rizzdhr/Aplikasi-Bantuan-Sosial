@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('warga_id')->constrained()->onDelete('cascade');
 
             // Bantuan
-            $table->enum('program_bantuan', ['kip', 'jkn', 'pkh', 'bpnt', 'blt']);
+            // $table->enum('program_bantuan', ['kip', 'jkn', 'pkh', 'bpnt', 'blt']);
 
             // Input manual
             $table->integer('penghasilan');
@@ -27,7 +27,8 @@ return new class extends Migration
             // Upload & AI
             $table->string('foto_rumah');
 
-            $table->enum('pekerjaan', ['tidak_bekerja','buruh_harian', 'pegawai/karyawan']);
+            // $table->enum('pekerjaan', ['tidak_bekerja','buruh_harian', 'pegawai/karyawan']);
+            $table->string('pekerjaan');
 
             // Hasil AI / ML
             $table->string('kondisi_rumah')->nullable(); // buruk/sedang/baik

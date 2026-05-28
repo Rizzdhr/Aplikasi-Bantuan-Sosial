@@ -26,9 +26,10 @@ return new class extends Migration
             $table->string('agama')->nullable();
             $table->string('status_pernikahan')->nullable();
             $table->string('pekerjaan')->nullable();
+            $table->integer('penghasilan')->nullable();
             $table->string('kewarganegaraan')->nullable();
-            $table->decimal('latitude_rumah', 10, 7)->nullable();
-            $table->decimal('longitude_rumah', 10, 7)->nullable();
+            // $table->decimal('latitude_rumah', 10, 7)->nullable();
+            // $table->decimal('longitude_rumah', 10, 7)->nullable();
             // $table->string('kota')->nullable();
             $table->timestamps();
         });

@@ -36,13 +36,10 @@
                                 <p class="mt-2 text-lg font-semibold text-gray-900">{{ $warga->alamat }}</p>
                             </div>
                             <div>
-                                <p class="text-sm font-medium text-gray-500">Kecamatan</p>
-                                <p class="mt-2 text-lg font-semibold text-gray-900">{{ $warga->kecamatan }}</p>
+                                <p class="text-sm font-medium text-gray-500">Penghasilan</p>
+                                <p class="mt-2 text-lg font-semibold text-gray-900">Rp {{ number_format($warga->penghasilan, 0, ',', '.') }}</p>
                             </div>
-                            <div>
-                                <p class="text-sm font-medium text-gray-500">Kota</p>
-                                <p class="mt-2 text-lg font-semibold text-gray-900">{{ $warga->kota }}</p>
-                            </div>
+                            
                         </div>
 
                         <div class="rounded-2xl border border-gray-200 bg-white p-6 text-center">

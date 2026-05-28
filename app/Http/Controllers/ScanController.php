@@ -19,7 +19,19 @@ class ScanController extends Controller
 
         return response()->json([
             'status' => 'success',
-            'data' => $warga
+            'data' => [
+                'id' => $warga->id,
+                'nik' => $warga->nik,
+                'nama' => $warga->nama,
+                'alamat' => $warga->alamat,
+                'tanggal_lahir' => $warga->tanggal_lahir,
+                'kecamatan' => $warga->kecamatan,
+                'penghasilan' => $warga->penghasilan,
+                'pekerjaan' => $warga->pekerjaan,
+
+                // INI USIA
+                'usia' => \Carbon\Carbon::parse($warga->tanggal_lahir)->age
+            ]
         ]);
 }
 }
