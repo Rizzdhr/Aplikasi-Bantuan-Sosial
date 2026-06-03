@@ -25,7 +25,7 @@ Hasil klasifikasi digunakan sebagai pendukung keputusan dalam proses seleksi pen
 ## Teknologi
 
 - **Backend**: PHP, Laravel 11
-- **Frontend**: JavaScript, Bootstrap, Tailwind CSS
+- **Frontend**: Tailwind CSS
 - **Database**: MySQL
 - **Machine Learning**: Python, Scikit-learn
 - **Computer Vision**: Roboflow
