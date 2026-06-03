@@ -33,11 +33,15 @@ Laravel (tampilkan hasil)
 ```
 
 Keputusan model bukan:
+
 Rumah buruk = otomatis diterima
+
 Gaji tinggi = otomatis ditolak
 
 Tapi:
+
 Rumah buruk menambah peluang, tapi gaji dan pekerjaan tetap menentukan
+
 Gaji tinggi mengurangi peluang, tapi kalau lansia + rumah buruk tetap bisa diterima
 
 ## Fitur
