@@ -20,8 +20,6 @@ def generate_alasan(penghasilan, usia, pekerjaan, kondisi_rumah, status):
     # Usia
     if usia >= 60:
         alasan.append({"icon": "✓", "teks": "Usia lanjut (≥ 60 tahun)", "positif": True})
-    elif usia <= 5:
-        alasan.append({"icon": "✓", "teks": "Balita (≤ 5 tahun)", "positif": True})
     elif usia <= 17:
         alasan.append({"icon": "~", "teks": "Usia anak/remaja", "positif": None})
     else:
@@ -60,7 +58,10 @@ def predict():
 
     fitur = [[penghasilan, usia, pekerjaan, kondisi_rumah]]
 
-    prob   = model.predict_proba(fitur)[0][1]
+    prob = model.predict_proba(fitur)[0][1]
+    # Clamp selalu jalan
+    prob = max(0.05, min(0.95, float(prob)))
+
     status = "diterima" if prob > 0.5 else "ditolak"
 
     alasan = generate_alasan(penghasilan, usia, pekerjaan, kondisi_rumah, status)
