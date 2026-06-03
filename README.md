@@ -18,18 +18,17 @@ Hasil klasifikasi digunakan sebagai pendukung keputusan dalam proses seleksi pen
 - CRUD Data Warga
 - Pengajuan Bantuan
 - Upload Foto Rumah
-- Verifikasi Lokasi
 - Sistem Skoring Kelayakan
 
 ---
 
 ## Teknologi
 
-- PHP
-- Laravel
-- MySQL
-- Bootstrap
-- JavaScript
+- **Backend**: PHP, Laravel 11
+- **Frontend**: JavaScript, Bootstrap, Tailwind CSS
+- **Database**: MySQL
+- **Machine Learning**: Python, Scikit-learn
+- **Computer Vision**: Roboflow
 
 ## Dataset & Model AI
 
@@ -43,6 +42,8 @@ https://universe.roboflow.com/rizkys-workspace-uddts/klasifikasi-rumah
 
 ### 1. Clone Repository
 
+Pastikan Git sudah terinstall pada komputer. Buka Git Bash, kemudian jalankan perintah berikut untuk meng-clone repository:
+
 ```bash
 git clone https://github.com/Rizzdhr/Aplikasi-Bantuan-Sosial.git
 ```
@@ -52,6 +53,12 @@ Masuk ke folder project:
 ```bash
 cd Aplikasi-Bantuan-Sosial
 ```
+
+```bash
+code .
+```
+
+### Buka Terminal (Command Prompt) pada VS Code:
 
 ### 2. Install Dependency Laravel
 
@@ -109,7 +116,15 @@ ROBOFLOW_URL=https://detect.roboflow.com/klasifikasi-rumah/1?api_key=your_api_ke
 php artisan migrate
 ```
 
-### 9. Jalankan Project
+### 9. Jalankan Seeder
+
+Perintah ini digunakan untuk mengisi data awal (master data) yang dibutuhkan aplikasi.
+
+```bash
+php artisan db:seed
+```
+
+### 10. Jalankan Project
 
 Menjalankan AI Python
 
@@ -126,6 +141,15 @@ php artisan serve
 Buka browser:
 
 http://127.0.0.1:8000
+
+---
+
+## Dataset
+
+Dataset untuk pelatihan model ML tersimpan di folder `app/dataset/`:
+
+- `ktp_tabular_v2.csv` - Dataset tabular untuk pelatihan model
+
 
 ---
 
