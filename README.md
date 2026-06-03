@@ -104,7 +104,7 @@ DB_PASSWORD=
 
 ### 7. Konfigurasi Roboflow
 
-Tambahkan konfigurasi berikut pada file `.env`
+Sesuaikan konfigurasi berikut pada file `.env`
 
 ```env
 ROBOFLOW_URL=https://detect.roboflow.com/klasifikasi-rumah/1?api_key=your_api_key
