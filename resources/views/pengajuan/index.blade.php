@@ -1,36 +1,36 @@
 <style>
-#reader {
-    padding: 20px;
-}
+    #reader {
+        padding: 20px;
+    }
 
-#reader__scan_region {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 250px;
-}
+    #reader__scan_region {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 250px;
+    }
 
-#reader__scan_region img {
-    margin: 0 auto !important;
-    display: block !important;
-}
+    #reader__scan_region img {
+        margin: 0 auto !important;
+        display: block !important;
+    }
 
-#reader select,
-#reader button {
-    padding: 8px 14px;
-    border-radius: 10px;
-    border: 1px solid #d1d5db;
-    margin: 4px;
-}
+    #reader select,
+    #reader button {
+        padding: 8px 14px;
+        border-radius: 10px;
+        border: 1px solid #d1d5db;
+        margin: 4px;
+    }
 
-#reader button {
-    cursor: pointer;
-}
+    #reader button {
+        cursor: pointer;
+    }
 
-#reader a {
-    display: inline-block;
-    margin-top: 10px;
-}
+    #reader a {
+        display: inline-block;
+        margin-top: 10px;
+    }
 </style>
 
 <x-app-layout>
@@ -353,24 +353,19 @@
 
                                         <p
                                             class="text-lg font-bold
-                                            @if ((session('skor_kelayakan') ?? 0) * 100 < 50)
-                                                text-red-600
+                                            @if ((session('skor_kelayakan') ?? 0) * 100 < 50) text-red-600
                                             @else
-                                                text-green-600
-                                            @endif
+                                                text-green-600 @endif
                                         ">
                                             {{ number_format((session('skor_kelayakan') ?? 0) * 100, 1) }}%
                                         </p>
                                     </div>
 
                                     <div class="mt-3 h-3 overflow-hidden rounded-full bg-gray-100">
-                                        <div
-                                            class="h-full rounded-full
-                                            @if ((session('skor_kelayakan') ?? 0) * 100 < 50)
-                                                bg-red-500
+                                        <div class="h-full rounded-full
+                                            @if ((session('skor_kelayakan') ?? 0) * 100 < 50) bg-red-500
                                             @else
-                                                bg-green-500
-                                            @endif
+                                                bg-green-500 @endif
                                         "
                                             style="width: {{ (session('skor_kelayakan') ?? 0) * 100 }}%">
                                         </div>
@@ -396,6 +391,32 @@
                                         {{ ucwords(str_replace('_', ' ', session('status'))) }}
                                     </span>
                                 </div>
+
+                                {{-- Alasan Skor Kelayakan --}}
+                                @if (session('alasan') && count(session('alasan')) > 0)
+                                    <div class="rounded-2xl bg-gray-50 p-4 space-y-2">
+                                        <p class="text-sm font-semibold text-gray-700 mb-3">
+                                            Alasan Skor Kelayakan
+                                        </p>
+                                        @foreach (session('alasan') as $item)
+                                            <div class="flex items-center gap-2 text-sm">
+                                                @if ($item['positif'] === true)
+                                                    <span
+                                                        class="flex h-5 w-5 items-center justify-center rounded-full bg-green-100 text-green-600 text-xs font-bold flex-shrink-0">✓</span>
+                                                    <span class="text-green-700">{{ $item['teks'] }}</span>
+                                                @elseif ($item['positif'] === false)
+                                                    <span
+                                                        class="flex h-5 w-5 items-center justify-center rounded-full bg-red-100 text-red-500 text-xs font-bold flex-shrink-0">✗</span>
+                                                    <span class="text-red-600">{{ $item['teks'] }}</span>
+                                                @else
+                                                    <span
+                                                        class="flex h-5 w-5 items-center justify-center rounded-full bg-yellow-100 text-yellow-600 text-xs font-bold flex-shrink-0">~</span>
+                                                    <span class="text-yellow-700">{{ $item['teks'] }}</span>
+                                                @endif
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                @endif
 
 
                                 <div class="border-t border-gray-100 pt-3">

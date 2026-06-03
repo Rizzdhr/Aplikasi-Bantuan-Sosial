@@ -239,6 +239,7 @@ class PengajuanController extends Controller
 
         $hasil = $dataML['status'] ?? 'DITOLAK';
         $skor = $dataML['skor'] ?? null;
+        $alasan = $dataML['alasan'] ?? [];
 
         // =========================
         // 7. Simpan ke database
@@ -280,7 +281,8 @@ class PengajuanController extends Controller
             'kondisi_rumah' => $label,
             // 'status_lokasi' => $status_lokasi,
             'skor_kelayakan' => $skor,
-            'status' => $hasil
+            'status' => $hasil,
+            'alasan' => $alasan,
         ]);
     }
 
