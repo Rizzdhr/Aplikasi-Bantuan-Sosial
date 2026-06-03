@@ -109,6 +109,7 @@ Tambahkan konfigurasi berikut pada file `.env`
 ```env
 ROBOFLOW_URL=https://detect.roboflow.com/klasifikasi-rumah/1?api_key=your_api_key
 ```
+Ganti nilai `your_api_key` dengan API Key Roboflow yang Anda miliki. API Key dapat diperoleh melalui akun Roboflow anda pada proyek yang digunakan.
 
 ### 8. Jalankan Migration
 
@@ -146,9 +147,9 @@ http://127.0.0.1:8000
 
 ## Dataset
 
-Dataset untuk pelatihan model ML tersimpan di folder `app/dataset/`:
+Dataset tersimpan di folder `app/dataset/`:
 
-- `ktp_tabular_v2.csv` - Dataset tabular untuk pelatihan model
+- `ktp_tabular_v2.csv` - Dataset tabular
 
 
 ---
