@@ -52,7 +52,7 @@ class PengajuanController extends Controller
 
         $usia = \Carbon\Carbon::parse($warga->tanggal_lahir)->age;
         $penghasilan = $warga->penghasilan;
-        $pekerjaan   = $warga->pekerjaan;
+        $pekerjaan   = strtoupper(trim($warga->pekerjaan));
 
         // $jarak = $this->hitungJarak(
         //     $warga->latitude_rumah,
@@ -115,9 +115,9 @@ class PengajuanController extends Controller
         // 4. Mapping kondisi rumah
         // =========================
         $mapRumah = [
-            'rumah_buruk' => 0, // rumah_buruk
-            'rumah_sedang' => 1, // rumah_baik
-            'rumah_baik' => 2, // rumah_baik
+            'rumah_buruk' => 0,
+            'rumah_sedang' => 1,
+            'rumah_baik' => 2,
         ];
 
         $kondisiRumah = $mapRumah[$label] ?? 1; // default sedang
@@ -128,23 +128,38 @@ class PengajuanController extends Controller
         $mapPekerjaan = [
             // Kelompok 0 — Tidak/belum bekerja
             'BELUM/TIDAK BEKERJA'      => 0,
+            'BELUM BEKERJA'            => 0,
+            'TIDAK BEKERJA'            => 0,
             'PELAJAR/MAHASISWA'        => 0,
+            'PELAJAR'                  => 0,
+            'MAHASISWA'                => 0,
             'IBU RUMAH TANGGA'         => 0,
             'PENSIUNAN'                => 0,
+            'PENSIUN'                  => 0,
 
             // Kelompok 1 — Buruh / pekerja harian
             'BURUH HARIAN LEPAS'       => 1,
             'BURUH TANI/PERKEBUNAN'    => 1,
+            'BURUH TANI'             => 1,
+            'PERKEBUNAN'              => 1,
             'BURUH NELAYAN/PERIKANAN'  => 1,
+            'BURUH NELAYAN'           => 1,
+            'PERIKANAN'              => 1,
             'BURUH PETERNAKAN'         => 1,
             'PETANI/PEKEBUN'           => 1,
+            'PETANI'                   => 1,
+            'PEKEBUN'                  => 1,
             'NELAYAN/PERIKANAN'        => 1,
+            'NELAYAN'                  => 1,
+            'PERIKANAN'              => 1,
             'PETERNAK'                 => 1,
             'TUKANG BATU'              => 1,
             'TUKANG KAYU'              => 1,
             'TUKANG SOL SEPATU'        => 1,
             'TUKANG CUKUR'             => 1,
             'TUKANG LAS/PANDAI BESI'   => 1,
+            'TUKANG LAS'                 => 1,
+            'PANDAI BESI'              => 1,
             'TUKANG LISTRIK'           => 1,
             'TUKANG JAHIT'             => 1,
             'TUKANG GIGI'              => 1,
@@ -157,7 +172,8 @@ class PengajuanController extends Controller
             'KARYAWAN BUMN'            => 2,
             'KARYAWAN BUMD'            => 2,
             'KARYAWAN HONORER'         => 2,
-            'PEGAWAI NEGERI SIPIL'     => 2,
+            'PEGAWAI NEGERI'     => 2,
+            'PEGAWAI SWASTA'       => 2,
             'TENTARA NASIONAL INDONESIA' => 2,
             'KEPOLISIAN RI'            => 2,
             'PERDAGANGAN'              => 2,
@@ -172,8 +188,12 @@ class PengajuanController extends Controller
             'PERAWAT'                  => 3,
             'APOTEKER'                 => 3,
             'PSIKIATER/PSIKOLOG'       => 3,
+            'PSIKIATER'                => 3,
+            'PSIKOLOG'                 => 3,
             'DOKTER GIGI'              => 3,
             'GURU/DOSEN'               => 3,
+            'GURU'                     => 3,
+            'DOSEN'                    => 3,
             'PENGACARA'                => 3,
             'NOTARIS'                  => 3,
             'AKUNTAN'                  => 3,
@@ -181,6 +201,8 @@ class PengajuanController extends Controller
             'SENIMAN'                  => 3,
             'WARTAWAN'                 => 3,
             'USTADZ/MUBALIGH'          => 3,
+            'USTADZ'                   => 3,
+            'MUBALIGH'                  => 3,
             'PASTOR'                   => 3,
             'PENDETA'                  => 3,
             'POLITIKUS'                => 3,
@@ -198,6 +220,8 @@ class PengajuanController extends Controller
             'DUTA BESAR'               => 4,
             'GUBERNUR'                 => 4,
             'BUPATI/WALIKOTA'          => 4,
+            'BUPATI'                    => 4,
+            'WALIKOTA'                  => 4,
             'LAINNYA'                  => 2,
         ];
 

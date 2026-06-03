@@ -1,341 +1,341 @@
 provinsi,nik,nama,jenis_kelamin,gol_darah,alamat,kel_desa,kecamatan,agama,status_pernikahan,pekerjaan,kewarganegaraan,tempat_lahir,tanggal_lahir,penghasilan
-Aceh,1101234567890123,Ani Pranoto,Perempuan,O,Jl.Merdeka No.1,Merdeka,Kuta Alam,Islam,Menikah,Petani,WNI,Banda Aceh,1980-01-01,1100000
-Aceh,1102234567890124,Budi Wijaya,Laki-laki,A,Jl.Sisingamangaraja No.2,Kampung Baru,Banda Aceh,Kristen,Belum Menikah,Pegawai Negeri,WNI,Banda Aceh,1981-02-02,3100000
-Aceh,1103234567890125,Citra Handayani,Perempuan,B,Jl.Diponegoro No.3,Padang Pasir,Kuta Alam,Hindu,Menikah,Wiraswasta,WNI,Banda Aceh,1982-03-03,9000000
-Aceh,1104234567890126,Darma Setiawan,Laki-laki,AB,Jl.Gatot Subroto No.4,Merdeka,Kuta Alam,Buddha,Menikah,Pelajar,WNI,Banda Aceh,1983-04-04,100000
-Aceh,1105234567890127,Edi Santoso,Laki-laki,O,Jl.Sudirman No.5,Kampung Baru,Banda Aceh,Islam,Belum Menikah,Petani,WNI,Banda Aceh,1984-05-05,1500000
-Aceh,1106234567890128,Fitriani Wijaya,Perempuan,A,Jl.Teuku Umar No.6,Merdeka,Kuta Alam,Kristen,Menikah,Pegawai Negeri,WNI,Banda Aceh,1985-06-06,3800000
-Aceh,1107234567890129,Gandi Santoso,Laki-laki,B,Jl.Kartini No.7,Kampung Baru,Banda Aceh,Hindu,Belum Menikah,Wiraswasta,WNI,Banda Aceh,1986-07-07,4600000
-Aceh,1108234567890130,Hadi Setiawan,Laki-laki,AB,Jl.Pattimura No.8,Padang Pasir,Kuta Alam,Buddha,Menikah,Pelajar,WNI,Banda Aceh,1987-08-08,500000
-Aceh,1109234567890131,Indah Wijaya,Perempuan,O,Jl.Imam Bonjol No.9,Merdeka,Kuta Alam,Islam,Menikah,Pegawai Swasta,WNI,Banda Aceh,1988-09-09,9400000
-Aceh,1110234567890132,Joko Santoso,Laki-laki,A,Jl.Ahmad Yani No.10,Kampung Baru,Banda Aceh,Kristen,Belum Menikah,Wiraswasta,WNI,Banda Aceh,1989-10-10,4200000
-Bali,5101234567890283,Darma Setiawan,Laki-laki,B,Jl.Sudirman No.1,Denpasar Selatan,Denpasar Kota,Islam,Menikah,Petani,WNI,Denpasar,1980-01-01,2100000
-Bali,5102234567890284,Edi Santoso,Laki-laki,AB,Jl.Teuku Umar No.2,Denpasar Utara,Denpasar Kota,Kristen,Belum Menikah,Pegawai Negeri,WNI,Denpasar,1981-02-02,3200000
-Bali,5103234567890285,Fitriani Wijaya,Perempuan,O,Jl.Merdeka No.3,Denpasar Timur,Denpasar Kota,Hindu,Menikah,Wiraswasta,WNI,Denpasar,1982-03-03,2700000
-Bali,5104234567890286,Gandi Santoso,Laki-laki,A,Jl.Gatot Subroto No.4,Denpasar Barat,Denpasar Kota,Buddha,Menikah,Pelajar,WNI,Denpasar,1983-04-04,0
-Bali,5105234567890287,Hadi Setiawan,Laki-laki,O,Jl.Diponegoro No.5,Denpasar Selatan,Denpasar Kota,Islam,Belum Menikah,Petani,WNI,Denpasar,1984-05-05,1400000
-Bali,5106234567890288,Indah Wijaya,Perempuan,B,Jl.Teuku Umar No.6,Denpasar Utara,Denpasar Kota,Kristen,Menikah,Pegawai Negeri,WNI,Denpasar,1985-06-06,4400000
-Bali,5107234567890289,Joko Santoso,Laki-laki,AB,Jl.Merdeka No.7,Denpasar Timur,Denpasar Kota,Hindu,Belum Menikah,Wiraswasta,WNI,Denpasar,1986-07-07,14900000
-Bali,5108234567890290,Kartika Handayani,Perempuan,O,Jl.Gatot Subroto No.8,Denpasar Barat,Denpasar Kota,Buddha,Menikah,Pelajar,WNI,Denpasar,1987-08-08,400000
-Bali,5109234567890291,Larasati Wijaya,Perempuan,A,Jl.Diponegoro No.9,Denpasar Selatan,Denpasar Kota,Islam,Menikah,Wiraswasta,WNI,Denpasar,1988-09-09,2600000
-Bali,5110234567890292,Mega Santoso,Perempuan,B,Jl.Teuku Umar No.10,Denpasar Timur,Denpasar Kota,Hindu,Belum Menikah,Pegawai Negeri,WNI,Denpasar,1989-10-10,6500000
-Bangka Belitung,1901234567890213,Nadia Wijaya,Perempuan,A,Jl.Merdeka No.1,Girimaya,Girimaya,Islam,Menikah,Petani,WNI,Pangkalpinang,1980-01-01,1400000
-Bangka Belitung,1902234567890214,Oscar Santoso,Laki-laki,B,Jl.Sisingamangaraja No.2,Bukit Intan,Girimaya,Kristen,Belum Menikah,Pegawai Negeri,WNI,Pangkalpinang,1981-02-02,7500000
-Bangka Belitung,1903234567890215,Putri Handayani,Perempuan,AB,Jl.Diponegoro No.3,Kelurahan Rawa,Bukit Intan,Hindu,Menikah,Wiraswasta,WNI,Pangkalpinang,1982-03-03,12700000
-Bangka Belitung,1904234567890216,Qori Setiawan,Laki-laki,O,Jl.Gatot Subroto No.4,Kelurahan Pasir,Kota Pangkalpinang,Buddha,Menikah,Pelajar,WNI,Pangkalpinang,1983-04-04,100000
-Bangka Belitung,1905234567890217,Rina Wulandari,Perempuan,A,Jl.Teuku Umar No.6,Kelurahan Rawa,Kota Pangkalpinang,Kristen,Menikah,Pegawai Negeri,WNI,Pangkalpinang,1984-05-05,5800000
-Bangka Belitung,1906234567890218,Sandi Pranoto,Laki-laki,B,Jl.Sudirman No.5,Kelurahan Bukit,Kota Pangkalpinang,Islam,Belum Menikah,Petani,WNI,Pangkalpinang,1985-06-06,1600000
-Bangka Belitung,1907234567890219,Tita Santoso,Perempuan,AB,Jl.Teuku Umar No.6,Kelurahan Rawa,Kota Pangkalpinang,Kristen,Menikah,Pegawai Negeri,WNI,Pangkalpinang,1986-07-07,3000000
-Bangka Belitung,1908234567890220,Umi Handayani,Perempuan,O,Jl.Kartini No.7,Kelurahan Pasir,Kota Pangkalpinang,Hindu,Belum Menikah,Wiraswasta,WNI,Pangkalpinang,1987-08-08,6000000
-Bangka Belitung,1909234567890221,Vivi Setiawan,Perempuan,A,Jl.Pattimura No.8,Kelurahan Rawa,Kota Pangkalpinang,Buddha,Menikah,Pelajar,WNI,Pangkalpinang,1988-09-09,500000
-Bangka Belitung,1910234567890222,Wahyu Pranoto,Laki-laki,B,Jl.Ahmad Yani No.9,Kelurahan Pasir,Kota Pangkalpinang,Kristen,Belum Menikah,Pegawai Swasta,WNI,Pangkalpinang,1989-10-10,7900000
-Banten,3601234567890233,Hadi Setiawan,Laki-laki,B,Jl.Sisingamangaraja No.1,Labuan,Serang,Islam,Menikah,Petani,WNI,Serang,1980-01-01,1800000
-Banten,3602234567890234,Indah Wijaya,Perempuan,AB,Jl.Diponegoro No.2,Pandeglang,Serang,Kristen,Belum Menikah,Pegawai Negeri,WNI,Serang,1981-02-02,4700000
-Banten,3603234567890235,Joko Santoso,Laki-laki,O,Jl.Gatot Subroto No.3,Serang Timur,Serang,Hindu,Menikah,Wiraswasta,WNI,Serang,1982-03-03,5900000
-Banten,3604234567890236,Kartika Handayani,Perempuan,A,Jl.Sudirman No.4,Baros,Serang,Buddha,Menikah,Pelajar,WNI,Serang,1983-04-04,100000
-Banten,3605234567890237,Larasati Wijaya,Perempuan,B,Jl.Teuku Umar No.5,Cilegon Timur,Serang,Islam,Belum Menikah,Petani,WNI,Serang,1984-05-05,1800000
-Banten,3606234567890238,Mega Santoso,Perempuan,AB,Jl.Kartini No.6,Cilegon Barat,Serang,Kristen,Menikah,Pegawai Negeri,WNI,Serang,1985-06-06,3600000
-Banten,3607234567890239,Nadia Wijaya,Perempuan,O,Jl.Pattimura No.7,Cilegon Selatan,Serang,Hindu,Belum Menikah,Wiraswasta,WNI,Serang,1986-07-07,4300000
-Banten,3608234567890240,Oscar Santoso,Laki-laki,A,Jl.Ahmad Yani No.8,Cilegon Utara,Serang,Buddha,Menikah,Pelajar,WNI,Serang,1987-08-08,300000
-Banten,3609234567890241,Putri Handayani,Perempuan,B,Jl.Gatot Subroto No.9,Pandeglang,Serang,Islam,Menikah,Petani,WNI,Serang,1988-09-09,1100000
-Banten,3610234567890242,Qori Setiawan,Laki-laki,AB,Jl.Diponegoro No.10,Labuan,Serang,Kristen,Belum Menikah,Wiraswasta,WNI,Serang,1989-10-10,11100000
-Bengkulu,1701234567890193,Umi Handayani,Perempuan,O,Jl.Merdeka No.1,Tanjung Karang,Seluma,Islam,Menikah,Petani,WNI,Bengkulu,1980-01-01,1900000
-Bengkulu,1702234567890194,Vivi Setiawan,Perempuan,A,Jl.Sisingamangaraja No.2,Manna,Seluma,Kristen,Belum Men,,,Bengkulu,1981-02-02,
-Bengkulu,1703234567890195,Wahyu Pranoto,Laki-laki,B,Jl.Diponegoro No.3,Bengkulu Tengah,Seluma,Kristen,Belum Menikah,Pegawai Negeri,WNI,Bengkulu,1982-03-03,6800000
-Bengkulu,1704234567890196,Xaverius Wijaya,Laki-laki,AB,Jl.Gatot Subroto No.4,Manna,Bengkulu Tengah,Hindu,Menikah,Wiraswasta,WNI,Bengkulu,1983-04-04,8700000
-Bengkulu,1705234567890197,Yanti Setiawati,Perempuan,O,Jl.Sudirman No.5,Curup Selatan,Bengkulu Tengah,Buddha,Menikah,Pelajar,WNI,Bengkulu,1984-05-05,0
-Bengkulu,1706234567890198,Zainal Arifin,Laki-laki,A,Jl.Teuku Umar No.6,Kepahiang,Bengkulu Tengah,Islam,Belum Menikah,Petani,WNI,Bengkulu,1985-06-06,2200000
-Bengkulu,1707234567890199,Ahmad Santoso,Laki-laki,B,Jl.Kartini No.7,Bengkulu Tengah,Bengkulu Tengah,Kristen,Menikah,Pegawai Negeri,WNI,Bengkulu,1986-07-07,6400000
-Bengkulu,1708234567890200,Ani Pranoto,Perempuan,AB,Jl.Pattimura No.8,Manna,Bengkulu Tengah,Hindu,Belum Menikah,Wiraswasta,WNI,Bengkulu,1987-08-08,5100000
-Bengkulu,1709234567890201,Budi Wijaya,Laki-laki,O,Jl.Imam Bonjol No.9,Lebong,Bengkulu Tengah,Buddha,Menikah,Pelajar,WNI,Bengkulu,1988-09-09,300000
-Bengkulu,1710234567890202,Citra Handayani,Perempuan,A,Jl.Ahmad Yani No.10,Kaur,Bengkulu Tengah,Islam,Belum Menikah,Pegawai Swasta,WNI,Bengkulu,1989-10-10,3500000
-DI Yogyakarta,3401234567890263,Kartika Handayani,Perempuan,O,Jl.Diponegoro No.1,Gondokusuman,Yogyakarta Kota,Islam,Menikah,Petani,WNI,Yogyakarta,1980-01-01,2500000
-DI Yogyakarta,3402234567890264,Larasati Wijaya,Perempuan,A,Jl.Gatot Subroto No.2,Mergangsan,Yogyakarta Kota,Kristen,Belum Menikah,Pegawai Negeri,WNI,Yogyakarta,1981-02-02,4800000
-DI Yogyakarta,3403234567890265,Mega Santoso,Perempuan,B,Jl.Sudirman No.3,Kotagede,Yogyakarta Kota,Hindu,Menikah,Wiraswasta,WNI,Yogyakarta,1982-03-03,11200000
-DI Yogyakarta,3404234567890266,Nadia Wijaya,Perempuan,AB,Jl.Teuku Umar No.4,Gondokusuman,Yogyakarta Kota,Buddha,Menikah,Pelajar,WNI,Yogyakarta,1983-04-04,400000
-DI Yogyakarta,3405234567890267,Oscar Santoso,Laki-laki,O,Jl.Merdeka No.5,Mergangsan,Yogyakarta Kota,Islam,Belum Menikah,Petani,WNI,Yogyakarta,1984-05-05,1400000
-DI Yogyakarta,3406234567890268,Putri Handayani,Perempuan,A,Jl.Gatot Subroto No.6,Kotagede,Yogyakarta Kota,Kristen,Menikah,Pegawai Negeri,WNI,Yogyakarta,1985-06-06,7500000
-DI Yogyakarta,3407234567890269,Qori Setiawan,Laki-laki,B,Jl.Sudirman No.7,Gondokusuman,Yogyakarta Kota,Hindu,Belum Menikah,Wiraswasta,WNI,Yogyakarta,1986-07-07,3700000
-DI Yogyakarta,3408234567890270,Rina Wulandari,Perempuan,AB,Jl.Teuku Umar No.8,Mergangsan,Yogyakarta Kota,Buddha,Menikah,Pelajar,WNI,Yogyakarta,1987-08-08,0
-DI Yogyakarta,3409234567890271,Sandi Pranoto,Laki-laki,B,Jl.Merdeka No.9,Gondokusuman,Yogyakarta Kota,Islam,Belum Menikah,Petani,WNI,Yogyakarta,1988-09-09,1500000
-DI Yogyakarta,3410234567890272,Tita Santoso,Perempuan,O,Jl.Gatot Subroto No.10,Kotagede,Yogyakarta Kota,Kristen,Menikah,Pegawai Negeri,WNI,Yogyakarta,1989-10-10,7900000
-DKI Jakarta,3101234567890223,Yanti Setiawati,Perempuan,AB,Jl.Merdeka No.1,Tanjung Priok,Tanjung Priok,Islam,Menikah,Petani,WNI,Jakarta,1980-01-01,1700000
-DKI Jakarta,3102234567890224,Zainal Arifin,Laki-laki,O,Jl.Sisingamangaraja No.2,Koja,Tanjung Priok,Kristen,Belum Menikah,Pegawai Negeri,WNI,Jakarta,1981-02-02,3500000
-DKI Jakarta,3103234567890225,Ahmad Santoso,Laki-laki,AB,Jl.Diponegoro No.3,Koja,Tanjung Priok,Hindu,Menikah,Wiraswasta,WNI,Jakarta,1982-03-03,7900000
-DKI Jakarta,3104234567890226,Ani Pranoto,Perempuan,O,Jl.Gatot Subroto No.4,Koja,Tanjung Priok,Buddha,Menikah,Pelajar,WNI,Jakarta,1983-04-04,0
-DKI Jakarta,3105234567890227,Budi Wijaya,Laki-laki,A,Jl.Sudirman No.5,Koja,Tanjung Priok,Islam,Belum Menikah,Petani,WNI,Jakarta,1984-05-05,2000000
-DKI Jakarta,3106234567890228,Citra Handayani,Perempuan,B,Jl.Teuku Umar No.6,Koja,Tanjung Priok,Kristen,Menikah,Pegawai Negeri,WNI,Jakarta,1985-06-06,4700000
-DKI Jakarta,3107234567890229,Darma Setiawan,Laki-laki,AB,Jl.Kartini No.7,Koja,Tanjung Priok,Hindu,Belum Menikah,Wiraswasta,WNI,Jakarta,1986-07-07,13600000
-DKI Jakarta,3108234567890230,Edi Santoso,Laki-laki,O,Jl.Pattimura No.8,Koja,Tanjung Priok,Buddha,Menikah,Pelajar,WNI,Jakarta,1987-08-08,500000
-DKI Jakarta,3109234567890231,Fitriani Wijaya,Perempuan,A,Jl.Ahmad Yani No.9,Koja,Tanjung Priok,Islam,Belum Menikah,Pegawai Swasta,WNI,Jakarta,1988-09-09,7100000
-DKI Jakarta,3110234567890232,Gandi Santoso,Laki-laki,B,Jl.Merdeka No.10,Koja,Tanjung Priok,Kristen,Menikah,Dokter,WNI,Jakarta,1989-10-10,12100000
-Gorontalo,7501234567890403,Putri Handayani,Perempuan,B,Jl.Sudirman No.1,Gorontalo Kota,Gorontalo Kota,Buddha,Menikah,Petani,WNI,Gorontalo,1980-01-01,1900000
-Gorontalo,7502234567890404,Qori Setiawan,Laki-laki,AB,Jl.Teuku Umar No.2,Gorontalo Kota,Gorontalo Kota,Islam,Belum Menikah,Pegawai Negeri,WNI,Gorontalo,1981-02-02,5200000
-Gorontalo,7503234567890405,Rina Wulandari,Perempuan,O,Jl.Merdeka No.3,Gorontalo Kota,Gorontalo Kota,Hindu,Menikah,Wiraswasta,WNI,Gorontalo,1982-03-03,7300000
-Gorontalo,7504234567890406,Sandi Pranoto,Laki-laki,AB,Jl.Sudirman No.4,Gorontalo Kota,Gorontalo Kota,Buddha,Belum Menikah,Petani,WNI,Gorontalo,1983-04-04,1600000
-Gorontalo,7505234567890407,Tita Santoso,Perempuan,B,Jl.Teuku Umar No.5,Gorontalo Kota,Gorontalo Kota,Islam,Menikah,Pegawai Negeri,WNI,Gorontalo,1984-05-05,7400000
-Gorontalo,7506234567890408,Umi Handayani,Perempuan,AB,Jl.Merdeka No.6,Gorontalo Kota,Gorontalo Kota,Hindu,Belum Menikah,Wiraswasta,WNI,Gorontalo,1985-06-06,3800000
-Gorontalo,7507234567890409,Vivi Setiawan,Perempuan,O,Jl.Sudirman No.7,Gorontalo Kota,Gorontalo Kota,Buddha,Menikah,Petani,WNI,Gorontalo,1986-07-07,1300000
-Gorontalo,7508234567890410,Wahyu Pranoto,Laki-laki,AB,Jl.Teuku Umar No.8,Gorontalo Kota,Gorontalo Kota,Islam,Belum Menikah,Pegawai Negeri,WNI,Gorontalo,1987-08-08,6400000
-Gorontalo,7509234567890411,Xaverius Wijaya,Laki-laki,B,Jl.Merdeka No.9,Gorontalo Kota,Gorontalo Kota,Hindu,Menikah,Wiraswasta,WNI,Gorontalo,1988-09-09,8200000
-Gorontalo,7510234567890412,Yanti Setiawati,Perempuan,AB,Jl.Sudirman No.10,Gorontalo Kota,Gorontalo Kota,Buddha,Belum Menikah,Petani,WNI,Gorontalo,1989-10-10,1300000
-Jambi,1501234567890183,Kartika Handayani,Perempuan,A,Jl.Merdeka No.1,Kota Jambi,Kota Jambi,Islam,Menikah,Petani,WNI,Jambi,1980-01-01,2200000
-Jambi,1502234567890184,Larasati Wijaya,Perempuan,O,Jl.Sisingamangaraja No.2,Padang Bulan,Kota Jambi,Kristen,Belum Menikah,Pegawai Negeri,WNI,Jambi,1981-02-02,5400000
-Jambi,1503234567890185,Mega Santoso,Perempuan,B,Jl.Diponegoro No.3,Simpang Empat,Kota Jambi,Hindu,Menikah,Wiraswasta,WNI,Jambi,1982-03-03,8900000
-Jambi,1504234567890186,Nadia Wijaya,Perempuan,AB,Jl.Gatot Subroto No.4,Mayang,Kota Jambi,Buddha,Menikah,Pelajar,WNI,Jambi,1983-04-04,500000
-Jambi,1505234567890187,Oscar Santoso,Laki-laki,O,Jl.Sudirman No.5,Paal Merah,Kota Jambi,Islam,Belum Menikah,Petani,WNI,Jambi,1984-05-05,2500000
-Jambi,1506234567890188,Putri Handayani,Perempuan,A,Jl.Teuku Umar No.6,Simbur,Kota Jambi,Kristen,Menikah,Pegawai Negeri,WNI,Jambi,1985-06-06,4400000
-Jambi,1507234567890189,Qori Setiawan,Laki-laki,B,Jl.Kartini No.7,Kelurahan Legok,Kota Jambi,Hindu,Belum Menikah,Wiraswasta,WNI,Jambi,1986-07-07,10300000
-Jambi,1508234567890190,Rina Wulandari,Perempuan,AB,Jl.Pattimura No.8,Mayang,Kota Jambi,Buddha,Menikah,Pelajar,WNI,Jambi,1987-08-08,0
-Jambi,1509234567890191,Sandi Pranoto,Laki-laki,A,Jl.Ahmad Yani No.9,Simpang Empat,Kota Jambi,Islam,Belum Menikah,Pegawai Swasta,WNI,Jambi,1988-09-09,5400000
-Jambi,1510234567890192,Tita Santoso,Perempuan,B,Jl.Imam Bonjol No.10,Paal Merah,Kota Jambi,Kristen,Menikah,Dokter,WNI,Jambi,1989-10-10,8800000
-Jawa Barat,3201234567890243,Rina Wulandari,Perempuan,O,Jl.Merdeka No.1,Cicendo,Bandung Kota,Islam,Menikah,Petani,WNI,Bandung,1980-01-01,1800000
-Jawa Barat,3202234567890244,Sandi Pranoto,Laki-laki,A,Jl.Sisingamangaraja No.2,Coblong,Bandung Kota,Kristen,Belum Menikah,Pegawai Negeri,WNI,Bandung,1981-02-02,5500000
-Jawa Barat,3203234567890245,Tita Santoso,Perempuan,B,Jl.Diponegoro No.3,Regol,Bandung Kota,Hindu,Menikah,Wiraswasta,WNI,Bandung,1982-03-03,8800000
-Jawa Barat,3204234567890246,Umi Handayani,Perempuan,AB,Jl.Gatot Subroto No.4,Lengkong,Bandung Kota,Buddha,Menikah,Pelajar,WNI,Bandung,1983-04-04,0
-Jawa Barat,3205234567890247,Vivi Setiawan,Perempuan,O,Jl.Sudirman No.5,Cicendo,Bandung Kota,Islam,Belum Menikah,Petani,WNI,Bandung,1984-05-05,1400000
-Jawa Barat,3206234567890248,Wahyu Pranoto,Laki-laki,A,Jl.Teuku Umar No.6,Coblong,Bandung Kota,Kristen,Menikah,Pegawai Negeri,WNI,Bandung,1985-06-06,6600000
-Jawa Barat,3207234567890249,Xaverius Wijaya,Laki-laki,AB,Jl.Kartini No.7,Regol,Bandung Kota,Hindu,Belum Menikah,Wiraswasta,WNI,Bandung,1986-07-07,10000000
-Jawa Barat,3208234567890250,Yanti Setiawati,Perempuan,B,Jl.Pattimura No.8,Lengkong,Bandung Kota,Buddha,Menikah,Pelajar,WNI,Bandung,1987-08-08,100000
-Jawa Barat,3209234567890251,Zainal Arifin,Laki-laki,O,Jl.Ahmad Yani No.9,Cicendo,Bandung Kota,Islam,Belum Menikah,Pegawai Swasta,WNI,Bandung,1988-09-09,8800000
-Jawa Barat,3210234567890252,Ahmad Santoso,Laki-laki,A,Jl.Merdeka No.10,Coblong,Bandung Kota,Kristen,Menikah,Dokter,WNI,Bandung,1989-10-10,18100000
-Jawa Tengah,3301234567890253,Ani Pranoto,Perempuan,B,Jl.Sisingamangaraja No.1,Semarang Kota,Semarang Kota,Islam,Menikah,Petani,WNI,Semarang,1980-01-01,2200000
-Jawa Tengah,3302234567890254,Budi Wijaya,Laki-laki,O,Jl.Diponegoro No.2,Tembalang,Semarang Kota,Kristen,Belum Menikah,Pegawai Negeri,WNI,Semarang,1981-02-02,3900000
-Jawa Tengah,3303234567890255,Citra Handayani,Perempuan,A,Jl.Gatot Subroto No.3,Barusari,Semarang Kota,Hindu,Menikah,Wiraswasta,WNI,Semarang,1982-03-03,8700000
-Jawa Tengah,3304234567890256,Darma Setiawan,Laki-laki,AB,Jl.Sudirman No.4,Candisari,Semarang Kota,Buddha,Menikah,Pelajar,WNI,Semarang,1983-04-04,100000
-Jawa Tengah,3305234567890257,Edi Santoso,Laki-laki,B,Jl.Teuku Umar No.5,Pedurungan,Semarang Kota,Islam,Belum Menikah,Petani,WNI,Semarang,1984-05-05,1500000
-Jawa Tengah,3306234567890258,Fitriani Wijaya,Perempuan,AB,Jl.Kartini No.6,Banyumanik,Semarang Kota,Kristen,Menikah,Pegawai Negeri,WNI,Semarang,1985-06-06,7700000
-Jawa Tengah,3307234567890259,Gandi Santoso,Laki-laki,O,Jl.Pattimura No.7,Tembalang,Semarang Kota,Hindu,Belum Menikah,Wiraswasta,WNI,Semarang,1986-07-07,8700000
-Jawa Tengah,3308234567890260,Hadi Setiawan,Laki-laki,A,Jl.Ahmad Yani No.8,Barusari,Semarang Kota,Buddha,Menikah,Pelajar,WNI,Semarang,1987-08-08,500000
-Jawa Tengah,3309234567890261,Indah Wijaya,Perempuan,B,Jl.Merdeka No.9,Pedurungan,Semarang Kota,Islam,Belum Menikah,Pegawai Swasta,WNI,Semarang,1988-09-09,9900000
-Jawa Tengah,3310234567890262,Joko Santoso,Laki-laki,AB,Jl.Sisingamangaraja No.10,Banyumanik,Semarang Kota,Kristen,Menikah,Dokter,WNI,Semaran,1989-10-10,18900000
-Jawa Timur,3501234567890273,Umi Handayani,Perempuan,A,Jl.Sudirman No.1,Sawahan,Surabaya Kota,Islam,Menikah,Wiraswasta,WNI,Surabaya,1980-01-01,12200000
-Jawa Timur,3502234567890274,Vivi Setiawan,Perempuan,AB,Jl.Teuku Umar No.2,Genteng,Surabaya Kota,Buddha,Menikah,Pelajar,WNI,Surabaya,1981-02-02,200000
-Jawa Timur,3503234567890275,Wahyu Pranoto,Laki-laki,B,Jl.Merdeka No.3,Sukolilo,Surabaya Kota,Hindu,Belum Menikah,Petani,WNI,Surabaya,1982-03-03,1500000
-Jawa Timur,3504234567890276,Xaverius Wijaya,Laki-laki,O,Jl.Gatot Subroto No.4,Krembangan,Surabaya Kota,Islam,Menikah,Pegawai Negeri,WNI,Surabaya,1983-04-04,3800000
-Jawa Timur,3505234567890277,Yanti Setiawati,Perempuan,A,Jl.Diponegoro No.5,Pabean Cantian,Surabaya Kota,Kristen,Belum Menikah,Wiraswasta,WNI,Surabaya,1984-05-05,15000000
-Jawa Timur,3506234567890278,Zainal Arifin,Laki-laki,AB,Jl.Sudirman No.6,Rungkut,Surabaya Kota,Buddha,Menikah,Pelajar,WNI,Surabaya,1985-06-06,300000
-Jawa Timur,3507234567890279,Ahmad Santoso,Laki-laki,O,Jl.Teuku Umar No.7,Tegalsari,Surabaya Kota,Hindu,Belum Menikah,Petani,WNI,Surabaya,1986-07-07,1000000
-Jawa Timur,3508234567890280,Ani Pranoto,Perempuan,B,Jl.Merdeka No.8,Dukuh Pakis,Surabaya Kota,Islam,Menikah,Pegawai Negeri,WNI,Surabaya,1987-08-08,7800000
-Jawa Timur,3509234567890281,Budi Wijaya,Laki-laki,AB,Jl.Gatot Subroto No.9,Sukomanunggal,Surabaya Kota,Kristen,Belum Menikah,Wiraswasta,WNI,Surabaya,1988-09-09,3200000
-Jawa Timur,3510234567890282,Citra Handayani,Perempuan,O,Jl.Diponegoro No.10,Sukolilo,Surabaya Kota,Buddha,Menikah,Pelajar,WNI,Surabaya,1989-10-10,0
-Kalimantan Barat,6101234567890293,Nadia Wijaya,Perempuan,B,Jl.Sudirman No.1,Pontianak Selatan,Pontianak Kota,Islam,Menikah,Petani,WNI,Pontianak,1980-01-01,1200000
-Kalimantan Barat,6102234567890294,Oscar Santoso,Laki-laki,AB,Jl.Teuku Umar No.2,Pontianak Utara,Pontianak Kota,Kristen,Belum Menikah,Wiraswasta,WNI,Pontianak,1981-02-02,6000000
-Kalimantan Barat,6103234567890295,Putri Handayani,Perempuan,O,Jl.Merdeka No.3,Pontianak Timur,Pontianak Kota,Hindu,Menikah,Pelajar,WNI,Pontianak,1982-03-03,500000
-Kalimantan Barat,6104234567890296,Qori Setiawan,Laki-laki,B,Jl.Gatot Subroto No.4,Pontianak Barat,Pontianak Kota,Buddha,Menikah,Petani,WNI,Pontianak,1983-04-04,2100000
-Kalimantan Barat,6105234567890297,Rina Wulandari,Perempuan,A,Jl.Sudirman No.5,Pontianak Selatan,Pontianak Kota,Islam,Belum Menikah,Pegawai Negeri,WNI,Pontianak,1984-05-05,6800000
-Kalimantan Barat,6106234567890298,Sandi Pranoto,Laki-laki,B,Jl.Teuku Umar No.6,Pontianak Utara,Pontianak Kota,Kristen,Menikah,Wiraswasta,WNI,Pontianak,1985-06-06,3600000
-Kalimantan Barat,6107234567890299,Tita Santoso,Perempuan,O,Jl.Merdeka No.7,Pontianak Timur,Pontianak Kota,Hindu,Belum Menikah,Pelajar,WNI,Pontianak,1986-07-07,300000
-Kalimantan Barat,6108234567890300,Umi Handayani,Perempuan,AB,Jl.Gatot Subroto No.8,Pontianak Barat,Pontianak Kota,Buddha,Menikah,Petani,WNI,Pontianak,1987-08-08,2000000
-Kalimantan Barat,6109234567890301,Vivi Setiawan,Perempuan,O,Jl.Sudirman No.9,Pontianak Selatan,Pontianak Kota,Islam,Belum Menikah,Pegawai Negeri,WNI,Pontianak,1988-09-09,6800000
-Kalimantan Barat,6110234567890302,Wahyu Pranoto,Laki-laki,B,Jl.Teuku Umar No.10,Pontianak Utara,Pontianak Kota,Kristen,Menikah,Wiraswasta,WNI,Pontianak,1989-10-10,13900000
-Kalimantan Selatan,6301234567890313,Gandi Santoso,Laki-laki,B,Jl.Sudirman No.1,Banjarmasin Timur,Banjarmasin Kota,Islam,Menikah,Petani,WNI,Banjarmasin,1980-01-01,2400000
-Kalimantan Selatan,6302234567890314,Hadi Setiawan,Laki-laki,AB,Jl.Teuku Umar No.2,Banjarmasin Utara,Banjarmasin Kota,Kristen,Belum Menikah,Pegawai Negeri,WNI,Banjarmasin,1981-02-02,4600000
-Kalimantan Selatan,6303234567890315,Indah Wijaya,Perempuan,O,Jl.Merdeka No.3,Banjarmasin Selatan,Banjarmasin Kota,Hindu,Menikah,Wiraswasta,WNI,Banjarmasin,1982-03-03,2200000
-Kalimantan Selatan,6304234567890316,Joko Santoso,Laki-laki,A,Jl.Sudirman No.4,Banjarmasin Barat,Banjarmasin Kota,Buddha,Menikah,Pelajar,WNI,Banjarmasin,1983-04-04,500000
-Kalimantan Selatan,6305234567890317,Kartika Handayani,Perempuan,B,Jl.Teuku Umar No.5,Banjarmasin Utara,Banjarmasin Kota,Islam,Belum Menikah,Petani,WNI,Banjarmasin,1984-05-05,1100000
-Kalimantan Selatan,6306234567890318,Larasati Wijaya,Perempuan,AB,Jl.Merdeka No.6,Banjarmasin Selatan,Banjarmasin Kota,Kristen,Menikah,Pegawai Negeri,WNI,Banjarmasin,1985-06-06,7300000
-Kalimantan Selatan,6307234567890319,Mega Santoso,Perempuan,O,Jl.Sudirman No.7,Banjarmasin Timur,Banjarmasin Kota,Hindu,Belum Menikah,Wiraswasta,WNI,Banjarmasin,1986-07-07,8800000
-Kalimantan Selatan,6308234567890320,Nadia Wijaya,Perempuan,B,Jl.Teuku Umar No.8,Banjarmasin Barat,Banjarmasin Kota,Buddha,Menikah,Pelajar,WNI,Banjarmasin,1987-08-08,500000
-Kalimantan Selatan,6309234567890321,Oscar Santoso,Laki-laki,O,Jl.Merdeka No.9,Banjarmasin Utara,Banjarmasin Kota,Islam,Menikah,Petani,WNI,Banjarmasin,1988-09-09,1800000
-Kalimantan Selatan,6310234567890322,Putri Handayani,Perempuan,A,Jl.Sudirman No.10,Banjarmasin Selatan,Banjarmasin Kota,Kristen,Belum Menikah,Pegawai Negeri,WNI,Banjarmasin,1989-10-10,3700000
-Kalimantan Tengah,6201234567890303,Xaverius Wijaya,Laki-laki,AB,Jl.Merdeka No.1,Jekan Raya,Palangka Raya Kota,Hindu,Menikah,Pelajar,WNI,Palangka Raya,1980-01-01,200000
-Kalimantan Tengah,6202234567890304,Yanti Setiawati,Perempuan,A,Jl.Sudirman No.2,Pahandut,Palangka Raya Kota,Buddha,Belum Menikah,Pegawai Negeri,WNI,Palangka Raya,1981-02-02,5700000
-Kalimantan Tengah,6203234567890305,Zainal Arifin,Laki-laki,O,Jl.Teuku Umar No.3,Bukit Batu,Palangka Raya Kota,Islam,Menikah,Wiraswasta,WNI,Palangka Raya,1982-03-03,6000000
-Kalimantan Tengah,6204234567890306,Ahmad Santoso,Laki-laki,B,Jl.Merdeka No.4,Jekan Raya,Palangka Raya Kota,Kristen,Belum Menikah,Pelajar,WNI,Palangka Raya,1983-04-04,300000
-Kalimantan Tengah,6205234567890307,Ani Pranoto,Perempuan,AB,Jl.Sudirman No.5,Pahandut,Palangka Raya Kota,Hindu,Menikah,Pegawai Negeri,WNI,Palangka Raya,1984-05-05,3000000
-Kalimantan Tengah,6206234567890308,Budi Wijaya,Laki-laki,O,Jl.Teuku Umar No.6,Bukit Batu,Palangka Raya Kota,Buddha,Belum Menikah,Wiraswasta,WNI,Palangka Raya,1985-06-06,8700000
-Kalimantan Tengah,6207234567890309,Citra Handayani,Perempuan,A,Jl.Merdeka No.7,Jekan Raya,Palangka Raya Kota,Islam,Menikah,Pelajar,WNI,Palangka Raya,1986-07-07,400000
-Kalimantan Tengah,6208234567890310,Darma Setiawan,Laki-laki,B,Jl.Sudirman No.8,Pahandut,Palangka Raya Kota,Kristen,Belum Menikah,Pegawai Negeri,WNI,Palangka Raya,1987-08-08,7800000
-Kalimantan Tengah,6209234567890311,Edi Santoso,Laki-laki,AB,Jl.Teuku Umar No.9,Bukit Batu,Palangka Raya Kota,Hindu,Menikah,Wiraswasta,WNI,Palangka Raya,1988-09-09,6500000
-Kalimantan Tengah,6210234567890312,Fitriani Wijaya,Perempuan,O,Jl.Merdeka No.10,Jekan Raya,Palangka Raya Kota,Buddha,Menikah,Pelajar,WNI,Palangka Raya,1989-10-10,400000
-Kalimantan Timur,6401234567890323,Qori Setiawan,Laki-laki,B,Jl.Teuku Umar No.1,Samarinda Kota,Samarinda Kota,Hindu,Menikah,Wiraswasta,WNI,Samarinda,1980-01-01,4700000
-Kalimantan Timur,6402234567890324,Rina Wulandari,Perempuan,A,Jl.Merdeka No.2,Samarinda Ulu,Samarinda Kota,Buddha,Belum Menikah,Pelajar,WNI,Samarinda,1981-02-02,500000
-Kalimantan Timur,6403234567890325,Sandi Pranoto,Laki-laki,O,Jl.Sudirman No.3,Samarinda Ilir,Samarinda Kota,Islam,Menikah,Petani,WNI,Samarinda,1982-03-03,1700000
-Kalimantan Timur,6404234567890326,Tita Santoso,Perempuan,AB,Jl.Teuku Umar No.4,Samarinda Seberang,Samarinda Kota,Kristen,Belum Menikah,Pegawai Negeri,WNI,Samarinda,1983-04-04,7000000
-Kalimantan Timur,6405234567890327,Umi Handayani,Perempuan,B,Jl.Merdeka No.5,Samarinda Ulu,Samarinda Kota,Hindu,Menikah,Wiraswasta,WNI,Samarinda,1984-05-05,14900000
-Kalimantan Timur,6406234567890328,Vivi Setiawan,Perempuan,AB,Jl.Sudirman No.6,Samarinda Ilir,Samarinda Kota,Buddha,Belum Menikah,Pelajar,WNI,Samarinda,1985-06-06,400000
-Kalimantan Timur,6407234567890329,Wahyu Pranoto,Laki-laki,O,Jl.Teuku Umar No.7,Samarinda Seberang,Samarinda Kota,Islam,Menikah,Petani,WNI,Samarinda,1986-07-07,1400000
-Kalimantan Timur,6408234567890330,Xaverius Wijaya,Laki-laki,AB,Jl.Merdeka No.8,Samarinda Ulu,Samarinda Kota,Kristen,Belum Menikah,Pegawai Negeri,WNI,Samarinda,1987-08-08,3900000
-Kalimantan Timur,6409234567890331,Yanti Setiawati,Perempuan,O,Jl.Sudirman No.9,Samarinda Ilir,Samarinda Kota,Hindu,Menikah,Wiraswasta,WNI,Samarinda,1988-09-09,11500000
-Kalimantan Timur,6410234567890332,Zainal Arifin,Laki-laki,A,Jl.Teuku Umar No.10,Samarinda Seberang,Samarinda Kota,Buddha,Belum Menikah,Pelajar,WNI,Samarinda,1989-10-10,100000
-Kalimantan Utara,6501234567890333,Ahmad Santoso,Laki-laki,B,Jl.Merdeka No.1,Tanjung Selor Barat,Bulungan Kota,Kristen,Menikah,Pegawai Negeri,WNI,Tanjung Selor,1980-01-01,6400000
-Kalimantan Utara,6502234567890334,Ani Pranoto,Perempuan,AB,Jl.Sudirman No.2,Tanjung Selor Timur,Bulungan Kota,Hindu,Belum Menikah,Wiraswasta,WNI,Tanjung Selor,1981-02-02,2000000
-Kalimantan Utara,6503234567890335,Budi Wijaya,Laki-laki,O,Jl.Teuku Umar No.3,Tanjung Selor Utara,Bulungan Kota,Buddha,Menikah,Petani,WNI,Tanjung Selor,1982-03-03,1800000
-Kalimantan Utara,6504234567890336,Citra Handayani,Perempuan,A,Jl.Merdeka No.4,Tanjung Selor Selatan,Bulungan Kota,Islam,Menikah,Pegawai Negeri,WNI,Tanjung Selor,1983-04-04,6100000
-Kalimantan Utara,6505234567890337,Darma Setiawan,Laki-laki,AB,Jl.Sudirman No.5,Tanjung Selor Timur,Bulungan Kota,Kristen,Belum Menikah,Wiraswasta,WNI,Tanjung Selor,1984-05-05,2400000
-Kalimantan Utara,6506234567890338,Edi Santoso,Laki-laki,O,Jl.Teuku Umar No.6,Tanjung Selor Utara,Bulungan Kota,Hindu,Menikah,Petani,WNI,Tanjung Selor,1985-06-06,1100000
-Kalimantan Utara,6507234567890339,Fitriani Wijaya,Perempuan,B,Jl.Merdeka No.7,Tanjung Selor Selatan,Bulungan Kota,Buddha,Menikah,Pegawai Negeri,WNI,Tanjung Selor,1986-07-07,5300000
-Kalimantan Utara,6508234567890340,Gandi Santoso,Laki-laki,AB,Jl.Sudirman No.8,Tanjung Selor Timur,Bulungan Kota,Islam,Belum Menikah,Wiraswasta,WNI,Tanjung Selor,1987-08-08,9800000
-Kalimantan Utara,6509234567890341,Hadi Setiawan,Laki-laki,O,Jl.Teuku Umar No.9,Tanjung Selor Utara,Bulungan Kota,Kristen,Menikah,Petani,WNI,Tanjung Selor,1988-09-09,1500000
-Kalimantan Utara,6510234567890342,Indah Wijaya,Perempuan,A,Jl.Merdeka No.10,Tanjung Selor Selatan,Bulungan Kota,Hindu,Belum Menikah,Pegawai Negeri,WNI,Tanjung Selor,1989-10-10,3300000
-Kepulauan Riau,2101234567890173,Ani Pranoto,Perempuan,O,Jl.Merdeka No.1,Tanjung Pinang Timur,Tanjung Pinang Kota,Islam,Menikah,Petani,WNI,Tanjung Pinang,1980-01-01,1500000
-Kepulauan Riau,2102234567890174,Budi Wijaya,Laki-laki,A,Jl.Sisingamangaraja No.2,Tanjung Pinang Selatan,Tanjung Pinang Kota,Kristen,Belum Menikah,Pegawai Negeri,WNI,Tanjung Pinang,1981-02-02,6600000
-Kepulauan Riau,2103234567890175,Citra Handayani,Perempuan,B,Jl.Diponegoro No.3,Tanjung Pinang Barat,Tanjung Pinang Kota,Hindu,Menikah,Wiraswasta,WNI,Tanjung Pinang,1982-03-03,4000000
-Kepulauan Riau,2104234567890176,Darma Setiawan,Laki-laki,AB,Jl.Gatot Subroto No.4,Tanjung Pinang Timur,Tanjung Pinang Kota,Buddha,Menikah,Pelajar,WNI,Tanjung Pinang,1983-04-04,0
-Kepulauan Riau,2105234567890177,Edi Santoso,Laki-laki,O,Jl.Sudirman No.5,Tanjung Pinang Selatan,Tanjung Pinang Kota,Islam,Belum Menikah,Petani,WNI,Tanjung Pinang,1984-05-05,2300000
-Kepulauan Riau,2106234567890178,Fitriani Wijaya,Perempuan,A,Jl.Teuku Umar No.6,Tanjung Pinang Barat,Tanjung Pinang Kota,Kristen,Menikah,Pegawai Negeri,WNI,Tanjung Pinang,1985-06-06,3400000
-Kepulauan Riau,2107234567890179,Gandi Santoso,Laki-laki,B,Jl.Kartini No.7,Tanjung Pinang Selatan,Tanjung Pinang Kota,Hindu,Belum Menikah,Wiraswasta,WNI,Tanjung Pinang,1986-07-07,5200000
-Kepulauan Riau,2108234567890180,Hadi Setiawan,Laki-laki,AB,Jl.Pattimura No.8,Tanjung Pinang Timur,Tanjung Pinang Kota,Buddha,Menikah,Pelajar,WNI,Tanjung Pinang,1987-08-08,100000
-Kepulauan Riau,2109234567890181,Indah Wijaya,Perempuan,O,Jl.Imam Bonjol No.9,Tanjung Pinang Barat,Tanjung Pinang Kota,Islam,Menikah,Pegawai Swasta,WNI,Tanjung Pinang,1988-09-09,8500000
-Kepulauan Riau,2110234567890182,Joko Santoso,Laki-laki,A,Jl.Ahmad Yani No.10,Tanjung Pinang Selatan,Tanjung Pinang Kota,Kristen,Belum Menikah,Wiraswasta,WNI,Tanjung Pinang,1989-10-10,6200000
-Lampung,1801234567890203,Darma Setiawan,Laki-laki,A,Jl.Merdeka No.1,Rajabasa,Kedaton,Islam,Menikah,Petani,WNI,Bandar Lampung,1980-01-01,1600000
-Lampung,1802234567890204,Edi Santoso,Laki-laki,O,Jl.Sisingamangaraja No.2,Sukarame,Kedaton,Kristen,Belum Menikah,Pegawai Negeri,WNI,Bandar Lampung,1981-02-02,6300000
-Lampung,1803234567890205,Fitriani Wijaya,Perempuan,B,Jl.Diponegoro No.3,Kedamaian,Kedaton,Hindu,Menikah,Wiraswasta,WNI,Bandar Lampung,1982-03-03,12800000
-Lampung,1804234567890206,Gandi Santoso,Laki-laki,AB,Jl.Gatot Subroto No.4,Kemiling,Kedaton,Buddha,Menikah,Pelajar,WNI,Bandar Lampung,1983-04-04,100000
-Lampung,1805234567890207,Hadi Setiawan,Laki-laki,O,Jl.Sudirman No.5,Sukabumi,Kedaton,Islam,Belum Menikah,Petani,WNI,Bandar Lampung,1984-05-05,2500000
-Lampung,1806234567890208,Indah Wijaya,Perempuan,A,Jl.Teuku Umar No.6,Rajabasa,Kedaton,Kristen,Menikah,Pegawai Negeri,WNI,Bandar Lampung,1985-06-06,7800000
-Lampung,1807234567890209,Joko Santoso,Laki-laki,B,Jl.Kartini No.7,Sukaraja,Kedaton,Hindu,Belum Menikah,Wiraswasta,WNI,Bandar Lampung,1986-07-07,7100000
-Lampung,1808234567890210,Kartika Handayani,Perempuan,AB,Jl.Pattimura No.8,Kemiling,Kedaton,Buddha,Menikah,Pelajar,WNI,Bandar Lampung,1987-08-08,500000
-Lampung,1809234567890211,Larasati Wijaya,Perempuan,O,Jl.Imam Bonjol No.9,Kedamaian,Kedaton,Islam,Menikah,Pegawai Swasta,WNI,Bandar Lampung,1988-09-09,6400000
-Lampung,1810234567890212,Mega Santoso,Perempuan,B,Jl.Ahmad Yani No.10,Kemiling,Kedaton,Kristen,Belum Menikah,Dokter,WNI,Bandar Lampung,1989-10-10,18200000
-Maluku,8101234567890423,Indah Wijaya,Perempuan,A,Jl.Merdeka No.1,Ambon Kota,Ambon Kota,Hindu,Menikah,Wiraswasta,WNI,Ambon,1980-01-01,11500000
-Maluku,8102234567890424,Joko Santoso,Laki-laki,B,Jl.Sudirman No.2,Ambon Kota,Ambon Kota,Buddha,Belum Menikah,Petani,WNI,Ambon,1981-02-02,2200000
-Maluku,8103234567890425,Kartika Handayani,Perempuan,AB,Jl.Teuku Umar No.3,Ambon Kota,Ambon Kota,Islam,Menikah,Pegawai Negeri,WNI,Ambon,1982-03-03,6300000
-Maluku,8104234567890426,Larasati Wijaya,Perempuan,O,Jl.Merdeka No.4,Ambon Kota,Ambon Kota,Hindu,Belum Menikah,Wiraswasta,WNI,Ambon,1983-04-04,13500000
-Maluku,8105234567890427,Mega Santoso,Perempuan,A,Jl.Sudirman No.5,Ambon Kota,Ambon Kota,Buddha,Menikah,Petani,WNI,Ambon,1984-05-05,1100000
-Maluku,8106234567890428,Nadia Wijaya,Perempuan,AB,Jl.Teuku Umar No.6,Ambon Kota,Ambon Kota,Islam,Belum Menikah,Pegawai Negeri,WNI,Ambon,1985-06-06,4500000
-Maluku,8107234567890429,Oscar Santoso,Laki-laki,O,Jl.Merdeka No.7,Ambon Kota,Ambon Kota,Hindu,Menikah,Wiraswasta,WNI,Ambon,1986-07-07,7700000
-Maluku,8108234567890430,Putri Handayani,Perempuan,B,Jl.Sudirman No.8,Ambon Kota,Ambon Kota,Buddha,Belum Menikah,Petani,WNI,Ambon,1987-08-08,1000000
-Maluku,8109234567890431,Qori Setiawan,Laki-laki,AB,Jl.Teuku Umar No.9,Ambon Kota,Ambon Kota,Islam,Menikah,Pegawai Negeri,WNI,Ambon,1988-09-09,5100000
-Maluku,8110234567890432,Rina Wulandari,Perempuan,O,Jl.Merdeka No.10,Ambon Kota,Ambon Kota,Hindu,Belum Menikah,Wiraswasta,WNI,Ambon,1989-10-10,2500000
-Maluku Utara,8201234567890433,Sandi Pranoto,Laki-laki,A,Jl.Sudirman No.1,Ternate Kota,Ternate Kota,Islam,Menikah,Petani,WNI,Ternate,1980-01-01,2500000
-Maluku Utara,8202234567890434,Tita Santoso,Perempuan,AB,Jl.Teuku Umar No.2,Ternate Kota,Ternate Kota,Hindu,Belum Menikah,Pegawai Negeri,WNI,Ternate,1981-02-02,4400000
-Maluku Utara,8203234567890435,Umi Handayani,Perempuan,B,Jl.Merdeka No.3,Ternate Kota,Ternate Kota,Buddha,Menikah,Wiraswasta,WNI,Ternate,1982-03-03,7600000
-Maluku Utara,8204234567890436,Vivi Setiawan,Perempuan,AB,Jl.Sudirman No.4,Ternate Kota,Ternate Kota,Islam,Belum Menikah,Petani,WNI,Ternate,1983-04-04,800000
-Maluku Utara,8205234567890437,Wahyu Pranoto,Laki-laki,O,Jl.Teuku Umar No.5,Ternate Kota,Ternate Kota,Hindu,Menikah,Pegawai Negeri,WNI,Ternate,1984-05-05,3400000
-Maluku Utara,8206234567890438,Xaverius Wijaya,Laki-laki,AB,Jl.Merdeka No.6,Ternate Kota,Ternate Kota,Buddha,Belum Menikah,Wiraswasta,WNI,Ternate,1985-06-06,3500000
-Maluku Utara,8207234567890439,Yanti Setiawati,Perempuan,B,Jl.Sudirman No.7,Ternate Kota,Ternate Kota,Islam,Menikah,Petani,WNI,Ternate,1986-07-07,1500000
-Maluku Utara,8208234567890440,Zainal Arifin,Laki-laki,AB,Jl.Teuku Umar No.8,Ternate Kota,Ternate Kota,Hindu,Belum Menikah,Pegawai Negeri,WNI,Ternate,1987-08-08,3400000
-Maluku Utara,8209234567890441,Ahmad Santoso,Laki-laki,O,Jl.Merdeka No.9,Ternate Kota,Ternate Kota,Buddha,Menikah,Wiraswasta,WNI,Ternate,1988-09-09,2800000
-Maluku Utara,8210234567890442,Ani Pranoto,Perempuan,A,Jl.Sudirman No.10,Ternate Kota,Ternate Kota,Islam,Belum Menikah,Petani,WNI,Ternate,1989-10-10,1800000
-Nusa Tenggara Barat,5201234567890343,Joko Santoso,Laki-laki,B,Jl.Sudirman No.1,Mataram Kota,Mataram Kota,Buddha,Menikah,Petani,WNI,Mataram,1980-01-01,1000000
-Nusa Tenggara Barat,5202234567890344,Kartika Handayani,Perempuan,AB,Jl.Teuku Umar No.2,Mataram Utara,Mataram Kota,Islam,Belum Menikah,Pegawai Negeri,WNI,Mataram,1981-02-02,6200000
-Nusa Tenggara Barat,5203234567890345,Larasati Wijaya,Perempuan,O,Jl.Merdeka No.3,Mataram Selatan,Mataram Kota,Hindu,Menikah,Wiraswasta,WNI,Mataram,1982-03-03,8000000
-Nusa Tenggara Barat,5204234567890346,Mega Santoso,Perempuan,AB,Jl.Sudirman No.4,Mataram Kota,Mataram Kota,Buddha,Belum Menikah,Petani,WNI,Mataram,1983-04-04,1600000
-Nusa Tenggara Barat,5205234567890347,Nadia Wijaya,Perempuan,B,Jl.Teuku Umar No.5,Mataram Kota,Mataram Kota,Islam,Menikah,Pegawai Negeri,WNI,Mataram,1984-05-05,7200000
-Nusa Tenggara Barat,5206234567890348,Oscar Santoso,Laki-laki,AB,Jl.Merdeka No.6,Mataram Kota,Mataram Kota,Hindu,Belum Menikah,Wiraswasta,WNI,Mataram,1985-06-06,14400000
-Nusa Tenggara Barat,5207234567890349,Putri Handayani,Perempuan,O,Jl.Sudirman No.7,Mataram Kota,Mataram Kota,Buddha,Menikah,Petani,WNI,Mataram,1986-07-07,1400000
-Nusa Tenggara Barat,5208234567890350,Qori Setiawan,Laki-laki,B,Jl.Teuku Umar No.8,Mataram Kota,Mataram Kota,Islam,Menikah,Pegawai Negeri,WNI,Mataram,1987-08-08,6400000
-Nusa Tenggara Barat,5209234567890351,Rina Wulandari,Perempuan,A,Jl.Merdeka No.9,Mataram Kota,Mataram Kota,Hindu,Belum Menikah,Wiraswasta,WNI,Mataram,1988-09-09,5300000
-Nusa Tenggara Barat,5210234567890352,Sandi Pranoto,Laki-laki,AB,Jl.Sudirman No.10,Mataram Kota,Mataram Kota,Buddha,Menikah,Petani,WNI,Mataram,1989-10-10,2300000
-Nusa Tenggara Timur,5301234567890353,Tita Santoso,Perempuan,O,Jl.Teuku Umar No.1,Kupang Kota,Kupang Kota,Islam,Menikah,Pegawai Negeri,WNI,Kupang,1980-01-01,4500000
-Nusa Tenggara Timur,5302234567890354,Umi Handayani,Perempuan,A,Jl.Merdeka No.2,Kupang Kota,Kupang Kota,Hindu,Belum Menikah,Wiraswasta,WNI,Kupang,1981-02-02,14100000
-Nusa Tenggara Timur,5303234567890355,Vivi Setiawan,Perempuan,AB,Jl.Sudirman No.3,Kupang Kota,Kupang Kota,Buddha,Menikah,Petani,WNI,Kupang,1982-03-03,2100000
-Nusa Tenggara Timur,5304234567890356,Wahyu Pranoto,Laki-laki,O,Jl.Teuku Umar No.4,Kupang Kota,Kupang Kota,Kristen,Menikah,Pegawai Negeri,WNI,Kupang,1983-04-04,4200000
-Nusa Tenggara Timur,5305234567890357,Xaverius Wijaya,Laki-laki,AB,Jl.Merdeka No.5,Kupang Kota,Kupang Kota,Hindu,Belum Menikah,Wiraswasta,WNI,Kupang,1984-05-05,4400000
-Nusa Tenggara Timur,5306234567890358,Yanti Setiawati,Perempuan,B,Jl.Sudirman No.6,Kupang Kota,Kupang Kota,Buddha,Menikah,Petani,WNI,Kupang,1985-06-06,1100000
-Nusa Tenggara Timur,5307234567890359,Zainal Arifin,Laki-laki,A,Jl.Teuku Umar No.7,Kupang Kota,Kupang Kota,Islam,Menikah,Pegawai Negeri,WNI,Kupang,1986-07-07,7200000
-Nusa Tenggara Timur,5308234567890360,Ahmad Santoso,Laki-laki,O,Jl.Merdeka No.8,Kupang Kota,Kupang Kota,Kristen,Belum Menikah,Wiraswasta,WNI,Kupang,1987-08-08,13000000
-Nusa Tenggara Timur,5309234567890361,Ani Pranoto,Perempuan,AB,Jl.Sudirman No.9,Kupang Kota,Kupang Kota,Hindu,Menikah,Petani,WNI,Kupang,1988-09-09,1900000
-Nusa Tenggara Timur,5310234567890362,Budi Wijaya,Laki-laki,B,Jl.Teuku Umar No.10,Kupang Kota,Kupang Kota,Buddha,Belum Menikah,Pegawai Negeri,WNI,Kupang,1989-10-10,5700000
-Papua,9101234567890443,Budi Wijaya,Laki-laki,B,Jl.Teuku Umar No.1,Jayapura Kota,Jayapura Kota,Hindu,Menikah,Pegawai Negeri,WNI,Jayapura,1980-01-01,5600000
-Papua,9102234567890444,Citra Handayani,Perempuan,AB,Jl.Merdeka No.2,Jayapura Kota,Jayapura Kota,Buddha,Belum Menikah,Wiraswasta,WNI,Jayapura,1981-02-02,13900000
-Papua,9103234567890445,Darma Setiawan,Laki-laki,O,Jl.Sudirman No.3,Jayapura Kota,Jayapura Kota,Islam,Menikah,Petani,WNI,Jayapura,1982-03-03,900000
-Papua,9104234567890446,Edi Santoso,Laki-laki,A,Jl.Teuku Umar No.4,Jayapura Kota,Jayapura Kota,Hindu,Belum Menikah,Pegawai Negeri,WNI,Jayapura,1983-04-04,7300000
-Papua,9105234567890447,Fitriani Wijaya,Perempuan,AB,Jl.Merdeka No.5,Jayapura Kota,Jayapura Kota,Buddha,Menikah,Wiraswasta,WNI,Jayapura,1984-05-05,4500000
-Papua,9106234567890448,Gandi Santoso,Laki-laki,B,Jl.Sudirman No.6,Jayapura Kota,Jayapura Kota,Islam,Menikah,Petani,WNI,Jayapura,1985-06-06,900000
-Papua,9107234567890449,Hadi Setiawan,Laki-laki,AB,Jl.Teuku Umar No.7,Jayapura Kota,Jayapura Kota,Hindu,Belum Menikah,Pegawai Negeri,WNI,Jayapura,1986-07-07,5500000
-Papua,9108234567890450,Indah Wijaya,Perempuan,O,Jl.Merdeka No.8,Jayapura Kota,Jayapura Kota,Buddha,Menikah,Wiraswasta,WNI,Jayapura,1987-08-08,10600000
-Papua,9109234567890451,Joko Santoso,Laki-laki,A,Jl.Sudirman No.9,Jayapura Kota,Jayapura Kota,Islam,Belum Menikah,Petani,WNI,Jayapura,1988-09-09,1100000
-Papua,9110234567890452,Kartika Handayani,Perempuan,B,Jl.Teuku Umar No.10,Jayapura Kota,Jayapura Kota,Hindu,Menikah,Pegawai Negeri,WNI,Jayapura,1989-10-10,4500000
-Papua Barat,9201234567890453,Larasati Wijaya,Perempuan,AB,Jl.Merdeka No.1,Manokwari Kota,Manokwari Kota,Buddha,Belum Menikah,Wiraswasta,WNI,Manokwari,1980-01-01,6900000
-Papua Barat,9202234567890454,Mega Santoso,Perempuan,O,Jl.Sudirman No.2,Manokwari Kota,Manokwari Kota,Islam,Menikah,Petani,WNI,Manokwari,1981-02-02,1400000
-Papua Barat,9203234567890455,Nadia Wijaya,Perempuan,A,Jl.Teuku Umar No.3,Manokwari Kota,Manokwari Kota,Hindu,Belum Menikah,Pegawai Negeri,WNI,Manokwari,1982-03-03,6400000
-Papua Barat,9204234567890456,Oscar Santoso,Laki-laki,B,Jl.Merdeka No.4,Manokwari Kota,Manokwari Kota,Buddha,Menikah,Wiraswasta,WNI,Manokwari,1983-04-04,13400000
-Papua Barat,9205234567890457,Putri Handayani,Perempuan,AB,Jl.Sudirman No.5,Manokwari Kota,Manokwari Kota,Islam,Belum Menikah,Petani,WNI,Manokwari,1984-05-05,1200000
-Papua Barat,9206234567890458,Qori Setiawan,Laki-laki,O,Jl.Teuku Umar No.6,Manokwari Kota,Manokwari Kota,Hindu,Menikah,Pegawai Negeri,WNI,Manokwari,1985-06-06,5700000
-Papua Barat,9207234567890459,Rina Wulandari,Perempuan,A,Jl.Merdeka No.7,Manokwari Kota,Manokwari Kota,Buddha,Belum Menikah,Wiraswasta,WNI,Manokwari,1986-07-07,6600000
-Papua Barat,9208234567890460,Sandi Pranoto,Laki-laki,AB,Jl.Sudirman No.8,Manokwari Kota,Manokwari Kota,Islam,Menikah,Petani,WNI,Manokwari,1987-08-08,1600000
-Papua Barat,9209234567890461,Tita Santoso,Perempuan,B,Jl.Teuku Umar No.9,Manokwari Kota,Manokwari Kota,Hindu,Belum Menikah,Pegawai Negeri,WNI,Manokwari,1988-09-09,5900000
-Papua Barat,9210234567890462,Umi Handayani,Perempuan,O,Jl.Merdeka No.10,Manokwari Kota,Manokwari Kota,Buddha,Menikah,Wiraswasta,WNI,Manokwari,1989-10-10,8300000
-Riau,1401234567890163,Vivi Setiawan,Perempuan,A,Jl.Merdeka No.1,Pekanbaru Kota,Pekanbaru Kota,Islam,Menikah,Petani,WNI,Pekanbaru,1980-01-01,1000000
-Riau,1402234567890164,Wahyu Pranoto,Laki-laki,B,Jl.Sisingamangaraja No.2,Pekanbaru Barat,Pekanbaru Barat,Kristen,Belum Menikah,Pegawai Negeri,WNI,Pekanbaru,1981-02-02,5800000
-Riau,1403234567890165,Xaverius Wijaya,Laki-laki,AB,Jl.Diponegoro No.3,Pekanbaru Timur,Pekanbaru Timur,Hindu,Menikah,Wiraswasta,WNI,Pekanbaru,1982-03-03,4500000
-Riau,1404234567890166,Yanti Setiawati,Perempuan,O,Jl.Gatot Subroto No.4,Pekanbaru Selatan,Pekanbaru Selatan,Buddha,Menikah,Pelajar,WNI,Pekanbaru,1983-04-04,0
-Riau,1405234567890167,Zainal Arifin,Laki-laki,A,Jl.Sudirman No.5,Pekanbaru Kota,Pekanbaru Kota,Islam,Belum Menikah,Petani,WNI,Pekanbaru,1984-05-05,2500000
-Riau,1406234567890168,Ahmad Santoso,Laki-laki,B,Jl.Teuku Umar No.6,Pekanbaru Barat,Pekanbaru Barat,Kristen,Menikah,Pegawai Negeri,WNI,Pekanbaru,1985-06-06,3000000
-Riau,1407234567890169,Ani Pranoto,Perempuan,AB,Jl.Kartini No.7,Pekanbaru Timur,Pekanbaru Timur,Hindu,Belum Menikah,Wiraswasta,WNI,Pekanbaru,1986-07-07,4300000
-Riau,1408234567890170,Budi Wijaya,Laki-laki,O,Jl.Imam Bonjol No.8,Pekanbaru Selatan,Pekanbaru Selatan,Buddha,Menikah,Pelajar,WNI,Pekanbaru,1987-08-08,100000
-Riau,1409234567890171,Citra Handayani,Perempuan,A,Jl.Ahmad Yani No.9,Pekanbaru Kota,Pekanbaru Kota,Islam,Belum Menikah,Pegawai Swasta,WNI,Pekanbaru,1988-09-09,4600000
-Riau,1410234567890172,Darma Setiawan,Laki-laki,B,Jl.Pattimura No.10,Pekanbaru Barat,Pekanbaru Barat,Kristen,Menikah,Dokter,WNI,Pekanbaru,1989-10-10,18400000
-Sulawesi Barat,7601234567890413,Zainal Arifin,Laki-laki,O,Jl.Teuku Umar No.1,Mamuju Kota,Mamuju Kota,Islam,Menikah,Pegawai Negeri,WNI,Mamuju,1980-01-01,6100000
-Sulawesi Barat,7602234567890414,Ahmad Santoso,Laki-laki,A,Jl.Merdeka No.2,Mamuju Kota,Mamuju Kota,Hindu,Belum Menikah,Wiraswasta,WNI,Mamuju,1981-02-02,14300000
-Sulawesi Barat,7603234567890415,Ani Pranoto,Perempuan,AB,Jl.Sudirman No.3,Mamuju Kota,Mamuju Kota,Buddha,Menikah,Petani,WNI,Mamuju,1982-03-03,1400000
-Sulawesi Barat,7604234567890416,Budi Wijaya,Laki-laki,B,Jl.Teuku Umar No.4,Mamuju Kota,Mamuju Kota,Islam,Belum Menikah,Pegawai Negeri,WNI,Mamuju,1983-04-04,5500000
-Sulawesi Barat,7605234567890417,Citra Handayani,Perempuan,O,Jl.Merdeka No.5,Mamuju Kota,Mamuju Kota,Hindu,Menikah,Wiraswasta,WNI,Mamuju,1984-05-05,3500000
-Sulawesi Barat,7606234567890418,Darma Setiawan,Laki-laki,AB,Jl.Sudirman No.6,Mamuju Kota,Mamuju Kota,Buddha,Belum Menikah,Petani,WNI,Mamuju,1985-06-06,1300000
-Sulawesi Barat,7607234567890419,Edi Santoso,Laki-laki,B,Jl.Teuku Umar No.7,Mamuju Kota,Mamuju Kota,Islam,Menikah,Pegawai Negeri,WNI,Mamuju,1986-07-07,5400000
-Sulawesi Barat,7608234567890420,Fitriani Wijaya,Perempuan,AB,Jl.Merdeka No.8,Mamuju Kota,Mamuju Kota,Hindu,Belum Menikah,Wiraswasta,WNI,Mamuju,1987-08-08,2000000
-Sulawesi Barat,7609234567890421,Gandi Santoso,Laki-laki,O,Jl.Sudirman No.9,Mamuju Kota,Mamuju Kota,Buddha,Menikah,Petani,WNI,Mamuju,1988-09-09,2000000
-Sulawesi Barat,7610234567890422,Hadi Setiawan,Laki-laki,AB,Jl.Teuku Umar No.10,Mamuju Kota,Mamuju Kota,Islam,Belum Menikah,Pegawai Negeri,WNI,Mamuju,1989-10-10,4600000
-Sulawesi Selatan,7301234567890383,Wahyu Pranoto,Laki-laki,B,Jl.Teuku Umar No.1,Makassar Kota,Makassar Kota,Kristen,Belum Menikah,Pegawai Negeri,WNI,Makassar,1980-01-01,8000000
-Sulawesi Selatan,7302234567890384,Xaverius Wijaya,Laki-laki,O,Jl.Merdeka No.2,Makassar Kota,Makassar Kota,Hindu,Menikah,Wiraswasta,WNI,Makassar,1981-02-02,13600000
-Sulawesi Selatan,7303234567890385,Yanti Setiawati,Perempuan,AB,Jl.Sudirman No.3,Makassar Kota,Makassar Kota,Buddha,Belum Menikah,Petani,WNI,Makassar,1982-03-03,1700000
-Sulawesi Selatan,7304234567890386,Zainal Arifin,Laki-laki,A,Jl.Teuku Umar No.4,Makassar Kota,Makassar Kota,Islam,Menikah,Pegawai Negeri,WNI,Makassar,1983-04-04,5700000
-Sulawesi Selatan,7305234567890387,Ahmad Santoso,Laki-laki,B,Jl.Merdeka No.5,Makassar Kota,Makassar Kota,Hindu,Belum Menikah,Wiraswasta,WNI,Makassar,1984-05-05,14400000
-Sulawesi Selatan,7306234567890388,Ani Pranoto,Perempuan,O,Jl.Sudirman No.6,Makassar Kota,Makassar Kota,Buddha,Menikah,Petani,WNI,Makassar,1985-06-06,1200000
-Sulawesi Selatan,7307234567890389,Budi Wijaya,Laki-laki,AB,Jl.Teuku Umar No.7,Makassar Kota,Makassar Kota,Islam,Belum Menikah,Pegawai Negeri,WNI,Makassar,1986-07-07,4200000
-Sulawesi Selatan,7308234567890390,Citra Handayani,Perempuan,A,Jl.Merdeka No.8,Makassar Kota,Makassar Kota,Hindu,Menikah,Wiraswasta,WNI,Makassar,1987-08-08,9500000
-Sulawesi Selatan,7309234567890391,Darma Setiawan,Laki-laki,O,Jl.Sudirman No.9,Makassar Kota,Makassar Kota,Buddha,Belum Menikah,Petani,WNI,Makassar,1988-09-09,1400000
-Sulawesi Selatan,7310234567890392,Edi Santoso,Laki-laki,B,Jl.Teuku Umar No.10,Makassar Kota,Makassar Kota,Islam,Menikah,Pegawai Negeri,WNI,Makassar,1989-10-10,3300000
-Sulawesi Tengah,7201234567890373,Mega Santoso,Perempuan,B,Jl.Sudirman No.1,Palu Barat,Palu Kota,Buddha,Belum Menikah,Petani,WNI,Palu,1980-01-01,2500000
-Sulawesi Tengah,7202234567890374,Nadia Wijaya,Perempuan,AB,Jl.Teuku Umar No.2,Palu Timur,Palu Kota,Islam,Menikah,Pegawai Negeri,WNI,Palu,1981-02-02,3300000
-Sulawesi Tengah,7203234567890375,Oscar Santoso,Laki-laki,O,Jl.Merdeka No.3,Palu Barat,Palu Kota,Kristen,Belum Menikah,Wiraswasta,WNI,Palu,1982-03-03,10000000
-Sulawesi Tengah,7204234567890376,Putri Handayani,Perempuan,A,Jl.Sudirman No.4,Palu Timur,Palu Kota,Hindu,Menikah,Petani,WNI,Palu,1983-04-04,900000
-Sulawesi Tengah,7205234567890377,Qori Setiawan,Laki-laki,B,Jl.Teuku Umar No.5,Palu Barat,Palu Kota,Buddha,Belum Menikah,Pegawai Negeri,WNI,Palu,1984-05-05,3300000
-Sulawesi Tengah,7206234567890378,Rina Wulandari,Perempuan,AB,Jl.Merdeka No.6,Palu Timur,Palu Kota,Islam,Menikah,Wiraswasta,WNI,Palu,1985-06-06,14200000
-Sulawesi Tengah,7207234567890379,Sandi Pranoto,Laki-laki,O,Jl.Sudirman No.7,Palu Barat,Palu Kota,Kristen,Belum Menikah,Petani,WNI,Palu,1986-07-07,2400000
-Sulawesi Tengah,7208234567890380,Tita Santoso,Perempuan,O,Jl.Teuku Umar No.8,Palu Timur,Palu Kota,Hindu,Menikah,Pegawai Negeri,WNI,Palu,1987-08-08,6300000
-Sulawesi Tengah,7209234567890381,Umi Handayani,Perempuan,A,Jl.Merdeka No.9,Palu Barat,Palu Kota,Buddha,Belum Menikah,Wiraswasta,WNI,Palu,1988-09-09,6000000
-Sulawesi Tengah,7210234567890382,Vivi Setiawan,Perempuan,B,Jl.Sudirman No.10,Palu Timur,Palu Kota,Islam,Menikah,Petani,WNI,Palu,1989-10-10,900000
-Sulawesi Tenggara,7401234567890393,Fitriani Wijaya,Perempuan,AB,Jl.Merdeka No.1,Kendari Kota,Kendari Kota,Hindu,Menikah,Wiraswasta,WNI,Kendari,1980-01-01,15000000
-Sulawesi Tenggara,7402234567890394,Gandi Santoso,Laki-laki,B,Jl.Sudirman No.2,Kendari Kota,Kendari Kota,Buddha,Belum Menikah,Petani,WNI,Kendari,1981-02-02,1000000
-Sulawesi Tenggara,7403234567890395,Hadi Setiawan,Laki-laki,O,Jl.Teuku Umar No.3,Kendari Kota,Kendari Kota,Islam,Menikah,Pegawai Negeri,WNI,Kendari,1982-03-03,4100000
-Sulawesi Tenggara,7404234567890396,Indah Wijaya,Perempuan,A,Jl.Merdeka No.4,Kendari Kota,Kendari Kota,Hindu,Belum Menikah,Wiraswasta,WNI,Kendari,1983-04-04,3700000
-Sulawesi Tenggara,7405234567890397,Joko Santoso,Laki-laki,AB,Jl.Sudirman No.5,Kendari Kota,Kendari Kota,Buddha,Menikah,Petani,WNI,Kendari,1984-05-05,1000000
-Sulawesi Tenggara,7406234567890398,Kartika Handayani,Perempuan,O,Jl.Teuku Umar No.6,Kendari Kota,Kendari Kota,Islam,Belum Menikah,Pegawai Negeri,WNI,Kendari,1985-06-06,7300000
-Sulawesi Tenggara,7407234567890399,Larasati Wijaya,Perempuan,B,Jl.Merdeka No.7,Kendari Kota,Kendari Kota,Hindu,Menikah,Wiraswasta,WNI,Kendari,1986-07-07,8000000
-Sulawesi Tenggara,7408234567890400,Mega Santoso,Perempuan,AB,Jl.Sudirman No.8,Kendari Kota,Kendari Kota,Buddha,Belum Menikah,Petani,WNI,Kendari,1987-08-08,2000000
-Sulawesi Tenggara,7409234567890401,Nadia Wijaya,Perempuan,O,Jl.Teuku Umar No.9,Kendari Kota,Kendari Kota,Islam,Menikah,Pegawai Negeri,WNI,Kendari,1988-09-09,3700000
-Sulawesi Tenggara,7410234567890402,Oscar Santoso,Laki-laki,A,Jl.Merdeka No.10,Kendari Kota,Kendari Kota,Hindu,Belum Menikah,Wiraswasta,WNI,Kendari,1989-10-10,8300000
-Sulawesi Utara,7101234567890363,Citra Handayani,Perempuan,AB,Jl.Merdeka No.1,Wanea,Manado Kota,Islam,Menikah,Wiraswasta,WNI,Manado,1980-01-01,3000000
-Sulawesi Utara,7102234567890364,Darma Setiawan,Laki-laki,O,Jl.Sudirman No.2,Malalayang,Manado Kota,Kristen,Belum Menikah,Petani,WNI,Manado,1981-02-02,1000000
-Sulawesi Utara,7103234567890365,Edi Santoso,Laki-laki,AB,Jl.Teuku Umar No.3,Wanea,Manado Kota,Hindu,Menikah,Pegawai Negeri,WNI,Manado,1982-03-03,5600000
-Sulawesi Utara,7104234567890366,Fitriani Wijaya,Perempuan,B,Jl.Merdeka No.4,Malalayang,Manado Kota,Buddha,Belum Menikah,Wiraswasta,WNI,Manado,1983-04-04,10000000
-Sulawesi Utara,7105234567890367,Gandi Santoso,Laki-laki,O,Jl.Sudirman No.5,Wanea,Manado Kota,Islam,Menikah,Petani,WNI,Manado,1984-05-05,1600000
-Sulawesi Utara,7106234567890368,Hadi Setiawan,Laki-laki,A,Jl.Teuku Umar No.6,Malalayang,Manado Kota,Kristen,Belum Menikah,Pegawai Negeri,WNI,Manado,1985-06-06,4300000
-Sulawesi Utara,7107234567890369,Indah Wijaya,Perempuan,AB,Jl.Merdeka No.7,Wanea,Manado Kota,Hindu,Menikah,Wiraswasta,WNI,Manado,1986-07-07,10000000
-Sulawesi Utara,7108234567890370,Joko Santoso,Laki-laki,B,Jl.Sudirman No.8,Malalayang,Manado Kota,Buddha,Menikah,Petani,WNI,Manado,1987-08-08,1500000
-Sulawesi Utara,7109234567890371,Kartika Handayani,Perempuan,O,Jl.Teuku Umar No.9,Wanea,Manado Kota,Islam,Belum Menikah,Pegawai Negeri,WNI,Manado,1988-09-09,4600000
-Sulawesi Utara,7110234567890372,Larasati Wijaya,Perempuan,A,Jl.Merdeka No.10,Malalayang,Manado Kota,Hindu,Menikah,Wiraswasta,WNI,Manado,1989-10-10,12100000
-Sumatera Barat,1301234567890143,Budi Wijaya,Laki-laki,A,Jl.Merdeka No.1,Padang Timur,Padang Timur,Islam,Menikah,Petani,WNI,Padang,1980-01-01,1200000
-Sumatera Barat,1302234567890144,Citra Handayani,Perempuan,B,Jl.Sisingamangaraja No.2,Padang Barat,Padang Barat,Kristen,Belum Menikah,Pegawai Negeri,WNI,Padang,1981-02-02,7200000
-Sumatera Barat,1303234567890145,Darma Setiawan,Laki-laki,AB,Jl.Diponegoro No.3,Padang Utara,Padang Utara,Hindu,Menikah,Wiraswasta,WNI,Padang,1982-03-03,9600000
-Sumatera Barat,1304234567890146,Edi Santoso,Laki-laki,O,Jl.Gatot Subroto No.4,Padang Selatan,Padang Selatan,Buddha,Menikah,Pelajar,WNI,Padang,1983-04-04,300000
-Sumatera Barat,1305234567890147,Fitriani Wijaya,Perempuan,A,Jl.Sudirman No.5,Padang Timur,Padang Timur,Islam,Belum Menikah,Petani,WNI,Padang,1984-05-05,1800000
-Sumatera Barat,1306234567890148,Gandi Santoso,Laki-laki,B,Jl.Teuku Umar No.6,Padang Barat,Padang Barat,Kristen,Menikah,Pegawai Negeri,WNI,Padang,1985-06-06,7800000
-Sumatera Barat,1307234567890149,Hadi Setiawan,Laki-laki,AB,Jl.Diponegoro No.7,Padang Utara,Padang Utara,Hindu,Belum Menikah,Wiraswasta,WNI,Padang,1986-07-07,3800000
-Sumatera Barat,1308234567890150,Indah Wijaya,Perempuan,O,Jl.Imam Bonjol No.8,Padang Selatan,Padang Selatan,Buddha,Menikah,Pelajar,WNI,Padang,1987-08-08,0
-Sumatera Barat,1309234567890151,Joko Santoso,Laki-laki,A,Jl.Kartini No.9,Padang Timur,Padang Timur,Islam,Belum Menikah,Pegawai Swasta,WNI,Padang,1988-09-09,8300000
-Sumatera Barat,1310234567890152,Kartika Handayani,Perempuan,B,Jl.Pattimura No.10,Padang Barat,Padang Barat,Kristen,Menikah,Dokter,WNI,Padang,1989-10-10,23900000
-Sumatera Selatan,1601234567890153,Larasati Wijaya,Perempuan,AB,Jl.Merdeka No.1,Palembang Utara,Palembang Utara,Hindu,Menikah,Petani,WNI,Palembang,1980-01-01,1100000
-Sumatera Selatan,1602234567890154,Mega Santoso,Perempuan,O,Jl.Sisingamangaraja No.2,Palembang Selatan,Palembang Selatan,Buddha,Belum Menikah,Pegawai Negeri,WNI,Palembang,1981-02-02,3400000
-Sumatera Selatan,1603234567890155,Nadia Wijaya,Perempuan,A,Jl.Diponegoro No.3,Palembang Timur,Palembang Timur,Islam,Menikah,Wiraswasta,WNI,Palembang,1982-03-03,7400000
-Sumatera Selatan,1604234567890156,Oscar Santoso,Laki-laki,B,Jl.Gatot Subroto No.4,Palembang Barat,Palembang Barat,Kristen,Menikah,Pelajar,WNI,Palembang,1983-04-04,400000
-Sumatera Selatan,1605234567890157,Putri Handayani,Perempuan,AB,Jl.Sudirman No.5,Palembang Utara,Palembang Utara,Hindu,Belum Menikah,Petani,WNI,Palembang,1984-05-05,1600000
-Sumatera Selatan,1606234567890158,Qori Setiawan,Laki-laki,O,Jl.Teuku Umar No.6,Palembang Selatan,Palembang Selatan,Buddha,Menikah,Pegawai Negeri,WNI,Palembang,1985-06-06,3800000
-Sumatera Selatan,1607234567890159,Rina Wulandari,Perempuan,A,Jl.Kartini No.7,Palembang Timur,Palembang Timur,Islam,Belum Menikah,Wiraswasta,WNI,Palembang,1986-07-07,10900000
-Sumatera Selatan,1608234567890160,Sandi Pranoto,Laki-laki,B,Jl.Imam Bonjol No.8,Palembang Barat,Palembang Barat,Kristen,Menikah,Pelajar,WNI,Palembang,1987-08-08,0
-Sumatera Selatan,1609234567890161,Tita Santoso,Perempuan,AB,Jl.Pattimura No.9,Palembang Utara,Palembang Utara,Hindu,Belum Menikah,Pegawai Swasta,WNI,Palembang,1988-09-09,5600000
-Sumatera Selatan,1610234567890162,Umi Handayani,Perempuan,O,Jl.Ahmad Yani No.10,Palembang Selatan,Palembang Selatan,Buddha,Menikah,Dokter,WNI,Palembang,1989-10-10,17400000
-Sumatera Utara,1201234567890133,Rina Wulandari,Perempuan,AB,Jl.Gatot Subroto No.1,Medan Baru,Medan Selayang,Hindu,Menikah,Dokter,WNI,Medan,1980-01-01,15200000
-Sumatera Utara,1202234567890134,Sandi Pranoto,Laki-laki,O,Jl.Sudirman No.2,Medan Timur,Medan Timur,Buddha,Belum Menikah,Pelajar,WNI,Medan,1981-02-02,100000
-Sumatera Utara,1203234567890135,Tita Santoso,Perempuan,B,Jl.Teuku Umar No.3,Medan Kota,Medan Kota,Islam,Menikah,Pegawai Negeri,WNI,Medan,1982-03-03,5800000
-Sumatera Utara,1204234567890136,Umi Handayani,Perempuan,A,Jl.Sisingamangaraja No.4,Medan Barat,Medan Barat,Kristen,Belum Menikah,Wiraswasta,WNI,Medan,1983-04-04,9700000
-Sumatera Utara,1205234567890137,Vivi Setiawan,Perempuan,AB,Jl.Diponegoro No.5,Medan Deli,Medan Deli,Hindu,Menikah,Pelajar,WNI,Medan,1984-05-05,400000
-Sumatera Utara,1206234567890138,Wahyu Pranoto,Laki-laki,O,Jl.Imam Bonjol No.6,Medan Baru,Medan Selayang,Buddha,Belum Menikah,Pegawai Swasta,WNI,Medan,1985-06-06,9200000
-Sumatera Utara,1207234567890139,Xaverius Wijaya,Laki-laki,B,Jl.Pattimura No.7,Medan Timur,Medan Timur,Islam,Menikah,Dokter,WNI,Medan,1986-07-07,8200000
-Sumatera Utara,1208234567890140,Yanti Setiawati,Perempuan,A,Jl.Gatot Subroto No.8,Medan Kota,Medan Kota,Kristen,Belum Menikah,Pelajar,WNI,Medan,1987-08-08,500000
-Sumatera Utara,1209234567890141,Zainal Arifin,Laki-laki,AB,Jl.Sudirman No.9,Medan Barat,Medan Barat,Hindu,Menikah,Wiraswasta,WNI,Medan,1988-09-09,9600000
-Sumatera Utara,1210234567890142,Ahmad Santoso,Laki-laki,O,Jl.Teuku Umar No.10,Medan Deli,Medan Deli,Buddha,Belum Menikah,Pegawai Negeri,WNI,Medan,1989-10-10,7200000
+Aceh,1101234567890123,Ani Pranoto,Perempuan,O,Jl.Merdeka No.1,Merdeka,Kuta Alam,Islam,Menikah,PETANI/PEKEBUN,WNI,Banda Aceh,1980-01-01,500000
+Aceh,1102234567890124,Budi Wijaya,Laki-laki,A,Jl.Sisingamangaraja No.2,Kampung Baru,Banda Aceh,Kristen,Belum Menikah,KARYAWAN HONORER,WNI,Banda Aceh,1981-02-02,4200000
+Aceh,1103234567890125,Citra Handayani,Perempuan,B,Jl.Diponegoro No.3,Padang Pasir,Kuta Alam,Hindu,Menikah,KARYAWAN BUMN,WNI,Banda Aceh,1982-03-03,3900000
+Aceh,1104234567890126,Darma Setiawan,Laki-laki,AB,Jl.Gatot Subroto No.4,Merdeka,Kuta Alam,Buddha,Menikah,PELAJAR/MAHASISWA,WNI,Banda Aceh,1983-04-04,500000
+Aceh,1105234567890127,Edi Santoso,Laki-laki,O,Jl.Sudirman No.5,Kampung Baru,Banda Aceh,Islam,Belum Menikah,PETANI/PEKEBUN,WNI,Banda Aceh,1984-05-05,2200000
+Aceh,1106234567890128,Fitriani Wijaya,Perempuan,A,Jl.Teuku Umar No.6,Merdeka,Kuta Alam,Kristen,Menikah,KARYAWAN SWASTA,WNI,Banda Aceh,1985-06-06,6200000
+Aceh,1107234567890129,Gandi Santoso,Laki-laki,B,Jl.Kartini No.7,Kampung Baru,Banda Aceh,Hindu,Belum Menikah,WIRASWASTA,WNI,Banda Aceh,1986-07-07,2700000
+Aceh,1108234567890130,Hadi Setiawan,Laki-laki,AB,Jl.Pattimura No.8,Padang Pasir,Kuta Alam,Buddha,Menikah,BELUM/TIDAK BEKERJA,WNI,Banda Aceh,1987-08-08,0
+Aceh,1109234567890131,Indah Wijaya,Perempuan,O,Jl.Imam Bonjol No.9,Merdeka,Kuta Alam,Islam,Menikah,KARYAWAN BUMN,WNI,Banda Aceh,1988-09-09,3900000
+Aceh,1110234567890132,Joko Santoso,Laki-laki,A,Jl.Ahmad Yani No.10,Kampung Baru,Banda Aceh,Kristen,Belum Menikah,PERDAGANGAN,WNI,Banda Aceh,1989-10-10,6300000
+Bali,5101234567890283,Darma Setiawan,Laki-laki,B,Jl.Sudirman No.1,Denpasar Selatan,Denpasar Kota,Islam,Menikah,BURUH HARIAN LEPAS,WNI,Denpasar,1980-01-01,2200000
+Bali,5102234567890284,Edi Santoso,Laki-laki,AB,Jl.Teuku Umar No.2,Denpasar Utara,Denpasar Kota,Kristen,Belum Menikah,KARYAWAN BUMN,WNI,Denpasar,1981-02-02,7000000
+Bali,5103234567890285,Fitriani Wijaya,Perempuan,O,Jl.Merdeka No.3,Denpasar Timur,Denpasar Kota,Hindu,Menikah,KARYAWAN HONORER,WNI,Denpasar,1982-03-03,6900000
+Bali,5104234567890286,Gandi Santoso,Laki-laki,A,Jl.Gatot Subroto No.4,Denpasar Barat,Denpasar Kota,Buddha,Menikah,PENSIUNAN,WNI,Denpasar,1983-04-04,100000
+Bali,5105234567890287,Hadi Setiawan,Laki-laki,O,Jl.Diponegoro No.5,Denpasar Selatan,Denpasar Kota,Islam,Belum Menikah,MEKANIK,WNI,Denpasar,1984-05-05,2300000
+Bali,5106234567890288,Indah Wijaya,Perempuan,B,Jl.Teuku Umar No.6,Denpasar Utara,Denpasar Kota,Kristen,Menikah,PEGAWAI NEGERI SIPIL,WNI,Denpasar,1985-06-06,7600000
+Bali,5107234567890289,Joko Santoso,Laki-laki,AB,Jl.Merdeka No.7,Denpasar Timur,Denpasar Kota,Hindu,Belum Menikah,TRANSPORTASI,WNI,Denpasar,1986-07-07,2500000
+Bali,5108234567890290,Kartika Handayani,Perempuan,O,Jl.Gatot Subroto No.8,Denpasar Barat,Denpasar Kota,Buddha,Menikah,PELAJAR/MAHASISWA,WNI,Denpasar,1987-08-08,500000
+Bali,5109234567890291,Larasati Wijaya,Perempuan,A,Jl.Diponegoro No.9,Denpasar Selatan,Denpasar Kota,Islam,Menikah,WIRASWASTA,WNI,Denpasar,1988-09-09,4600000
+Bali,5110234567890292,Mega Santoso,Perempuan,B,Jl.Teuku Umar No.10,Denpasar Timur,Denpasar Kota,Hindu,Belum Menikah,PEGAWAI NEGERI SIPIL,WNI,Denpasar,1989-10-10,3400000
+Bangka Belitung,1901234567890213,Nadia Wijaya,Perempuan,A,Jl.Merdeka No.1,Girimaya,Girimaya,Islam,Menikah,TUKANG BATU,WNI,Pangkalpinang,1980-01-01,1500000
+Bangka Belitung,1902234567890214,Oscar Santoso,Laki-laki,B,Jl.Sisingamangaraja No.2,Bukit Intan,Girimaya,Kristen,Belum Menikah,KARYAWAN SWASTA,WNI,Pangkalpinang,1981-02-02,3000000
+Bangka Belitung,1903234567890215,Putri Handayani,Perempuan,AB,Jl.Diponegoro No.3,Kelurahan Rawa,Bukit Intan,Hindu,Menikah,WIRASWASTA,WNI,Pangkalpinang,1982-03-03,3100000
+Bangka Belitung,1904234567890216,Qori Setiawan,Laki-laki,O,Jl.Gatot Subroto No.4,Kelurahan Pasir,Kota Pangkalpinang,Buddha,Menikah,IBU RUMAH TANGGA,WNI,Pangkalpinang,1983-04-04,200000
+Bangka Belitung,1905234567890217,Rina Wulandari,Perempuan,A,Jl.Teuku Umar No.6,Kelurahan Rawa,Kota Pangkalpinang,Kristen,Menikah,PERDAGANGAN,WNI,Pangkalpinang,1984-05-05,4100000
+Bangka Belitung,1906234567890218,Sandi Pranoto,Laki-laki,B,Jl.Sudirman No.5,Kelurahan Bukit,Kota Pangkalpinang,Islam,Belum Menikah,BURUH HARIAN LEPAS,WNI,Pangkalpinang,1985-06-06,1900000
+Bangka Belitung,1907234567890219,Tita Santoso,Perempuan,AB,Jl.Teuku Umar No.6,Kelurahan Rawa,Kota Pangkalpinang,Kristen,Menikah,PERDAGANGAN,WNI,Pangkalpinang,1986-07-07,3200000
+Bangka Belitung,1908234567890220,Umi Handayani,Perempuan,O,Jl.Kartini No.7,Kelurahan Pasir,Kota Pangkalpinang,Hindu,Belum Menikah,WIRASWASTA,WNI,Pangkalpinang,1987-08-08,3000000
+Bangka Belitung,1909234567890221,Vivi Setiawan,Perempuan,A,Jl.Pattimura No.8,Kelurahan Rawa,Kota Pangkalpinang,Buddha,Menikah,IBU RUMAH TANGGA,WNI,Pangkalpinang,1988-09-09,500000
+Bangka Belitung,1910234567890222,Wahyu Pranoto,Laki-laki,B,Jl.Ahmad Yani No.9,Kelurahan Pasir,Kota Pangkalpinang,Kristen,Belum Menikah,PERDAGANGAN,WNI,Pangkalpinang,1989-10-10,8000000
+Banten,3601234567890233,Hadi Setiawan,Laki-laki,B,Jl.Sisingamangaraja No.1,Labuan,Serang,Islam,Menikah,TUKANG OJEK,WNI,Serang,1980-01-01,2300000
+Banten,3602234567890234,Indah Wijaya,Perempuan,AB,Jl.Diponegoro No.2,Pandeglang,Serang,Kristen,Belum Menikah,KARYAWAN BUMN,WNI,Serang,1981-02-02,7000000
+Banten,3603234567890235,Joko Santoso,Laki-laki,O,Jl.Gatot Subroto No.3,Serang Timur,Serang,Hindu,Menikah,KARYAWAN SWASTA,WNI,Serang,1982-03-03,2700000
+Banten,3604234567890236,Kartika Handayani,Perempuan,A,Jl.Sudirman No.4,Baros,Serang,Buddha,Menikah,PELAJAR/MAHASISWA,WNI,Serang,1983-04-04,200000
+Banten,3605234567890237,Larasati Wijaya,Perempuan,B,Jl.Teuku Umar No.5,Cilegon Timur,Serang,Islam,Belum Menikah,PETANI/PEKEBUN,WNI,Serang,1984-05-05,1200000
+Banten,3606234567890238,Mega Santoso,Perempuan,AB,Jl.Kartini No.6,Cilegon Barat,Serang,Kristen,Menikah,TRANSPORTASI,WNI,Serang,1985-06-06,3100000
+Banten,3607234567890239,Nadia Wijaya,Perempuan,O,Jl.Pattimura No.7,Cilegon Selatan,Serang,Hindu,Belum Menikah,WIRASWASTA,WNI,Serang,1986-07-07,4200000
+Banten,3608234567890240,Oscar Santoso,Laki-laki,A,Jl.Ahmad Yani No.8,Cilegon Utara,Serang,Buddha,Menikah,PENSIUNAN,WNI,Serang,1987-08-08,500000
+Banten,3609234567890241,Putri Handayani,Perempuan,B,Jl.Gatot Subroto No.9,Pandeglang,Serang,Islam,Menikah,TUKANG OJEK,WNI,Serang,1988-09-09,1000000
+Banten,3610234567890242,Qori Setiawan,Laki-laki,AB,Jl.Diponegoro No.10,Labuan,Serang,Kristen,Belum Menikah,PEGAWAI NEGERI SIPIL,WNI,Serang,1989-10-10,4700000
+Bengkulu,1701234567890193,Umi Handayani,Perempuan,O,Jl.Merdeka No.1,Tanjung Karang,Seluma,Islam,Menikah,TUKANG BATU,WNI,Bengkulu,1980-01-01,1300000
+Bengkulu,1702234567890194,Vivi Setiawan,Perempuan,A,Jl.Sisingamangaraja No.2,Manna,Seluma,Kristen,Belum Men,BELUM/TIDAK BEKERJA,,Bengkulu,1981-02-02,500000
+Bengkulu,1703234567890195,Wahyu Pranoto,Laki-laki,B,Jl.Diponegoro No.3,Bengkulu Tengah,Seluma,Kristen,Belum Menikah,KARYAWAN HONORER,WNI,Bengkulu,1982-03-03,6600000
+Bengkulu,1704234567890196,Xaverius Wijaya,Laki-laki,AB,Jl.Gatot Subroto No.4,Manna,Bengkulu Tengah,Hindu,Menikah,KARYAWAN SWASTA,WNI,Bengkulu,1983-04-04,6300000
+Bengkulu,1705234567890197,Yanti Setiawati,Perempuan,O,Jl.Sudirman No.5,Curup Selatan,Bengkulu Tengah,Buddha,Menikah,PELAJAR/MAHASISWA,WNI,Bengkulu,1984-05-05,400000
+Bengkulu,1706234567890198,Zainal Arifin,Laki-laki,A,Jl.Teuku Umar No.6,Kepahiang,Bengkulu Tengah,Islam,Belum Menikah,TUKANG BATU,WNI,Bengkulu,1985-06-06,1000000
+Bengkulu,1707234567890199,Ahmad Santoso,Laki-laki,B,Jl.Kartini No.7,Bengkulu Tengah,Bengkulu Tengah,Kristen,Menikah,WIRASWASTA,WNI,Bengkulu,1986-07-07,4900000
+Bengkulu,1708234567890200,Ani Pranoto,Perempuan,AB,Jl.Pattimura No.8,Manna,Bengkulu Tengah,Hindu,Belum Menikah,PEGAWAI NEGERI SIPIL,WNI,Bengkulu,1987-08-08,6500000
+Bengkulu,1709234567890201,Budi Wijaya,Laki-laki,O,Jl.Imam Bonjol No.9,Lebong,Bengkulu Tengah,Buddha,Menikah,PELAJAR/MAHASISWA,WNI,Bengkulu,1988-09-09,500000
+Bengkulu,1710234567890202,Citra Handayani,Perempuan,A,Jl.Ahmad Yani No.10,Kaur,Bengkulu Tengah,Islam,Belum Menikah,PEGAWAI NEGERI SIPIL,WNI,Bengkulu,1989-10-10,7800000
+DI Yogyakarta,3401234567890263,Kartika Handayani,Perempuan,O,Jl.Diponegoro No.1,Gondokusuman,Yogyakarta Kota,Islam,Menikah,BURUH HARIAN LEPAS,WNI,Yogyakarta,1980-01-01,1200000
+DI Yogyakarta,3402234567890264,Larasati Wijaya,Perempuan,A,Jl.Gatot Subroto No.2,Mergangsan,Yogyakarta Kota,Kristen,Belum Menikah,TRANSPORTASI,WNI,Yogyakarta,1981-02-02,2700000
+DI Yogyakarta,3403234567890265,Mega Santoso,Perempuan,B,Jl.Sudirman No.3,Kotagede,Yogyakarta Kota,Hindu,Menikah,TRANSPORTASI,WNI,Yogyakarta,1982-03-03,4500000
+DI Yogyakarta,3404234567890266,Nadia Wijaya,Perempuan,AB,Jl.Teuku Umar No.4,Gondokusuman,Yogyakarta Kota,Buddha,Menikah,PENSIUNAN,WNI,Yogyakarta,1983-04-04,200000
+DI Yogyakarta,3405234567890267,Oscar Santoso,Laki-laki,O,Jl.Merdeka No.5,Mergangsan,Yogyakarta Kota,Islam,Belum Menikah,PETANI/PEKEBUN,WNI,Yogyakarta,1984-05-05,1100000
+DI Yogyakarta,3406234567890268,Putri Handayani,Perempuan,A,Jl.Gatot Subroto No.6,Kotagede,Yogyakarta Kota,Kristen,Menikah,PERDAGANGAN,WNI,Yogyakarta,1985-06-06,7000000
+DI Yogyakarta,3407234567890269,Qori Setiawan,Laki-laki,B,Jl.Sudirman No.7,Gondokusuman,Yogyakarta Kota,Hindu,Belum Menikah,PEGAWAI NEGERI SIPIL,WNI,Yogyakarta,1986-07-07,3800000
+DI Yogyakarta,3408234567890270,Rina Wulandari,Perempuan,AB,Jl.Teuku Umar No.8,Mergangsan,Yogyakarta Kota,Buddha,Menikah,PENSIUNAN,WNI,Yogyakarta,1987-08-08,300000
+DI Yogyakarta,3409234567890271,Sandi Pranoto,Laki-laki,B,Jl.Merdeka No.9,Gondokusuman,Yogyakarta Kota,Islam,Belum Menikah,MEKANIK,WNI,Yogyakarta,1988-09-09,900000
+DI Yogyakarta,3410234567890272,Tita Santoso,Perempuan,O,Jl.Gatot Subroto No.10,Kotagede,Yogyakarta Kota,Kristen,Menikah,PEGAWAI NEGERI SIPIL,WNI,Yogyakarta,1989-10-10,3300000
+DKI Jakarta,3101234567890223,Yanti Setiawati,Perempuan,AB,Jl.Merdeka No.1,Tanjung Priok,Tanjung Priok,Islam,Menikah,TUKANG BATU,WNI,Jakarta,1980-01-01,2200000
+DKI Jakarta,3102234567890224,Zainal Arifin,Laki-laki,O,Jl.Sisingamangaraja No.2,Koja,Tanjung Priok,Kristen,Belum Menikah,PERDAGANGAN,WNI,Jakarta,1981-02-02,4100000
+DKI Jakarta,3103234567890225,Ahmad Santoso,Laki-laki,AB,Jl.Diponegoro No.3,Koja,Tanjung Priok,Hindu,Menikah,KARYAWAN HONORER,WNI,Jakarta,1982-03-03,6200000
+DKI Jakarta,3104234567890226,Ani Pranoto,Perempuan,O,Jl.Gatot Subroto No.4,Koja,Tanjung Priok,Buddha,Menikah,PENSIUNAN,WNI,Jakarta,1983-04-04,400000
+DKI Jakarta,3105234567890227,Budi Wijaya,Laki-laki,A,Jl.Sudirman No.5,Koja,Tanjung Priok,Islam,Belum Menikah,PEMBANTU RUMAH TANGGA,WNI,Jakarta,1984-05-05,1600000
+DKI Jakarta,3106234567890228,Citra Handayani,Perempuan,B,Jl.Teuku Umar No.6,Koja,Tanjung Priok,Kristen,Menikah,KARYAWAN BUMN,WNI,Jakarta,1985-06-06,3300000
+DKI Jakarta,3107234567890229,Darma Setiawan,Laki-laki,AB,Jl.Kartini No.7,Koja,Tanjung Priok,Hindu,Belum Menikah,PERDAGANGAN,WNI,Jakarta,1986-07-07,5600000
+DKI Jakarta,3108234567890230,Edi Santoso,Laki-laki,O,Jl.Pattimura No.8,Koja,Tanjung Priok,Buddha,Menikah,BELUM/TIDAK BEKERJA,WNI,Jakarta,1987-08-08,0
+DKI Jakarta,3109234567890231,Fitriani Wijaya,Perempuan,A,Jl.Ahmad Yani No.9,Koja,Tanjung Priok,Islam,Belum Menikah,TRANSPORTASI,WNI,Jakarta,1988-09-09,3200000
+DKI Jakarta,3110234567890232,Gandi Santoso,Laki-laki,B,Jl.Merdeka No.10,Koja,Tanjung Priok,Kristen,Menikah,PERAWAT,WNI,Jakarta,1989-10-10,10000000
+Gorontalo,7501234567890403,Putri Handayani,Perempuan,B,Jl.Sudirman No.1,Gorontalo Kota,Gorontalo Kota,Buddha,Menikah,PEMBANTU RUMAH TANGGA,WNI,Gorontalo,1980-01-01,2400000
+Gorontalo,7502234567890404,Qori Setiawan,Laki-laki,AB,Jl.Teuku Umar No.2,Gorontalo Kota,Gorontalo Kota,Islam,Belum Menikah,KARYAWAN SWASTA,WNI,Gorontalo,1981-02-02,4900000
+Gorontalo,7503234567890405,Rina Wulandari,Perempuan,O,Jl.Merdeka No.3,Gorontalo Kota,Gorontalo Kota,Hindu,Menikah,WIRASWASTA,WNI,Gorontalo,1982-03-03,6300000
+Gorontalo,7504234567890406,Sandi Pranoto,Laki-laki,AB,Jl.Sudirman No.4,Gorontalo Kota,Gorontalo Kota,Buddha,Belum Menikah,MEKANIK,WNI,Gorontalo,1983-04-04,2100000
+Gorontalo,7505234567890407,Tita Santoso,Perempuan,B,Jl.Teuku Umar No.5,Gorontalo Kota,Gorontalo Kota,Islam,Menikah,PEGAWAI NEGERI SIPIL,WNI,Gorontalo,1984-05-05,6000000
+Gorontalo,7506234567890408,Umi Handayani,Perempuan,AB,Jl.Merdeka No.6,Gorontalo Kota,Gorontalo Kota,Hindu,Belum Menikah,TRANSPORTASI,WNI,Gorontalo,1985-06-06,2500000
+Gorontalo,7507234567890409,Vivi Setiawan,Perempuan,O,Jl.Sudirman No.7,Gorontalo Kota,Gorontalo Kota,Buddha,Menikah,PETANI/PEKEBUN,WNI,Gorontalo,1986-07-07,2200000
+Gorontalo,7508234567890410,Wahyu Pranoto,Laki-laki,AB,Jl.Teuku Umar No.8,Gorontalo Kota,Gorontalo Kota,Islam,Belum Menikah,TRANSPORTASI,WNI,Gorontalo,1987-08-08,4200000
+Gorontalo,7509234567890411,Xaverius Wijaya,Laki-laki,B,Jl.Merdeka No.9,Gorontalo Kota,Gorontalo Kota,Hindu,Menikah,TRANSPORTASI,WNI,Gorontalo,1988-09-09,6600000
+Gorontalo,7510234567890412,Yanti Setiawati,Perempuan,AB,Jl.Sudirman No.10,Gorontalo Kota,Gorontalo Kota,Buddha,Belum Menikah,TUKANG OJEK,WNI,Gorontalo,1989-10-10,800000
+Jambi,1501234567890183,Kartika Handayani,Perempuan,A,Jl.Merdeka No.1,Kota Jambi,Kota Jambi,Islam,Menikah,TUKANG KAYU,WNI,Jambi,1980-01-01,1800000
+Jambi,1502234567890184,Larasati Wijaya,Perempuan,O,Jl.Sisingamangaraja No.2,Padang Bulan,Kota Jambi,Kristen,Belum Menikah,KARYAWAN BUMN,WNI,Jambi,1981-02-02,5400000
+Jambi,1503234567890185,Mega Santoso,Perempuan,B,Jl.Diponegoro No.3,Simpang Empat,Kota Jambi,Hindu,Menikah,KARYAWAN SWASTA,WNI,Jambi,1982-03-03,7100000
+Jambi,1504234567890186,Nadia Wijaya,Perempuan,AB,Jl.Gatot Subroto No.4,Mayang,Kota Jambi,Buddha,Menikah,IBU RUMAH TANGGA,WNI,Jambi,1983-04-04,400000
+Jambi,1505234567890187,Oscar Santoso,Laki-laki,O,Jl.Sudirman No.5,Paal Merah,Kota Jambi,Islam,Belum Menikah,NELAYAN/PERIKANAN,WNI,Jambi,1984-05-05,2100000
+Jambi,1506234567890188,Putri Handayani,Perempuan,A,Jl.Teuku Umar No.6,Simbur,Kota Jambi,Kristen,Menikah,KARYAWAN SWASTA,WNI,Jambi,1985-06-06,8000000
+Jambi,1507234567890189,Qori Setiawan,Laki-laki,B,Jl.Kartini No.7,Kelurahan Legok,Kota Jambi,Hindu,Belum Menikah,KARYAWAN HONORER,WNI,Jambi,1986-07-07,4400000
+Jambi,1508234567890190,Rina Wulandari,Perempuan,AB,Jl.Pattimura No.8,Mayang,Kota Jambi,Buddha,Menikah,PELAJAR/MAHASISWA,WNI,Jambi,1987-08-08,100000
+Jambi,1509234567890191,Sandi Pranoto,Laki-laki,A,Jl.Ahmad Yani No.9,Simpang Empat,Kota Jambi,Islam,Belum Menikah,PEGAWAI NEGERI SIPIL,WNI,Jambi,1988-09-09,7300000
+Jambi,1510234567890192,Tita Santoso,Perempuan,B,Jl.Imam Bonjol No.10,Paal Merah,Kota Jambi,Kristen,Menikah,PERAWAT,WNI,Jambi,1989-10-10,19800000
+Jawa Barat,3201234567890243,Rina Wulandari,Perempuan,O,Jl.Merdeka No.1,Cicendo,Bandung Kota,Islam,Menikah,BURUH TANI/PERKEBUNAN,WNI,Bandung,1980-01-01,500000
+Jawa Barat,3202234567890244,Sandi Pranoto,Laki-laki,A,Jl.Sisingamangaraja No.2,Coblong,Bandung Kota,Kristen,Belum Menikah,PERDAGANGAN,WNI,Bandung,1981-02-02,4500000
+Jawa Barat,3203234567890245,Tita Santoso,Perempuan,B,Jl.Diponegoro No.3,Regol,Bandung Kota,Hindu,Menikah,WIRASWASTA,WNI,Bandung,1982-03-03,2600000
+Jawa Barat,3204234567890246,Umi Handayani,Perempuan,AB,Jl.Gatot Subroto No.4,Lengkong,Bandung Kota,Buddha,Menikah,BELUM/TIDAK BEKERJA,WNI,Bandung,1983-04-04,200000
+Jawa Barat,3205234567890247,Vivi Setiawan,Perempuan,O,Jl.Sudirman No.5,Cicendo,Bandung Kota,Islam,Belum Menikah,TUKANG KAYU,WNI,Bandung,1984-05-05,1200000
+Jawa Barat,3206234567890248,Wahyu Pranoto,Laki-laki,A,Jl.Teuku Umar No.6,Coblong,Bandung Kota,Kristen,Menikah,KARYAWAN SWASTA,WNI,Bandung,1985-06-06,4000000
+Jawa Barat,3207234567890249,Xaverius Wijaya,Laki-laki,AB,Jl.Kartini No.7,Regol,Bandung Kota,Hindu,Belum Menikah,PERDAGANGAN,WNI,Bandung,1986-07-07,3000000
+Jawa Barat,3208234567890250,Yanti Setiawati,Perempuan,B,Jl.Pattimura No.8,Lengkong,Bandung Kota,Buddha,Menikah,BELUM/TIDAK BEKERJA,WNI,Bandung,1987-08-08,500000
+Jawa Barat,3209234567890251,Zainal Arifin,Laki-laki,O,Jl.Ahmad Yani No.9,Cicendo,Bandung Kota,Islam,Belum Menikah,WIRASWASTA,WNI,Bandung,1988-09-09,7700000
+Jawa Barat,3210234567890252,Ahmad Santoso,Laki-laki,A,Jl.Merdeka No.10,Coblong,Bandung Kota,Kristen,Menikah,GURU/DOSEN,WNI,Bandung,1989-10-10,19600000
+Jawa Tengah,3301234567890253,Ani Pranoto,Perempuan,B,Jl.Sisingamangaraja No.1,Semarang Kota,Semarang Kota,Islam,Menikah,NELAYAN/PERIKANAN,WNI,Semarang,1980-01-01,900000
+Jawa Tengah,3302234567890254,Budi Wijaya,Laki-laki,O,Jl.Diponegoro No.2,Tembalang,Semarang Kota,Kristen,Belum Menikah,KARYAWAN HONORER,WNI,Semarang,1981-02-02,5500000
+Jawa Tengah,3303234567890255,Citra Handayani,Perempuan,A,Jl.Gatot Subroto No.3,Barusari,Semarang Kota,Hindu,Menikah,PERDAGANGAN,WNI,Semarang,1982-03-03,3500000
+Jawa Tengah,3304234567890256,Darma Setiawan,Laki-laki,AB,Jl.Sudirman No.4,Candisari,Semarang Kota,Buddha,Menikah,IBU RUMAH TANGGA,WNI,Semarang,1983-04-04,400000
+Jawa Tengah,3305234567890257,Edi Santoso,Laki-laki,B,Jl.Teuku Umar No.5,Pedurungan,Semarang Kota,Islam,Belum Menikah,PEMBANTU RUMAH TANGGA,WNI,Semarang,1984-05-05,1100000
+Jawa Tengah,3306234567890258,Fitriani Wijaya,Perempuan,AB,Jl.Kartini No.6,Banyumanik,Semarang Kota,Kristen,Menikah,PERDAGANGAN,WNI,Semarang,1985-06-06,7300000
+Jawa Tengah,3307234567890259,Gandi Santoso,Laki-laki,O,Jl.Pattimura No.7,Tembalang,Semarang Kota,Hindu,Belum Menikah,KARYAWAN HONORER,WNI,Semarang,1986-07-07,6900000
+Jawa Tengah,3308234567890260,Hadi Setiawan,Laki-laki,A,Jl.Ahmad Yani No.8,Barusari,Semarang Kota,Buddha,Menikah,PELAJAR/MAHASISWA,WNI,Semarang,1987-08-08,500000
+Jawa Tengah,3309234567890261,Indah Wijaya,Perempuan,B,Jl.Merdeka No.9,Pedurungan,Semarang Kota,Islam,Belum Menikah,PEGAWAI NEGERI SIPIL,WNI,Semarang,1988-09-09,5000000
+Jawa Tengah,3310234567890262,Joko Santoso,Laki-laki,AB,Jl.Sisingamangaraja No.10,Banyumanik,Semarang Kota,Kristen,Menikah,AKUNTAN,WNI,Semaran,1989-10-10,17200000
+Jawa Timur,3501234567890273,Umi Handayani,Perempuan,A,Jl.Sudirman No.1,Sawahan,Surabaya Kota,Islam,Menikah,PERDAGANGAN,WNI,Surabaya,1980-01-01,5300000
+Jawa Timur,3502234567890274,Vivi Setiawan,Perempuan,AB,Jl.Teuku Umar No.2,Genteng,Surabaya Kota,Buddha,Menikah,BELUM/TIDAK BEKERJA,WNI,Surabaya,1981-02-02,100000
+Jawa Timur,3503234567890275,Wahyu Pranoto,Laki-laki,B,Jl.Merdeka No.3,Sukolilo,Surabaya Kota,Hindu,Belum Menikah,TUKANG BATU,WNI,Surabaya,1982-03-03,700000
+Jawa Timur,3504234567890276,Xaverius Wijaya,Laki-laki,O,Jl.Gatot Subroto No.4,Krembangan,Surabaya Kota,Islam,Menikah,PEGAWAI NEGERI SIPIL,WNI,Surabaya,1983-04-04,2600000
+Jawa Timur,3505234567890277,Yanti Setiawati,Perempuan,A,Jl.Diponegoro No.5,Pabean Cantian,Surabaya Kota,Kristen,Belum Menikah,PERDAGANGAN,WNI,Surabaya,1984-05-05,6000000
+Jawa Timur,3506234567890278,Zainal Arifin,Laki-laki,AB,Jl.Sudirman No.6,Rungkut,Surabaya Kota,Buddha,Menikah,PELAJAR/MAHASISWA,WNI,Surabaya,1985-06-06,400000
+Jawa Timur,3507234567890279,Ahmad Santoso,Laki-laki,O,Jl.Teuku Umar No.7,Tegalsari,Surabaya Kota,Hindu,Belum Menikah,TUKANG BATU,WNI,Surabaya,1986-07-07,500000
+Jawa Timur,3508234567890280,Ani Pranoto,Perempuan,B,Jl.Merdeka No.8,Dukuh Pakis,Surabaya Kota,Islam,Menikah,KARYAWAN SWASTA,WNI,Surabaya,1987-08-08,7000000
+Jawa Timur,3509234567890281,Budi Wijaya,Laki-laki,AB,Jl.Gatot Subroto No.9,Sukomanunggal,Surabaya Kota,Kristen,Belum Menikah,KARYAWAN HONORER,WNI,Surabaya,1988-09-09,2800000
+Jawa Timur,3510234567890282,Citra Handayani,Perempuan,O,Jl.Diponegoro No.10,Sukolilo,Surabaya Kota,Buddha,Menikah,PELAJAR/MAHASISWA,WNI,Surabaya,1989-10-10,0
+Kalimantan Barat,6101234567890293,Nadia Wijaya,Perempuan,B,Jl.Sudirman No.1,Pontianak Selatan,Pontianak Kota,Islam,Menikah,BURUH HARIAN LEPAS,WNI,Pontianak,1980-01-01,1500000
+Kalimantan Barat,6102234567890294,Oscar Santoso,Laki-laki,AB,Jl.Teuku Umar No.2,Pontianak Utara,Pontianak Kota,Kristen,Belum Menikah,KARYAWAN SWASTA,WNI,Pontianak,1981-02-02,5700000
+Kalimantan Barat,6103234567890295,Putri Handayani,Perempuan,O,Jl.Merdeka No.3,Pontianak Timur,Pontianak Kota,Hindu,Menikah,PELAJAR/MAHASISWA,WNI,Pontianak,1982-03-03,200000
+Kalimantan Barat,6104234567890296,Qori Setiawan,Laki-laki,B,Jl.Gatot Subroto No.4,Pontianak Barat,Pontianak Kota,Buddha,Menikah,MEKANIK,WNI,Pontianak,1983-04-04,1100000
+Kalimantan Barat,6105234567890297,Rina Wulandari,Perempuan,A,Jl.Sudirman No.5,Pontianak Selatan,Pontianak Kota,Islam,Belum Menikah,PERDAGANGAN,WNI,Pontianak,1984-05-05,3300000
+Kalimantan Barat,6106234567890298,Sandi Pranoto,Laki-laki,B,Jl.Teuku Umar No.6,Pontianak Utara,Pontianak Kota,Kristen,Menikah,KARYAWAN HONORER,WNI,Pontianak,1985-06-06,6100000
+Kalimantan Barat,6107234567890299,Tita Santoso,Perempuan,O,Jl.Merdeka No.7,Pontianak Timur,Pontianak Kota,Hindu,Belum Menikah,PENSIUNAN,WNI,Pontianak,1986-07-07,100000
+Kalimantan Barat,6108234567890300,Umi Handayani,Perempuan,AB,Jl.Gatot Subroto No.8,Pontianak Barat,Pontianak Kota,Buddha,Menikah,MEKANIK,WNI,Pontianak,1987-08-08,1800000
+Kalimantan Barat,6109234567890301,Vivi Setiawan,Perempuan,O,Jl.Sudirman No.9,Pontianak Selatan,Pontianak Kota,Islam,Belum Menikah,KARYAWAN BUMN,WNI,Pontianak,1988-09-09,3100000
+Kalimantan Barat,6110234567890302,Wahyu Pranoto,Laki-laki,B,Jl.Teuku Umar No.10,Pontianak Utara,Pontianak Kota,Kristen,Menikah,KARYAWAN SWASTA,WNI,Pontianak,1989-10-10,6700000
+Kalimantan Selatan,6301234567890313,Gandi Santoso,Laki-laki,B,Jl.Sudirman No.1,Banjarmasin Timur,Banjarmasin Kota,Islam,Menikah,PEMBANTU RUMAH TANGGA,WNI,Banjarmasin,1980-01-01,1600000
+Kalimantan Selatan,6302234567890314,Hadi Setiawan,Laki-laki,AB,Jl.Teuku Umar No.2,Banjarmasin Utara,Banjarmasin Kota,Kristen,Belum Menikah,WIRASWASTA,WNI,Banjarmasin,1981-02-02,5100000
+Kalimantan Selatan,6303234567890315,Indah Wijaya,Perempuan,O,Jl.Merdeka No.3,Banjarmasin Selatan,Banjarmasin Kota,Hindu,Menikah,WIRASWASTA,WNI,Banjarmasin,1982-03-03,8000000
+Kalimantan Selatan,6304234567890316,Joko Santoso,Laki-laki,A,Jl.Sudirman No.4,Banjarmasin Barat,Banjarmasin Kota,Buddha,Menikah,BELUM/TIDAK BEKERJA,WNI,Banjarmasin,1983-04-04,500000
+Kalimantan Selatan,6305234567890317,Kartika Handayani,Perempuan,B,Jl.Teuku Umar No.5,Banjarmasin Utara,Banjarmasin Kota,Islam,Belum Menikah,PETANI/PEKEBUN,WNI,Banjarmasin,1984-05-05,600000
+Kalimantan Selatan,6306234567890318,Larasati Wijaya,Perempuan,AB,Jl.Merdeka No.6,Banjarmasin Selatan,Banjarmasin Kota,Kristen,Menikah,WIRASWASTA,WNI,Banjarmasin,1985-06-06,7100000
+Kalimantan Selatan,6307234567890319,Mega Santoso,Perempuan,O,Jl.Sudirman No.7,Banjarmasin Timur,Banjarmasin Kota,Hindu,Belum Menikah,PEGAWAI NEGERI SIPIL,WNI,Banjarmasin,1986-07-07,7600000
+Kalimantan Selatan,6308234567890320,Nadia Wijaya,Perempuan,B,Jl.Teuku Umar No.8,Banjarmasin Barat,Banjarmasin Kota,Buddha,Menikah,BELUM/TIDAK BEKERJA,WNI,Banjarmasin,1987-08-08,100000
+Kalimantan Selatan,6309234567890321,Oscar Santoso,Laki-laki,O,Jl.Merdeka No.9,Banjarmasin Utara,Banjarmasin Kota,Islam,Menikah,TUKANG BATU,WNI,Banjarmasin,1988-09-09,1100000
+Kalimantan Selatan,6310234567890322,Putri Handayani,Perempuan,A,Jl.Sudirman No.10,Banjarmasin Selatan,Banjarmasin Kota,Kristen,Belum Menikah,PERDAGANGAN,WNI,Banjarmasin,1989-10-10,5300000
+Kalimantan Tengah,6201234567890303,Xaverius Wijaya,Laki-laki,AB,Jl.Merdeka No.1,Jekan Raya,Palangka Raya Kota,Hindu,Menikah,PELAJAR/MAHASISWA,WNI,Palangka Raya,1980-01-01,300000
+Kalimantan Tengah,6202234567890304,Yanti Setiawati,Perempuan,A,Jl.Sudirman No.2,Pahandut,Palangka Raya Kota,Buddha,Belum Menikah,KARYAWAN BUMN,WNI,Palangka Raya,1981-02-02,4200000
+Kalimantan Tengah,6203234567890305,Zainal Arifin,Laki-laki,O,Jl.Teuku Umar No.3,Bukit Batu,Palangka Raya Kota,Islam,Menikah,WIRASWASTA,WNI,Palangka Raya,1982-03-03,4000000
+Kalimantan Tengah,6204234567890306,Ahmad Santoso,Laki-laki,B,Jl.Merdeka No.4,Jekan Raya,Palangka Raya Kota,Kristen,Belum Menikah,BELUM/TIDAK BEKERJA,WNI,Palangka Raya,1983-04-04,300000
+Kalimantan Tengah,6205234567890307,Ani Pranoto,Perempuan,AB,Jl.Sudirman No.5,Pahandut,Palangka Raya Kota,Hindu,Menikah,TRANSPORTASI,WNI,Palangka Raya,1984-05-05,8000000
+Kalimantan Tengah,6206234567890308,Budi Wijaya,Laki-laki,O,Jl.Teuku Umar No.6,Bukit Batu,Palangka Raya Kota,Buddha,Belum Menikah,TRANSPORTASI,WNI,Palangka Raya,1985-06-06,6000000
+Kalimantan Tengah,6207234567890309,Citra Handayani,Perempuan,A,Jl.Merdeka No.7,Jekan Raya,Palangka Raya Kota,Islam,Menikah,BELUM/TIDAK BEKERJA,WNI,Palangka Raya,1986-07-07,0
+Kalimantan Tengah,6208234567890310,Darma Setiawan,Laki-laki,B,Jl.Sudirman No.8,Pahandut,Palangka Raya Kota,Kristen,Belum Menikah,KARYAWAN HONORER,WNI,Palangka Raya,1987-08-08,5900000
+Kalimantan Tengah,6209234567890311,Edi Santoso,Laki-laki,AB,Jl.Teuku Umar No.9,Bukit Batu,Palangka Raya Kota,Hindu,Menikah,TRANSPORTASI,WNI,Palangka Raya,1988-09-09,2500000
+Kalimantan Tengah,6210234567890312,Fitriani Wijaya,Perempuan,O,Jl.Merdeka No.10,Jekan Raya,Palangka Raya Kota,Buddha,Menikah,BELUM/TIDAK BEKERJA,WNI,Palangka Raya,1989-10-10,100000
+Kalimantan Timur,6401234567890323,Qori Setiawan,Laki-laki,B,Jl.Teuku Umar No.1,Samarinda Kota,Samarinda Kota,Hindu,Menikah,KARYAWAN BUMN,WNI,Samarinda,1980-01-01,5100000
+Kalimantan Timur,6402234567890324,Rina Wulandari,Perempuan,A,Jl.Merdeka No.2,Samarinda Ulu,Samarinda Kota,Buddha,Belum Menikah,PENSIUNAN,WNI,Samarinda,1981-02-02,300000
+Kalimantan Timur,6403234567890325,Sandi Pranoto,Laki-laki,O,Jl.Sudirman No.3,Samarinda Ilir,Samarinda Kota,Islam,Menikah,TUKANG BATU,WNI,Samarinda,1982-03-03,1700000
+Kalimantan Timur,6404234567890326,Tita Santoso,Perempuan,AB,Jl.Teuku Umar No.4,Samarinda Seberang,Samarinda Kota,Kristen,Belum Menikah,KARYAWAN SWASTA,WNI,Samarinda,1983-04-04,3500000
+Kalimantan Timur,6405234567890327,Umi Handayani,Perempuan,B,Jl.Merdeka No.5,Samarinda Ulu,Samarinda Kota,Hindu,Menikah,WIRASWASTA,WNI,Samarinda,1984-05-05,2500000
+Kalimantan Timur,6406234567890328,Vivi Setiawan,Perempuan,AB,Jl.Sudirman No.6,Samarinda Ilir,Samarinda Kota,Buddha,Belum Menikah,PENSIUNAN,WNI,Samarinda,1985-06-06,200000
+Kalimantan Timur,6407234567890329,Wahyu Pranoto,Laki-laki,O,Jl.Teuku Umar No.7,Samarinda Seberang,Samarinda Kota,Islam,Menikah,MEKANIK,WNI,Samarinda,1986-07-07,1400000
+Kalimantan Timur,6408234567890330,Xaverius Wijaya,Laki-laki,AB,Jl.Merdeka No.8,Samarinda Ulu,Samarinda Kota,Kristen,Belum Menikah,WIRASWASTA,WNI,Samarinda,1987-08-08,6900000
+Kalimantan Timur,6409234567890331,Yanti Setiawati,Perempuan,O,Jl.Sudirman No.9,Samarinda Ilir,Samarinda Kota,Hindu,Menikah,KARYAWAN HONORER,WNI,Samarinda,1988-09-09,7500000
+Kalimantan Timur,6410234567890332,Zainal Arifin,Laki-laki,A,Jl.Teuku Umar No.10,Samarinda Seberang,Samarinda Kota,Buddha,Belum Menikah,PENSIUNAN,WNI,Samarinda,1989-10-10,100000
+Kalimantan Utara,6501234567890333,Ahmad Santoso,Laki-laki,B,Jl.Merdeka No.1,Tanjung Selor Barat,Bulungan Kota,Kristen,Menikah,KARYAWAN BUMN,WNI,Tanjung Selor,1980-01-01,4300000
+Kalimantan Utara,6502234567890334,Ani Pranoto,Perempuan,AB,Jl.Sudirman No.2,Tanjung Selor Timur,Bulungan Kota,Hindu,Belum Menikah,KARYAWAN BUMN,WNI,Tanjung Selor,1981-02-02,2800000
+Kalimantan Utara,6503234567890335,Budi Wijaya,Laki-laki,O,Jl.Teuku Umar No.3,Tanjung Selor Utara,Bulungan Kota,Buddha,Menikah,BURUH TANI/PERKEBUNAN,WNI,Tanjung Selor,1982-03-03,600000
+Kalimantan Utara,6504234567890336,Citra Handayani,Perempuan,A,Jl.Merdeka No.4,Tanjung Selor Selatan,Bulungan Kota,Islam,Menikah,KARYAWAN HONORER,WNI,Tanjung Selor,1983-04-04,4500000
+Kalimantan Utara,6505234567890337,Darma Setiawan,Laki-laki,AB,Jl.Sudirman No.5,Tanjung Selor Timur,Bulungan Kota,Kristen,Belum Menikah,KARYAWAN SWASTA,WNI,Tanjung Selor,1984-05-05,2800000
+Kalimantan Utara,6506234567890338,Edi Santoso,Laki-laki,O,Jl.Teuku Umar No.6,Tanjung Selor Utara,Bulungan Kota,Hindu,Menikah,MEKANIK,WNI,Tanjung Selor,1985-06-06,2100000
+Kalimantan Utara,6507234567890339,Fitriani Wijaya,Perempuan,B,Jl.Merdeka No.7,Tanjung Selor Selatan,Bulungan Kota,Buddha,Menikah,TRANSPORTASI,WNI,Tanjung Selor,1986-07-07,5800000
+Kalimantan Utara,6508234567890340,Gandi Santoso,Laki-laki,AB,Jl.Sudirman No.8,Tanjung Selor Timur,Bulungan Kota,Islam,Belum Menikah,KARYAWAN BUMN,WNI,Tanjung Selor,1987-08-08,2800000
+Kalimantan Utara,6509234567890341,Hadi Setiawan,Laki-laki,O,Jl.Teuku Umar No.9,Tanjung Selor Utara,Bulungan Kota,Kristen,Menikah,BURUH TANI/PERKEBUNAN,WNI,Tanjung Selor,1988-09-09,700000
+Kalimantan Utara,6510234567890342,Indah Wijaya,Perempuan,A,Jl.Merdeka No.10,Tanjung Selor Selatan,Bulungan Kota,Hindu,Belum Menikah,TRANSPORTASI,WNI,Tanjung Selor,1989-10-10,3600000
+Kepulauan Riau,2101234567890173,Ani Pranoto,Perempuan,O,Jl.Merdeka No.1,Tanjung Pinang Timur,Tanjung Pinang Kota,Islam,Menikah,PETANI/PEKEBUN,WNI,Tanjung Pinang,1980-01-01,2400000
+Kepulauan Riau,2102234567890174,Budi Wijaya,Laki-laki,A,Jl.Sisingamangaraja No.2,Tanjung Pinang Selatan,Tanjung Pinang Kota,Kristen,Belum Menikah,KARYAWAN SWASTA,WNI,Tanjung Pinang,1981-02-02,6800000
+Kepulauan Riau,2103234567890175,Citra Handayani,Perempuan,B,Jl.Diponegoro No.3,Tanjung Pinang Barat,Tanjung Pinang Kota,Hindu,Menikah,TRANSPORTASI,WNI,Tanjung Pinang,1982-03-03,4000000
+Kepulauan Riau,2104234567890176,Darma Setiawan,Laki-laki,AB,Jl.Gatot Subroto No.4,Tanjung Pinang Timur,Tanjung Pinang Kota,Buddha,Menikah,PENSIUNAN,WNI,Tanjung Pinang,1983-04-04,0
+Kepulauan Riau,2105234567890177,Edi Santoso,Laki-laki,O,Jl.Sudirman No.5,Tanjung Pinang Selatan,Tanjung Pinang Kota,Islam,Belum Menikah,TUKANG BATU,WNI,Tanjung Pinang,1984-05-05,2300000
+Kepulauan Riau,2106234567890178,Fitriani Wijaya,Perempuan,A,Jl.Teuku Umar No.6,Tanjung Pinang Barat,Tanjung Pinang Kota,Kristen,Menikah,PERDAGANGAN,WNI,Tanjung Pinang,1985-06-06,2700000
+Kepulauan Riau,2107234567890179,Gandi Santoso,Laki-laki,B,Jl.Kartini No.7,Tanjung Pinang Selatan,Tanjung Pinang Kota,Hindu,Belum Menikah,PERDAGANGAN,WNI,Tanjung Pinang,1986-07-07,3000000
+Kepulauan Riau,2108234567890180,Hadi Setiawan,Laki-laki,AB,Jl.Pattimura No.8,Tanjung Pinang Timur,Tanjung Pinang Kota,Buddha,Menikah,PENSIUNAN,WNI,Tanjung Pinang,1987-08-08,500000
+Kepulauan Riau,2109234567890181,Indah Wijaya,Perempuan,O,Jl.Imam Bonjol No.9,Tanjung Pinang Barat,Tanjung Pinang Kota,Islam,Menikah,PERDAGANGAN,WNI,Tanjung Pinang,1988-09-09,6100000
+Kepulauan Riau,2110234567890182,Joko Santoso,Laki-laki,A,Jl.Ahmad Yani No.10,Tanjung Pinang Selatan,Tanjung Pinang Kota,Kristen,Belum Menikah,PERDAGANGAN,WNI,Tanjung Pinang,1989-10-10,4500000
+Lampung,1801234567890203,Darma Setiawan,Laki-laki,A,Jl.Merdeka No.1,Rajabasa,Kedaton,Islam,Menikah,TUKANG KAYU,WNI,Bandar Lampung,1980-01-01,1100000
+Lampung,1802234567890204,Edi Santoso,Laki-laki,O,Jl.Sisingamangaraja No.2,Sukarame,Kedaton,Kristen,Belum Menikah,KARYAWAN HONORER,WNI,Bandar Lampung,1981-02-02,7000000
+Lampung,1803234567890205,Fitriani Wijaya,Perempuan,B,Jl.Diponegoro No.3,Kedamaian,Kedaton,Hindu,Menikah,PEGAWAI NEGERI SIPIL,WNI,Bandar Lampung,1982-03-03,4000000
+Lampung,1804234567890206,Gandi Santoso,Laki-laki,AB,Jl.Gatot Subroto No.4,Kemiling,Kedaton,Buddha,Menikah,IBU RUMAH TANGGA,WNI,Bandar Lampung,1983-04-04,300000
+Lampung,1805234567890207,Hadi Setiawan,Laki-laki,O,Jl.Sudirman No.5,Sukabumi,Kedaton,Islam,Belum Menikah,NELAYAN/PERIKANAN,WNI,Bandar Lampung,1984-05-05,2500000
+Lampung,1806234567890208,Indah Wijaya,Perempuan,A,Jl.Teuku Umar No.6,Rajabasa,Kedaton,Kristen,Menikah,PEGAWAI NEGERI SIPIL,WNI,Bandar Lampung,1985-06-06,5400000
+Lampung,1807234567890209,Joko Santoso,Laki-laki,B,Jl.Kartini No.7,Sukaraja,Kedaton,Hindu,Belum Menikah,PEGAWAI NEGERI SIPIL,WNI,Bandar Lampung,1986-07-07,7300000
+Lampung,1808234567890210,Kartika Handayani,Perempuan,AB,Jl.Pattimura No.8,Kemiling,Kedaton,Buddha,Menikah,BELUM/TIDAK BEKERJA,WNI,Bandar Lampung,1987-08-08,0
+Lampung,1809234567890211,Larasati Wijaya,Perempuan,O,Jl.Imam Bonjol No.9,Kedamaian,Kedaton,Islam,Menikah,WIRASWASTA,WNI,Bandar Lampung,1988-09-09,6400000
+Lampung,1810234567890212,Mega Santoso,Perempuan,B,Jl.Ahmad Yani No.10,Kemiling,Kedaton,Kristen,Belum Menikah,GURU/DOSEN,WNI,Bandar Lampung,1989-10-10,7800000
+Maluku,8101234567890423,Indah Wijaya,Perempuan,A,Jl.Merdeka No.1,Ambon Kota,Ambon Kota,Hindu,Menikah,PERDAGANGAN,WNI,Ambon,1980-01-01,3800000
+Maluku,8102234567890424,Joko Santoso,Laki-laki,B,Jl.Sudirman No.2,Ambon Kota,Ambon Kota,Buddha,Belum Menikah,BURUH TANI/PERKEBUNAN,WNI,Ambon,1981-02-02,1300000
+Maluku,8103234567890425,Kartika Handayani,Perempuan,AB,Jl.Teuku Umar No.3,Ambon Kota,Ambon Kota,Islam,Menikah,KARYAWAN BUMN,WNI,Ambon,1982-03-03,4700000
+Maluku,8104234567890426,Larasati Wijaya,Perempuan,O,Jl.Merdeka No.4,Ambon Kota,Ambon Kota,Hindu,Belum Menikah,KARYAWAN SWASTA,WNI,Ambon,1983-04-04,4000000
+Maluku,8105234567890427,Mega Santoso,Perempuan,A,Jl.Sudirman No.5,Ambon Kota,Ambon Kota,Buddha,Menikah,TUKANG OJEK,WNI,Ambon,1984-05-05,1400000
+Maluku,8106234567890428,Nadia Wijaya,Perempuan,AB,Jl.Teuku Umar No.6,Ambon Kota,Ambon Kota,Islam,Belum Menikah,KARYAWAN BUMN,WNI,Ambon,1985-06-06,5300000
+Maluku,8107234567890429,Oscar Santoso,Laki-laki,O,Jl.Merdeka No.7,Ambon Kota,Ambon Kota,Hindu,Menikah,TRANSPORTASI,WNI,Ambon,1986-07-07,5900000
+Maluku,8108234567890430,Putri Handayani,Perempuan,B,Jl.Sudirman No.8,Ambon Kota,Ambon Kota,Buddha,Belum Menikah,TUKANG KAYU,WNI,Ambon,1987-08-08,2400000
+Maluku,8109234567890431,Qori Setiawan,Laki-laki,AB,Jl.Teuku Umar No.9,Ambon Kota,Ambon Kota,Islam,Menikah,TRANSPORTASI,WNI,Ambon,1988-09-09,6600000
+Maluku,8110234567890432,Rina Wulandari,Perempuan,O,Jl.Merdeka No.10,Ambon Kota,Ambon Kota,Hindu,Belum Menikah,PERDAGANGAN,WNI,Ambon,1989-10-10,2500000
+Maluku Utara,8201234567890433,Sandi Pranoto,Laki-laki,A,Jl.Sudirman No.1,Ternate Kota,Ternate Kota,Islam,Menikah,BURUH TANI/PERKEBUNAN,WNI,Ternate,1980-01-01,1400000
+Maluku Utara,8202234567890434,Tita Santoso,Perempuan,AB,Jl.Teuku Umar No.2,Ternate Kota,Ternate Kota,Hindu,Belum Menikah,KARYAWAN HONORER,WNI,Ternate,1981-02-02,3100000
+Maluku Utara,8203234567890435,Umi Handayani,Perempuan,B,Jl.Merdeka No.3,Ternate Kota,Ternate Kota,Buddha,Menikah,KARYAWAN BUMN,WNI,Ternate,1982-03-03,4100000
+Maluku Utara,8204234567890436,Vivi Setiawan,Perempuan,AB,Jl.Sudirman No.4,Ternate Kota,Ternate Kota,Islam,Belum Menikah,PETANI/PEKEBUN,WNI,Ternate,1983-04-04,800000
+Maluku Utara,8205234567890437,Wahyu Pranoto,Laki-laki,O,Jl.Teuku Umar No.5,Ternate Kota,Ternate Kota,Hindu,Menikah,KARYAWAN HONORER,WNI,Ternate,1984-05-05,6000000
+Maluku Utara,8206234567890438,Xaverius Wijaya,Laki-laki,AB,Jl.Merdeka No.6,Ternate Kota,Ternate Kota,Buddha,Belum Menikah,KARYAWAN BUMN,WNI,Ternate,1985-06-06,4200000
+Maluku Utara,8207234567890439,Yanti Setiawati,Perempuan,B,Jl.Sudirman No.7,Ternate Kota,Ternate Kota,Islam,Menikah,TUKANG KAYU,WNI,Ternate,1986-07-07,2400000
+Maluku Utara,8208234567890440,Zainal Arifin,Laki-laki,AB,Jl.Teuku Umar No.8,Ternate Kota,Ternate Kota,Hindu,Belum Menikah,KARYAWAN BUMN,WNI,Ternate,1987-08-08,7000000
+Maluku Utara,8209234567890441,Ahmad Santoso,Laki-laki,O,Jl.Merdeka No.9,Ternate Kota,Ternate Kota,Buddha,Menikah,PEGAWAI NEGERI SIPIL,WNI,Ternate,1988-09-09,3800000
+Maluku Utara,8210234567890442,Ani Pranoto,Perempuan,A,Jl.Sudirman No.10,Ternate Kota,Ternate Kota,Islam,Belum Menikah,TUKANG KAYU,WNI,Ternate,1989-10-10,2100000
+Nusa Tenggara Barat,5201234567890343,Joko Santoso,Laki-laki,B,Jl.Sudirman No.1,Mataram Kota,Mataram Kota,Buddha,Menikah,MEKANIK,WNI,Mataram,1980-01-01,1300000
+Nusa Tenggara Barat,5202234567890344,Kartika Handayani,Perempuan,AB,Jl.Teuku Umar No.2,Mataram Utara,Mataram Kota,Islam,Belum Menikah,TRANSPORTASI,WNI,Mataram,1981-02-02,2800000
+Nusa Tenggara Barat,5203234567890345,Larasati Wijaya,Perempuan,O,Jl.Merdeka No.3,Mataram Selatan,Mataram Kota,Hindu,Menikah,KARYAWAN SWASTA,WNI,Mataram,1982-03-03,6500000
+Nusa Tenggara Barat,5204234567890346,Mega Santoso,Perempuan,AB,Jl.Sudirman No.4,Mataram Kota,Mataram Kota,Buddha,Belum Menikah,PEMBANTU RUMAH TANGGA,WNI,Mataram,1983-04-04,1300000
+Nusa Tenggara Barat,5205234567890347,Nadia Wijaya,Perempuan,B,Jl.Teuku Umar No.5,Mataram Kota,Mataram Kota,Islam,Menikah,KARYAWAN SWASTA,WNI,Mataram,1984-05-05,2500000
+Nusa Tenggara Barat,5206234567890348,Oscar Santoso,Laki-laki,AB,Jl.Merdeka No.6,Mataram Kota,Mataram Kota,Hindu,Belum Menikah,PEGAWAI NEGERI SIPIL,WNI,Mataram,1985-06-06,7400000
+Nusa Tenggara Barat,5207234567890349,Putri Handayani,Perempuan,O,Jl.Sudirman No.7,Mataram Kota,Mataram Kota,Buddha,Menikah,NELAYAN/PERIKANAN,WNI,Mataram,1986-07-07,2500000
+Nusa Tenggara Barat,5208234567890350,Qori Setiawan,Laki-laki,B,Jl.Teuku Umar No.8,Mataram Kota,Mataram Kota,Islam,Menikah,PEGAWAI NEGERI SIPIL,WNI,Mataram,1987-08-08,3500000
+Nusa Tenggara Barat,5209234567890351,Rina Wulandari,Perempuan,A,Jl.Merdeka No.9,Mataram Kota,Mataram Kota,Hindu,Belum Menikah,KARYAWAN HONORER,WNI,Mataram,1988-09-09,5300000
+Nusa Tenggara Barat,5210234567890352,Sandi Pranoto,Laki-laki,AB,Jl.Sudirman No.10,Mataram Kota,Mataram Kota,Buddha,Menikah,BURUH TANI/PERKEBUNAN,WNI,Mataram,1989-10-10,1800000
+Nusa Tenggara Timur,5301234567890353,Tita Santoso,Perempuan,O,Jl.Teuku Umar No.1,Kupang Kota,Kupang Kota,Islam,Menikah,PERDAGANGAN,WNI,Kupang,1980-01-01,2500000
+Nusa Tenggara Timur,5302234567890354,Umi Handayani,Perempuan,A,Jl.Merdeka No.2,Kupang Kota,Kupang Kota,Hindu,Belum Menikah,KARYAWAN SWASTA,WNI,Kupang,1981-02-02,2900000
+Nusa Tenggara Timur,5303234567890355,Vivi Setiawan,Perempuan,AB,Jl.Sudirman No.3,Kupang Kota,Kupang Kota,Buddha,Menikah,NELAYAN/PERIKANAN,WNI,Kupang,1982-03-03,2200000
+Nusa Tenggara Timur,5304234567890356,Wahyu Pranoto,Laki-laki,O,Jl.Teuku Umar No.4,Kupang Kota,Kupang Kota,Kristen,Menikah,KARYAWAN SWASTA,WNI,Kupang,1983-04-04,7800000
+Nusa Tenggara Timur,5305234567890357,Xaverius Wijaya,Laki-laki,AB,Jl.Merdeka No.5,Kupang Kota,Kupang Kota,Hindu,Belum Menikah,PEGAWAI NEGERI SIPIL,WNI,Kupang,1984-05-05,6200000
+Nusa Tenggara Timur,5306234567890358,Yanti Setiawati,Perempuan,B,Jl.Sudirman No.6,Kupang Kota,Kupang Kota,Buddha,Menikah,BURUH TANI/PERKEBUNAN,WNI,Kupang,1985-06-06,900000
+Nusa Tenggara Timur,5307234567890359,Zainal Arifin,Laki-laki,A,Jl.Teuku Umar No.7,Kupang Kota,Kupang Kota,Islam,Menikah,WIRASWASTA,WNI,Kupang,1986-07-07,3300000
+Nusa Tenggara Timur,5308234567890360,Ahmad Santoso,Laki-laki,O,Jl.Merdeka No.8,Kupang Kota,Kupang Kota,Kristen,Belum Menikah,KARYAWAN SWASTA,WNI,Kupang,1987-08-08,4400000
+Nusa Tenggara Timur,5309234567890361,Ani Pranoto,Perempuan,AB,Jl.Sudirman No.9,Kupang Kota,Kupang Kota,Hindu,Menikah,TUKANG OJEK,WNI,Kupang,1988-09-09,600000
+Nusa Tenggara Timur,5310234567890362,Budi Wijaya,Laki-laki,B,Jl.Teuku Umar No.10,Kupang Kota,Kupang Kota,Buddha,Belum Menikah,PEGAWAI NEGERI SIPIL,WNI,Kupang,1989-10-10,3800000
+Papua,9101234567890443,Budi Wijaya,Laki-laki,B,Jl.Teuku Umar No.1,Jayapura Kota,Jayapura Kota,Hindu,Menikah,KARYAWAN HONORER,WNI,Jayapura,1980-01-01,4000000
+Papua,9102234567890444,Citra Handayani,Perempuan,AB,Jl.Merdeka No.2,Jayapura Kota,Jayapura Kota,Buddha,Belum Menikah,KARYAWAN HONORER,WNI,Jayapura,1981-02-02,3100000
+Papua,9103234567890445,Darma Setiawan,Laki-laki,O,Jl.Sudirman No.3,Jayapura Kota,Jayapura Kota,Islam,Menikah,TUKANG OJEK,WNI,Jayapura,1982-03-03,2200000
+Papua,9104234567890446,Edi Santoso,Laki-laki,A,Jl.Teuku Umar No.4,Jayapura Kota,Jayapura Kota,Hindu,Belum Menikah,TRANSPORTASI,WNI,Jayapura,1983-04-04,5100000
+Papua,9105234567890447,Fitriani Wijaya,Perempuan,AB,Jl.Merdeka No.5,Jayapura Kota,Jayapura Kota,Buddha,Menikah,PERDAGANGAN,WNI,Jayapura,1984-05-05,7200000
+Papua,9106234567890448,Gandi Santoso,Laki-laki,B,Jl.Sudirman No.6,Jayapura Kota,Jayapura Kota,Islam,Menikah,NELAYAN/PERIKANAN,WNI,Jayapura,1985-06-06,1200000
+Papua,9107234567890449,Hadi Setiawan,Laki-laki,AB,Jl.Teuku Umar No.7,Jayapura Kota,Jayapura Kota,Hindu,Belum Menikah,TRANSPORTASI,WNI,Jayapura,1986-07-07,3500000
+Papua,9108234567890450,Indah Wijaya,Perempuan,O,Jl.Merdeka No.8,Jayapura Kota,Jayapura Kota,Buddha,Menikah,TRANSPORTASI,WNI,Jayapura,1987-08-08,7600000
+Papua,9109234567890451,Joko Santoso,Laki-laki,A,Jl.Sudirman No.9,Jayapura Kota,Jayapura Kota,Islam,Belum Menikah,NELAYAN/PERIKANAN,WNI,Jayapura,1988-09-09,1800000
+Papua,9110234567890452,Kartika Handayani,Perempuan,B,Jl.Teuku Umar No.10,Jayapura Kota,Jayapura Kota,Hindu,Menikah,KARYAWAN SWASTA,WNI,Jayapura,1989-10-10,3600000
+Papua Barat,9201234567890453,Larasati Wijaya,Perempuan,AB,Jl.Merdeka No.1,Manokwari Kota,Manokwari Kota,Buddha,Belum Menikah,KARYAWAN HONORER,WNI,Manokwari,1980-01-01,4600000
+Papua Barat,9202234567890454,Mega Santoso,Perempuan,O,Jl.Sudirman No.2,Manokwari Kota,Manokwari Kota,Islam,Menikah,PEMBANTU RUMAH TANGGA,WNI,Manokwari,1981-02-02,1200000
+Papua Barat,9203234567890455,Nadia Wijaya,Perempuan,A,Jl.Teuku Umar No.3,Manokwari Kota,Manokwari Kota,Hindu,Belum Menikah,PEGAWAI NEGERI SIPIL,WNI,Manokwari,1982-03-03,3500000
+Papua Barat,9204234567890456,Oscar Santoso,Laki-laki,B,Jl.Merdeka No.4,Manokwari Kota,Manokwari Kota,Buddha,Menikah,TRANSPORTASI,WNI,Manokwari,1983-04-04,6900000
+Papua Barat,9205234567890457,Putri Handayani,Perempuan,AB,Jl.Sudirman No.5,Manokwari Kota,Manokwari Kota,Islam,Belum Menikah,PETANI/PEKEBUN,WNI,Manokwari,1984-05-05,1700000
+Papua Barat,9206234567890458,Qori Setiawan,Laki-laki,O,Jl.Teuku Umar No.6,Manokwari Kota,Manokwari Kota,Hindu,Menikah,TRANSPORTASI,WNI,Manokwari,1985-06-06,2700000
+Papua Barat,9207234567890459,Rina Wulandari,Perempuan,A,Jl.Merdeka No.7,Manokwari Kota,Manokwari Kota,Buddha,Belum Menikah,TRANSPORTASI,WNI,Manokwari,1986-07-07,5500000
+Papua Barat,9208234567890460,Sandi Pranoto,Laki-laki,AB,Jl.Sudirman No.8,Manokwari Kota,Manokwari Kota,Islam,Menikah,TUKANG BATU,WNI,Manokwari,1987-08-08,1100000
+Papua Barat,9209234567890461,Tita Santoso,Perempuan,B,Jl.Teuku Umar No.9,Manokwari Kota,Manokwari Kota,Hindu,Belum Menikah,TRANSPORTASI,WNI,Manokwari,1988-09-09,5400000
+Papua Barat,9210234567890462,Umi Handayani,Perempuan,O,Jl.Merdeka No.10,Manokwari Kota,Manokwari Kota,Buddha,Menikah,PEGAWAI NEGERI SIPIL,WNI,Manokwari,1989-10-10,4400000
+Riau,1401234567890163,Vivi Setiawan,Perempuan,A,Jl.Merdeka No.1,Pekanbaru Kota,Pekanbaru Kota,Islam,Menikah,TUKANG BATU,WNI,Pekanbaru,1980-01-01,1200000
+Riau,1402234567890164,Wahyu Pranoto,Laki-laki,B,Jl.Sisingamangaraja No.2,Pekanbaru Barat,Pekanbaru Barat,Kristen,Belum Menikah,KARYAWAN SWASTA,WNI,Pekanbaru,1981-02-02,6700000
+Riau,1403234567890165,Xaverius Wijaya,Laki-laki,AB,Jl.Diponegoro No.3,Pekanbaru Timur,Pekanbaru Timur,Hindu,Menikah,KARYAWAN BUMN,WNI,Pekanbaru,1982-03-03,5000000
+Riau,1404234567890166,Yanti Setiawati,Perempuan,O,Jl.Gatot Subroto No.4,Pekanbaru Selatan,Pekanbaru Selatan,Buddha,Menikah,IBU RUMAH TANGGA,WNI,Pekanbaru,1983-04-04,200000
+Riau,1405234567890167,Zainal Arifin,Laki-laki,A,Jl.Sudirman No.5,Pekanbaru Kota,Pekanbaru Kota,Islam,Belum Menikah,PETANI/PEKEBUN,WNI,Pekanbaru,1984-05-05,1300000
+Riau,1406234567890168,Ahmad Santoso,Laki-laki,B,Jl.Teuku Umar No.6,Pekanbaru Barat,Pekanbaru Barat,Kristen,Menikah,PEGAWAI NEGERI SIPIL,WNI,Pekanbaru,1985-06-06,6600000
+Riau,1407234567890169,Ani Pranoto,Perempuan,AB,Jl.Kartini No.7,Pekanbaru Timur,Pekanbaru Timur,Hindu,Belum Menikah,PERDAGANGAN,WNI,Pekanbaru,1986-07-07,5000000
+Riau,1408234567890170,Budi Wijaya,Laki-laki,O,Jl.Imam Bonjol No.8,Pekanbaru Selatan,Pekanbaru Selatan,Buddha,Menikah,IBU RUMAH TANGGA,WNI,Pekanbaru,1987-08-08,0
+Riau,1409234567890171,Citra Handayani,Perempuan,A,Jl.Ahmad Yani No.9,Pekanbaru Kota,Pekanbaru Kota,Islam,Belum Menikah,KARYAWAN SWASTA,WNI,Pekanbaru,1988-09-09,4100000
+Riau,1410234567890172,Darma Setiawan,Laki-laki,B,Jl.Pattimura No.10,Pekanbaru Barat,Pekanbaru Barat,Kristen,Menikah,PERAWAT,WNI,Pekanbaru,1989-10-10,12700000
+Sulawesi Barat,7601234567890413,Zainal Arifin,Laki-laki,O,Jl.Teuku Umar No.1,Mamuju Kota,Mamuju Kota,Islam,Menikah,KARYAWAN SWASTA,WNI,Mamuju,1980-01-01,3100000
+Sulawesi Barat,7602234567890414,Ahmad Santoso,Laki-laki,A,Jl.Merdeka No.2,Mamuju Kota,Mamuju Kota,Hindu,Belum Menikah,PERDAGANGAN,WNI,Mamuju,1981-02-02,5200000
+Sulawesi Barat,7603234567890415,Ani Pranoto,Perempuan,AB,Jl.Sudirman No.3,Mamuju Kota,Mamuju Kota,Buddha,Menikah,TUKANG OJEK,WNI,Mamuju,1982-03-03,1500000
+Sulawesi Barat,7604234567890416,Budi Wijaya,Laki-laki,B,Jl.Teuku Umar No.4,Mamuju Kota,Mamuju Kota,Islam,Belum Menikah,WIRASWASTA,WNI,Mamuju,1983-04-04,6300000
+Sulawesi Barat,7605234567890417,Citra Handayani,Perempuan,O,Jl.Merdeka No.5,Mamuju Kota,Mamuju Kota,Hindu,Menikah,PERDAGANGAN,WNI,Mamuju,1984-05-05,3200000
+Sulawesi Barat,7606234567890418,Darma Setiawan,Laki-laki,AB,Jl.Sudirman No.6,Mamuju Kota,Mamuju Kota,Buddha,Belum Menikah,PEMBANTU RUMAH TANGGA,WNI,Mamuju,1985-06-06,2300000
+Sulawesi Barat,7607234567890419,Edi Santoso,Laki-laki,B,Jl.Teuku Umar No.7,Mamuju Kota,Mamuju Kota,Islam,Menikah,KARYAWAN BUMN,WNI,Mamuju,1986-07-07,4100000
+Sulawesi Barat,7608234567890420,Fitriani Wijaya,Perempuan,AB,Jl.Merdeka No.8,Mamuju Kota,Mamuju Kota,Hindu,Belum Menikah,KARYAWAN SWASTA,WNI,Mamuju,1987-08-08,7000000
+Sulawesi Barat,7609234567890421,Gandi Santoso,Laki-laki,O,Jl.Sudirman No.9,Mamuju Kota,Mamuju Kota,Buddha,Menikah,PEMBANTU RUMAH TANGGA,WNI,Mamuju,1988-09-09,500000
+Sulawesi Barat,7610234567890422,Hadi Setiawan,Laki-laki,AB,Jl.Teuku Umar No.10,Mamuju Kota,Mamuju Kota,Islam,Belum Menikah,PERDAGANGAN,WNI,Mamuju,1989-10-10,7600000
+Sulawesi Selatan,7301234567890383,Wahyu Pranoto,Laki-laki,B,Jl.Teuku Umar No.1,Makassar Kota,Makassar Kota,Kristen,Belum Menikah,PERDAGANGAN,WNI,Makassar,1980-01-01,6800000
+Sulawesi Selatan,7302234567890384,Xaverius Wijaya,Laki-laki,O,Jl.Merdeka No.2,Makassar Kota,Makassar Kota,Hindu,Menikah,KARYAWAN HONORER,WNI,Makassar,1981-02-02,7200000
+Sulawesi Selatan,7303234567890385,Yanti Setiawati,Perempuan,AB,Jl.Sudirman No.3,Makassar Kota,Makassar Kota,Buddha,Belum Menikah,TUKANG BATU,WNI,Makassar,1982-03-03,1600000
+Sulawesi Selatan,7304234567890386,Zainal Arifin,Laki-laki,A,Jl.Teuku Umar No.4,Makassar Kota,Makassar Kota,Islam,Menikah,WIRASWASTA,WNI,Makassar,1983-04-04,2900000
+Sulawesi Selatan,7305234567890387,Ahmad Santoso,Laki-laki,B,Jl.Merdeka No.5,Makassar Kota,Makassar Kota,Hindu,Belum Menikah,KARYAWAN HONORER,WNI,Makassar,1984-05-05,4600000
+Sulawesi Selatan,7306234567890388,Ani Pranoto,Perempuan,O,Jl.Sudirman No.6,Makassar Kota,Makassar Kota,Buddha,Menikah,TUKANG OJEK,WNI,Makassar,1985-06-06,800000
+Sulawesi Selatan,7307234567890389,Budi Wijaya,Laki-laki,AB,Jl.Teuku Umar No.7,Makassar Kota,Makassar Kota,Islam,Belum Menikah,KARYAWAN HONORER,WNI,Makassar,1986-07-07,4400000
+Sulawesi Selatan,7308234567890390,Citra Handayani,Perempuan,A,Jl.Merdeka No.8,Makassar Kota,Makassar Kota,Hindu,Menikah,PERDAGANGAN,WNI,Makassar,1987-08-08,4400000
+Sulawesi Selatan,7309234567890391,Darma Setiawan,Laki-laki,O,Jl.Sudirman No.9,Makassar Kota,Makassar Kota,Buddha,Belum Menikah,PEMBANTU RUMAH TANGGA,WNI,Makassar,1988-09-09,1500000
+Sulawesi Selatan,7310234567890392,Edi Santoso,Laki-laki,B,Jl.Teuku Umar No.10,Makassar Kota,Makassar Kota,Islam,Menikah,WIRASWASTA,WNI,Makassar,1989-10-10,6900000
+Sulawesi Tengah,7201234567890373,Mega Santoso,Perempuan,B,Jl.Sudirman No.1,Palu Barat,Palu Kota,Buddha,Belum Menikah,TUKANG KAYU,WNI,Palu,1980-01-01,2200000
+Sulawesi Tengah,7202234567890374,Nadia Wijaya,Perempuan,AB,Jl.Teuku Umar No.2,Palu Timur,Palu Kota,Islam,Menikah,KARYAWAN BUMN,WNI,Palu,1981-02-02,3700000
+Sulawesi Tengah,7203234567890375,Oscar Santoso,Laki-laki,O,Jl.Merdeka No.3,Palu Barat,Palu Kota,Kristen,Belum Menikah,WIRASWASTA,WNI,Palu,1982-03-03,6700000
+Sulawesi Tengah,7204234567890376,Putri Handayani,Perempuan,A,Jl.Sudirman No.4,Palu Timur,Palu Kota,Hindu,Menikah,PEMBANTU RUMAH TANGGA,WNI,Palu,1983-04-04,1000000
+Sulawesi Tengah,7205234567890377,Qori Setiawan,Laki-laki,B,Jl.Teuku Umar No.5,Palu Barat,Palu Kota,Buddha,Belum Menikah,PERDAGANGAN,WNI,Palu,1984-05-05,6100000
+Sulawesi Tengah,7206234567890378,Rina Wulandari,Perempuan,AB,Jl.Merdeka No.6,Palu Timur,Palu Kota,Islam,Menikah,PEGAWAI NEGERI SIPIL,WNI,Palu,1985-06-06,5000000
+Sulawesi Tengah,7207234567890379,Sandi Pranoto,Laki-laki,O,Jl.Sudirman No.7,Palu Barat,Palu Kota,Kristen,Belum Menikah,BURUH TANI/PERKEBUNAN,WNI,Palu,1986-07-07,500000
+Sulawesi Tengah,7208234567890380,Tita Santoso,Perempuan,O,Jl.Teuku Umar No.8,Palu Timur,Palu Kota,Hindu,Menikah,PEGAWAI NEGERI SIPIL,WNI,Palu,1987-08-08,4300000
+Sulawesi Tengah,7209234567890381,Umi Handayani,Perempuan,A,Jl.Merdeka No.9,Palu Barat,Palu Kota,Buddha,Belum Menikah,KARYAWAN BUMN,WNI,Palu,1988-09-09,5200000
+Sulawesi Tengah,7210234567890382,Vivi Setiawan,Perempuan,B,Jl.Sudirman No.10,Palu Timur,Palu Kota,Islam,Menikah,TUKANG OJEK,WNI,Palu,1989-10-10,1900000
+Sulawesi Tenggara,7401234567890393,Fitriani Wijaya,Perempuan,AB,Jl.Merdeka No.1,Kendari Kota,Kendari Kota,Hindu,Menikah,WIRASWASTA,WNI,Kendari,1980-01-01,5300000
+Sulawesi Tenggara,7402234567890394,Gandi Santoso,Laki-laki,B,Jl.Sudirman No.2,Kendari Kota,Kendari Kota,Buddha,Belum Menikah,TUKANG BATU,WNI,Kendari,1981-02-02,2100000
+Sulawesi Tenggara,7403234567890395,Hadi Setiawan,Laki-laki,O,Jl.Teuku Umar No.3,Kendari Kota,Kendari Kota,Islam,Menikah,WIRASWASTA,WNI,Kendari,1982-03-03,7500000
+Sulawesi Tenggara,7404234567890396,Indah Wijaya,Perempuan,A,Jl.Merdeka No.4,Kendari Kota,Kendari Kota,Hindu,Belum Menikah,TRANSPORTASI,WNI,Kendari,1983-04-04,7200000
+Sulawesi Tenggara,7405234567890397,Joko Santoso,Laki-laki,AB,Jl.Sudirman No.5,Kendari Kota,Kendari Kota,Buddha,Menikah,NELAYAN/PERIKANAN,WNI,Kendari,1984-05-05,700000
+Sulawesi Tenggara,7406234567890398,Kartika Handayani,Perempuan,O,Jl.Teuku Umar No.6,Kendari Kota,Kendari Kota,Islam,Belum Menikah,PEGAWAI NEGERI SIPIL,WNI,Kendari,1985-06-06,5700000
+Sulawesi Tenggara,7407234567890399,Larasati Wijaya,Perempuan,B,Jl.Merdeka No.7,Kendari Kota,Kendari Kota,Hindu,Menikah,KARYAWAN HONORER,WNI,Kendari,1986-07-07,6500000
+Sulawesi Tenggara,7408234567890400,Mega Santoso,Perempuan,AB,Jl.Sudirman No.8,Kendari Kota,Kendari Kota,Buddha,Belum Menikah,TUKANG OJEK,WNI,Kendari,1987-08-08,700000
+Sulawesi Tenggara,7409234567890401,Nadia Wijaya,Perempuan,O,Jl.Teuku Umar No.9,Kendari Kota,Kendari Kota,Islam,Menikah,TRANSPORTASI,WNI,Kendari,1988-09-09,7300000
+Sulawesi Tenggara,7410234567890402,Oscar Santoso,Laki-laki,A,Jl.Merdeka No.10,Kendari Kota,Kendari Kota,Hindu,Belum Menikah,KARYAWAN BUMN,WNI,Kendari,1989-10-10,6800000
+Sulawesi Utara,7101234567890363,Citra Handayani,Perempuan,AB,Jl.Merdeka No.1,Wanea,Manado Kota,Islam,Menikah,PEGAWAI NEGERI SIPIL,WNI,Manado,1980-01-01,3900000
+Sulawesi Utara,7102234567890364,Darma Setiawan,Laki-laki,O,Jl.Sudirman No.2,Malalayang,Manado Kota,Kristen,Belum Menikah,TUKANG BATU,WNI,Manado,1981-02-02,900000
+Sulawesi Utara,7103234567890365,Edi Santoso,Laki-laki,AB,Jl.Teuku Umar No.3,Wanea,Manado Kota,Hindu,Menikah,KARYAWAN SWASTA,WNI,Manado,1982-03-03,2700000
+Sulawesi Utara,7104234567890366,Fitriani Wijaya,Perempuan,B,Jl.Merdeka No.4,Malalayang,Manado Kota,Buddha,Belum Menikah,KARYAWAN BUMN,WNI,Manado,1983-04-04,5500000
+Sulawesi Utara,7105234567890367,Gandi Santoso,Laki-laki,O,Jl.Sudirman No.5,Wanea,Manado Kota,Islam,Menikah,PETANI/PEKEBUN,WNI,Manado,1984-05-05,1900000
+Sulawesi Utara,7106234567890368,Hadi Setiawan,Laki-laki,A,Jl.Teuku Umar No.6,Malalayang,Manado Kota,Kristen,Belum Menikah,WIRASWASTA,WNI,Manado,1985-06-06,6500000
+Sulawesi Utara,7107234567890369,Indah Wijaya,Perempuan,AB,Jl.Merdeka No.7,Wanea,Manado Kota,Hindu,Menikah,PERDAGANGAN,WNI,Manado,1986-07-07,3700000
+Sulawesi Utara,7108234567890370,Joko Santoso,Laki-laki,B,Jl.Sudirman No.8,Malalayang,Manado Kota,Buddha,Menikah,PEMBANTU RUMAH TANGGA,WNI,Manado,1987-08-08,2000000
+Sulawesi Utara,7109234567890371,Kartika Handayani,Perempuan,O,Jl.Teuku Umar No.9,Wanea,Manado Kota,Islam,Belum Menikah,WIRASWASTA,WNI,Manado,1988-09-09,4000000
+Sulawesi Utara,7110234567890372,Larasati Wijaya,Perempuan,A,Jl.Merdeka No.10,Malalayang,Manado Kota,Hindu,Menikah,KARYAWAN BUMN,WNI,Manado,1989-10-10,6600000
+Sumatera Barat,1301234567890143,Budi Wijaya,Laki-laki,A,Jl.Merdeka No.1,Padang Timur,Padang Timur,Islam,Menikah,BURUH HARIAN LEPAS,WNI,Padang,1980-01-01,800000
+Sumatera Barat,1302234567890144,Citra Handayani,Perempuan,B,Jl.Sisingamangaraja No.2,Padang Barat,Padang Barat,Kristen,Belum Menikah,TRANSPORTASI,WNI,Padang,1981-02-02,5200000
+Sumatera Barat,1303234567890145,Darma Setiawan,Laki-laki,AB,Jl.Diponegoro No.3,Padang Utara,Padang Utara,Hindu,Menikah,KARYAWAN BUMN,WNI,Padang,1982-03-03,3600000
+Sumatera Barat,1304234567890146,Edi Santoso,Laki-laki,O,Jl.Gatot Subroto No.4,Padang Selatan,Padang Selatan,Buddha,Menikah,PENSIUNAN,WNI,Padang,1983-04-04,0
+Sumatera Barat,1305234567890147,Fitriani Wijaya,Perempuan,A,Jl.Sudirman No.5,Padang Timur,Padang Timur,Islam,Belum Menikah,BURUH TANI/PERKEBUNAN,WNI,Padang,1984-05-05,1200000
+Sumatera Barat,1306234567890148,Gandi Santoso,Laki-laki,B,Jl.Teuku Umar No.6,Padang Barat,Padang Barat,Kristen,Menikah,TRANSPORTASI,WNI,Padang,1985-06-06,3200000
+Sumatera Barat,1307234567890149,Hadi Setiawan,Laki-laki,AB,Jl.Diponegoro No.7,Padang Utara,Padang Utara,Hindu,Belum Menikah,WIRASWASTA,WNI,Padang,1986-07-07,3300000
+Sumatera Barat,1308234567890150,Indah Wijaya,Perempuan,O,Jl.Imam Bonjol No.8,Padang Selatan,Padang Selatan,Buddha,Menikah,PENSIUNAN,WNI,Padang,1987-08-08,500000
+Sumatera Barat,1309234567890151,Joko Santoso,Laki-laki,A,Jl.Kartini No.9,Padang Timur,Padang Timur,Islam,Belum Menikah,PERDAGANGAN,WNI,Padang,1988-09-09,6000000
+Sumatera Barat,1310234567890152,Kartika Handayani,Perempuan,B,Jl.Pattimura No.10,Padang Barat,Padang Barat,Kristen,Menikah,AKUNTAN,WNI,Padang,1989-10-10,17300000
+Sumatera Selatan,1601234567890153,Larasati Wijaya,Perempuan,AB,Jl.Merdeka No.1,Palembang Utara,Palembang Utara,Hindu,Menikah,BURUH TANI/PERKEBUNAN,WNI,Palembang,1980-01-01,1800000
+Sumatera Selatan,1602234567890154,Mega Santoso,Perempuan,O,Jl.Sisingamangaraja No.2,Palembang Selatan,Palembang Selatan,Buddha,Belum Menikah,TRANSPORTASI,WNI,Palembang,1981-02-02,6000000
+Sumatera Selatan,1603234567890155,Nadia Wijaya,Perempuan,A,Jl.Diponegoro No.3,Palembang Timur,Palembang Timur,Islam,Menikah,WIRASWASTA,WNI,Palembang,1982-03-03,3500000
+Sumatera Selatan,1604234567890156,Oscar Santoso,Laki-laki,B,Jl.Gatot Subroto No.4,Palembang Barat,Palembang Barat,Kristen,Menikah,PENSIUNAN,WNI,Palembang,1983-04-04,300000
+Sumatera Selatan,1605234567890157,Putri Handayani,Perempuan,AB,Jl.Sudirman No.5,Palembang Utara,Palembang Utara,Hindu,Belum Menikah,TUKANG KAYU,WNI,Palembang,1984-05-05,1200000
+Sumatera Selatan,1606234567890158,Qori Setiawan,Laki-laki,O,Jl.Teuku Umar No.6,Palembang Selatan,Palembang Selatan,Buddha,Menikah,TRANSPORTASI,WNI,Palembang,1985-06-06,6500000
+Sumatera Selatan,1607234567890159,Rina Wulandari,Perempuan,A,Jl.Kartini No.7,Palembang Timur,Palembang Timur,Islam,Belum Menikah,PEGAWAI NEGERI SIPIL,WNI,Palembang,1986-07-07,7400000
+Sumatera Selatan,1608234567890160,Sandi Pranoto,Laki-laki,B,Jl.Imam Bonjol No.8,Palembang Barat,Palembang Barat,Kristen,Menikah,PENSIUNAN,WNI,Palembang,1987-08-08,500000
+Sumatera Selatan,1609234567890161,Tita Santoso,Perempuan,AB,Jl.Pattimura No.9,Palembang Utara,Palembang Utara,Hindu,Belum Menikah,KARYAWAN BUMN,WNI,Palembang,1988-09-09,4200000
+Sumatera Selatan,1610234567890162,Umi Handayani,Perempuan,O,Jl.Ahmad Yani No.10,Palembang Selatan,Palembang Selatan,Buddha,Menikah,APOTEKER,WNI,Palembang,1989-10-10,7900000
+Sumatera Utara,1201234567890133,Rina Wulandari,Perempuan,AB,Jl.Gatot Subroto No.1,Medan Baru,Medan Selayang,Hindu,Menikah,NOTARIS,WNI,Medan,1980-01-01,12000000
+Sumatera Utara,1202234567890134,Sandi Pranoto,Laki-laki,O,Jl.Sudirman No.2,Medan Timur,Medan Timur,Buddha,Belum Menikah,IBU RUMAH TANGGA,WNI,Medan,1981-02-02,200000
+Sumatera Utara,1203234567890135,Tita Santoso,Perempuan,B,Jl.Teuku Umar No.3,Medan Kota,Medan Kota,Islam,Menikah,PEGAWAI NEGERI SIPIL,WNI,Medan,1982-03-03,5900000
+Sumatera Utara,1204234567890136,Umi Handayani,Perempuan,A,Jl.Sisingamangaraja No.4,Medan Barat,Medan Barat,Kristen,Belum Menikah,KARYAWAN SWASTA,WNI,Medan,1983-04-04,3300000
+Sumatera Utara,1205234567890137,Vivi Setiawan,Perempuan,AB,Jl.Diponegoro No.5,Medan Deli,Medan Deli,Hindu,Menikah,PELAJAR/MAHASISWA,WNI,Medan,1984-05-05,100000
+Sumatera Utara,1206234567890138,Wahyu Pranoto,Laki-laki,O,Jl.Imam Bonjol No.6,Medan Baru,Medan Selayang,Buddha,Belum Menikah,WIRASWASTA,WNI,Medan,1985-06-06,6900000
+Sumatera Utara,1207234567890139,Xaverius Wijaya,Laki-laki,B,Jl.Pattimura No.7,Medan Timur,Medan Timur,Islam,Menikah,PERAWAT,WNI,Medan,1986-07-07,11400000
+Sumatera Utara,1208234567890140,Yanti Setiawati,Perempuan,A,Jl.Gatot Subroto No.8,Medan Kota,Medan Kota,Kristen,Belum Menikah,BELUM/TIDAK BEKERJA,WNI,Medan,1987-08-08,300000
+Sumatera Utara,1209234567890141,Zainal Arifin,Laki-laki,AB,Jl.Sudirman No.9,Medan Barat,Medan Barat,Hindu,Menikah,WIRASWASTA,WNI,Medan,1988-09-09,4600000
+Sumatera Utara,1210234567890142,Ahmad Santoso,Laki-laki,O,Jl.Teuku Umar No.10,Medan Deli,Medan Deli,Buddha,Belum Menikah,PERDAGANGAN,WNI,Medan,1989-10-10,5400000

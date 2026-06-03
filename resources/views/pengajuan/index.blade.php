@@ -316,13 +316,27 @@
                                             Skor Kelayakan
                                         </p>
 
-                                        <p class="text-lg font-bold text-gray-900">
+                                        <p
+                                            class="text-lg font-bold
+                                            @if ((session('skor_kelayakan') ?? 0) * 100 < 50)
+                                                text-red-600
+                                            @else
+                                                text-green-600
+                                            @endif
+                                        ">
                                             {{ number_format((session('skor_kelayakan') ?? 0) * 100, 1) }}%
                                         </p>
                                     </div>
 
                                     <div class="mt-3 h-3 overflow-hidden rounded-full bg-gray-100">
-                                        <div class="h-full rounded-full bg-green-500"
+                                        <div
+                                            class="h-full rounded-full
+                                            @if ((session('skor_kelayakan') ?? 0) * 100 < 50)
+                                                bg-red-500
+                                            @else
+                                                bg-green-500
+                                            @endif
+                                        "
                                             style="width: {{ (session('skor_kelayakan') ?? 0) * 100 }}%">
                                         </div>
                                     </div>
