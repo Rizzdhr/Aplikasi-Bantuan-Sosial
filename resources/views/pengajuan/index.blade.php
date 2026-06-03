@@ -1,3 +1,38 @@
+<style>
+#reader {
+    padding: 20px;
+}
+
+#reader__scan_region {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px;
+}
+
+#reader__scan_region img {
+    margin: 0 auto !important;
+    display: block !important;
+}
+
+#reader select,
+#reader button {
+    padding: 8px 14px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    margin: 4px;
+}
+
+#reader button {
+    cursor: pointer;
+}
+
+#reader a {
+    display: inline-block;
+    margin-top: 10px;
+}
+</style>
+
 <x-app-layout>
     {{-- <x-slot name="header">
         <div class="space-y-1">
