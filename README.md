@@ -13,6 +13,31 @@ Aplikasi ini menggunakan AI untuk membantu proses penilaian kelayakan penerima b
 
 Hasil klasifikasi digunakan sebagai pendukung keputusan dalam proses seleksi penerima bantuan sosial.
 
+## Alur Aplikasi
+Sistem ini menggunakan Laravel sebagai backend utama yang menerima usia, pekerjaan, penghasilan dan foto rumah dari pengguna. Foto dikirim ke Roboflow API untuk diklasifikasikan menjadi rumah_buruk, rumah_sedang, atau rumah_baik. 
+
+Karena Laravel sudah memiliki fitur HTTP Client yang dapat berkomunikasi langsung dengan API Roboflow, maka penggunaan Python untuk menghubungkan ke API Roboflow tidak diperlukan. Hal ini membuat arsitektur sistem lebih sederhana dan efisien.
+
+Selanjutnya, Laravel mengirim 4 fitur — penghasilan, usia, pekerjaan, dan kondisi rumah — ke Flask API yang memuat model Decision Tree (model.pkl) untuk memprediksi kelayakan bansos.
+
+User
+  ↓
+Laravel (input otomatis usia, pekerjaan, penghasilan + foto rumah)
+  ↓
+Roboflow API (klasifikasi rumah → rumah_buruk/sedang/baik)
+  ↓
+Flask API (prediksi kelayakan via Decision Tree)
+  ↓
+Laravel (tampilkan hasil)
+
+Keputusan model bukan:
+Rumah buruk = otomatis diterima
+Gaji tinggi = otomatis ditolak
+
+Tapi:
+Rumah buruk menambah peluang, tapi gaji dan pekerjaan tetap menentukan
+Gaji tinggi mengurangi peluang, tapi kalau lansia + rumah buruk tetap bisa diterima
+
 ## Fitur
 
 - CRUD Data Warga
