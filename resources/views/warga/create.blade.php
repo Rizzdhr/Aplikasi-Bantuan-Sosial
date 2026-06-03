@@ -1,11 +1,4 @@
 <x-app-layout>
-    {{-- <x-slot name="header">
-        <div class="space-y-1">
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">Tambah Warga</h2>
-            <p class="text-sm text-gray-500">Tambahkan data warga baru ke sistem.</p>
-        </div>
-    </x-slot> --}}
-
     <div class="py-12">
         <div class="max-w-3xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">

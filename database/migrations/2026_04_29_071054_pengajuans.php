@@ -27,7 +27,7 @@ return new class extends Migration
             $table->string('pekerjaan');
 
             // Hasil AI / ML
-            $table->string('kondisi_rumah')->nullable(); // buruk/sedang/baik
+            $table->string('kondisi_rumah')->nullable();
             $table->float('skor_kelayakan')->nullable();
 
             // Status

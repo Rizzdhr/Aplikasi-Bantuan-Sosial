@@ -34,13 +34,6 @@
 </style>
 
 <x-app-layout>
-    {{-- <x-slot name="header">
-        <div class="space-y-1">
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">Pengajuan Bantuan</h2>
-            <p class="text-sm text-gray-500">Scan QR warga dan kirim pengajuan bantuan sosial.</p>
-        </div>
-    </x-slot> --}}
-
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
             <div class="grid gap-6 xl:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
@@ -83,18 +76,6 @@
                                 <p class="text-sm text-gray-500">Nama</p>
                                 <p class="mt-1 font-semibold text-gray-900" id="nama"></p>
                             </div>
-                            {{-- <div class="rounded-2xl bg-gray-50 p-4">
-                                <p class="text-sm text-gray-500">Alamat</p>
-                                <p class="mt-1 font-semibold text-gray-900" id="alamat"></p>
-                            </div> --}}
-                            {{-- <div class="rounded-2xl bg-gray-50 p-4">
-                                <p class="text-sm text-gray-500">Kecamatan</p>
-                                <p class="mt-1 font-semibold text-gray-900" id="kecamatan"></p>
-                            </div> --}}
-                            {{-- <div class="rounded-2xl bg-gray-50 p-4">
-                                <p class="text-sm text-gray-500">Tanggal Lahir</p>
-                                <p class="mt-1 font-semibold text-gray-900" id="tanggal_lahir"></p>
-                            </div> --}}
                         </div>
                     </div>
 
@@ -115,23 +96,7 @@
                             </div>
                         </div>
 
-                        {{-- <button type="button" onclick="ambilLokasi()" id="btnLokasi" class="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-blue-600 px-4 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 transition">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
-                            <span id="textLokasi">Verifikasi Lokasi</span>
-                        </button> --}}
-
                         <div class="grid gap-4 md:grid-cols-2">
-                            {{-- <div>
-                                <label class="block text-sm font-medium text-gray-700">Program Bantuan</label>
-                                <select name="program_bantuan" class="mt-2 block w-full rounded-xl border border-gray-300 bg-white px-4 py-2 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-100">
-                                    <option value="jkn">Bantuan Iuran JKN (kesehatan)</option>
-                                    <option value="bpnt">Bantuan Pangan Non-Tunai (BPNT) (pangan)</option>
-                                    <option value="blt">Bantuan Langsung Tunai (BLT) (tunai)</option>
-                                </select>
-                            </div> --}}
                             <div>
                                 <label class="block text-sm font-medium text-gray-700">
                                     Penghasilan
@@ -152,20 +117,8 @@
                                 <input type="text" name="pekerjaan" id="pekerjaan"
                                     class="mt-2 block w-full rounded-xl border border-gray-300 bg-white px-4 py-2 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-100"
                                     readonly>
-                                {{-- <select name="pekerjaan"
-                                    class="mt-2 block w-full rounded-xl border border-gray-300 bg-white px-4 py-2 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-100">
-                                    <option value="tidak_bekerja">Tidak Bekerja</option>
-                                    <option value="buruh_harian">Buruh Harian</option>
-                                    <option value="pegawai/karyawan">Pegawai</option>
-                                </select> --}}
                             </div>
                         </div>
-
-                        {{-- <div>
-                            <label class="block text-sm font-medium text-gray-700">Foto Rumah</label>
-                            <input type="file" name="foto_rumah"
-                                class="mt-2 block w-full rounded-xl border border-gray-300 bg-white px-4 py-2 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-100">
-                        </div> --}}
 
                         <div>
                             <h3 class="text-lg font-semibold text-gray-900">
@@ -215,57 +168,6 @@
                             </div>
                         @endif
                     </form>
-
-                    {{-- <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-                        <div class="flex items-center justify-between gap-4">
-                            <div>
-                                <h3 class="text-lg font-semibold text-gray-900">Riwayat Pengajuan</h3>
-                                <p class="text-sm text-gray-500">Lihat daftar pengajuan terbaru.</p>
-                            </div>
-                        </div>
-                        <div class="mt-6 overflow-x-auto">
-                            <table class="min-w-full divide-y divide-gray-200 text-sm">
-                                <thead class="bg-gray-50 text-gray-600 uppercase tracking-wide text-xs">
-                                    <tr>
-                                        <th class="px-4 py-3 text-left">Warga</th>
-                                        <th class="px-4 py-3 text-left">Program</th>
-                                        <th class="px-4 py-3 text-left">Status</th>
-                                        <th class="px-4 py-3 text-center">Aksi</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="divide-y divide-gray-200 bg-white">
-                                    @forelse($pengajuans as $pengajuan)
-                                        <tr class="hover:bg-gray-50">
-                                            <td class="px-4 py-4 text-gray-700">{{ $pengajuan->warga->nama ?? 'N/A' }}
-                                            </td>
-                                            <td class="px-4 py-4 text-gray-700">{{ $pengajuan->program_bantuan }}</td>
-                                            <td class="px-4 py-4">
-                                                @if ($pengajuan->status === 'diterima')
-                                                    <span
-                                                        class="inline-flex rounded-full bg-green-100 px-3 py-1 text-xs font-semibold text-green-700">Diterima</span>
-                                                @elseif($pengajuan->status === 'ditolak')
-                                                    <span
-                                                        class="inline-flex rounded-full bg-red-100 px-3 py-1 text-xs font-semibold text-red-700">Ditolak</span>
-                                                @else
-                                                    <span
-                                                        class="inline-flex rounded-full bg-gray-100 px-3 py-1 text-xs font-semibold text-gray-700">Menunggu</span>
-                                                @endif
-                                            </td>
-                                            <td class="px-4 py-4 text-center">
-                                                <a href="{{ route('pengajuan.show', $pengajuan->id) }}"
-                                                    class="inline-flex items-center rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-700 hover:bg-blue-200">Detail</a>
-                                            </td>
-                                        </tr>
-                                    @empty
-                                        <tr>
-                                            <td colspan="4" class="px-4 py-10 text-center text-gray-500">Belum ada
-                                                pengajuan.</td>
-                                        </tr>
-                                    @endforelse
-                                </tbody>
-                            </table>
-                        </div>
-                    </div> --}}
                 </div>
 
                 <aside class="space-y-6">
@@ -373,13 +275,6 @@
                                 </div>
 
                                 <div class="flex justify-center rounded-2xl bg-gray-50 p-4">
-                                    {{-- <p class="text-sm leading-relaxed text-gray-600">
-                                        Kondisi rumah terdeteksi sebagai
-                                        <span class="font-semibold text-gray-900">
-                                            {{ ucwords(str_replace('_', ' ', session('kondisi_rumah'))) }}
-                                        </span>
-                                        berdasarkan hasil klasifikasi foto rumah.
-                                    </p> --}}
                                     <span
                                         class="rounded-full px-4 py-2 text-sm font-semibold
                         @if (session('status') == 'ditolak') bg-red-100 text-red-700
@@ -462,9 +357,6 @@
                         document.getElementById('formPengajuan')?.classList.remove('hidden');
                         document.getElementById('nik').innerText = w.nik;
                         document.getElementById('nama').innerText = w.nama;
-                        // document.getElementById('alamat').innerText = w.alamat;
-                        // document.getElementById('kecamatan').innerText = w.kecamatan;
-                        // document.getElementById('tanggal_lahir').innerText = w.tanggal_lahir;
                         document.getElementById('penghasilan').value =
                             'Rp ' + Number(w.penghasilan).toLocaleString('id-ID');
                         document.getElementById('usia').value = w.usia;
@@ -554,31 +446,4 @@
             }
         });
     </script>
-    {{-- <script>
-        function ambilLokasi() {
-            const btn = document.getElementById('btnLokasi');
-            const text = document.getElementById('textLokasi');
-            if (!btn || !text) return;
-            btn.disabled = true;
-            text.innerHTML = 'Mengambil lokasi...';
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(
-                    function (position) {
-                        document.getElementById('latitude_pengajuan').value = position.coords.latitude;
-                        document.getElementById('longitude_pengajuan').value = position.coords.longitude;
-                        btn.classList.remove('bg-blue-600', 'hover:bg-blue-700');
-                        btn.classList.add('bg-green-600');
-                        text.innerHTML = 'Lokasi Berhasil Diverifikasi';
-                        alert('Lokasi berhasil diambil');
-                        document.getElementById('btnAjukan').disabled = false;
-                    },
-                    function () {
-                        btn.disabled = false;
-                        text.innerHTML = 'Verifikasi Lokasi';
-                        alert('Gagal mengambil lokasi');
-                    }
-                );
-            }
-        }
-    </script> --}}
 </x-app-layout>
