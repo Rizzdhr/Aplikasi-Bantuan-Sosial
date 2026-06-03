@@ -151,7 +151,6 @@ class PengajuanController extends Controller
             'PEKEBUN'                  => 1,
             'NELAYAN/PERIKANAN'        => 1,
             'NELAYAN'                  => 1,
-            'PERIKANAN'              => 1,
             'PETERNAK'                 => 1,
             'TUKANG BATU'              => 1,
             'TUKANG KAYU'              => 1,

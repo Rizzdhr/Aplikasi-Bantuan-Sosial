@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Warga;
-use SimpleSoftwareIO\QrCode\Facades\QrCode;
-use Illuminate\Support\Facades\Http;
 use Carbon\Carbon;
+use Endroid\QrCode\Builder\Builder;
+use Endroid\QrCode\Writer\PngWriter;
 
 class WargaController extends Controller
 {
@@ -200,8 +200,40 @@ class WargaController extends Controller
     public function show($id)
     {
         $warga = Warga::findOrFail($id);
+        $qrCode = $this->makeQrCodeDataUri($warga->nik);
 
-        return view('warga.show', compact('warga'));
+        return view('warga.show', compact('warga', 'qrCode'));
+    }
+
+    /**
+     * Download the QR code image for the specified resource.
+     */
+    public function downloadQr(Warga $warga)
+    {
+        $qrResult = Builder::create()
+            ->writer(new PngWriter())
+            ->data($warga->nik)
+            ->size(300)
+            ->margin(10)
+            ->build();
+
+        $fileName = "warga-{$warga->nik}-qr.png";
+
+        return response($qrResult->getString(), 200, [
+            'Content-Type' => 'image/png',
+            'Content-Disposition' => "attachment; filename=\"{$fileName}\"",
+        ]);
+    }
+
+    private function makeQrCodeDataUri(string $payload): string
+    {
+        return Builder::create()
+            ->writer(new PngWriter())
+            ->data($payload)
+            ->size(300)
+            ->margin(10)
+            ->build()
+            ->getDataUri();
     }
 
     /**
@@ -272,13 +304,5 @@ class WargaController extends Controller
         return redirect()->route('warga.index');
     }
 
-    /**
-     * Generate QR
-     */
-    public function generateQR($nik)
-    {
-        $warga = Warga::where('nik', $nik)->firstOrFail();
-
-        return QrCode::size(300)->generate($warga->nik);
-    }
 }
+// }

@@ -35,6 +35,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::post('/warga/import', [WargaController::class, 'import'])->name('warga.import');
+    Route::get('/warga/{warga}/download-qr', [WargaController::class, 'downloadQr'])->name('warga.downloadQr');
     Route::resource('warga', WargaController::class)->middleware('auth');
 
     Route::resource('pengajuan', PengajuanController::class)->middleware('auth');

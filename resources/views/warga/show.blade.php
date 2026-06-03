@@ -74,9 +74,12 @@
                         <div class="rounded-2xl border border-gray-200 bg-white p-6 text-center">
                             <h4 class="text-lg font-semibold text-gray-900">QR Code</h4>
                             <div class="mt-6 flex justify-center">
-                                {!! QrCode::size(200)->generate($warga->nik) !!}
+                                <img src="{{ $qrCode }}" alt="QR Code warga" class="h-48 w-48 object-contain" />
                             </div>
                             <p class="mt-4 text-sm text-gray-500">Gunakan QR untuk verifikasi cepat.</p>
+                            <br>
+
+                            <a href="{{ route('warga.downloadQr', $warga->id) }}" class="inline-flex items-center justify-center rounded-xl bg-green-600 px-4 py-2 text-sm font-semibold text-white hover:bg-green-700">Unduh QR</a>
                         </div>
                     </div>
                 </div>
