@@ -43,7 +43,7 @@ class WargaController extends Controller
             'nik' => 'required|unique:wargas,nik',
             'nama' => 'required|string|max:255',
             'tempat_lahir' => 'nullable|string|max:255',
-            'tanggal_lahir' => 'nullable|date|before_or_equal:today',
+            'tanggal_lahir' => 'required|date|before_or_equal:today',
             'jenis_kelamin' => 'nullable|string|max:100',
             'gol_darah' => 'nullable|string|max:10',
             'alamat' => 'required|string',
@@ -51,9 +51,9 @@ class WargaController extends Controller
             'kecamatan' => 'nullable|string|max:255',
             'agama' => 'nullable|string|max:255',
             'status_pernikahan' => 'nullable|string|max:255',
-            'pekerjaan' => 'nullable|string|max:255',
+            'pekerjaan' => 'required|string|max:255',
             'kewarganegaraan' => 'nullable|string|max:255',
-            'penghasilan' => 'nullable|integer|min:0',
+            'penghasilan' => 'required|integer|min:0',
         ]);
 
         Warga::create($request->only([
@@ -256,7 +256,7 @@ class WargaController extends Controller
             'nik' => 'required|unique:wargas,nik,' . $id,
             'nama' => 'required|string|max:255',
             'tempat_lahir' => 'nullable|string|max:255',
-            'tanggal_lahir' => 'nullable|date|before_or_equal:today',
+            'tanggal_lahir' => 'required|date|before_or_equal:today',
             'jenis_kelamin' => 'nullable|string|max:100',
             'gol_darah' => 'nullable|string|max:10',
             'alamat' => 'required|string',
@@ -264,9 +264,9 @@ class WargaController extends Controller
             'kecamatan' => 'nullable|string|max:255',
             'agama' => 'nullable|string|max:255',
             'status_pernikahan' => 'nullable|string|max:255',
-            'pekerjaan' => 'nullable|string|max:255',
+            'pekerjaan' => 'required|string|max:255',
             'kewarganegaraan' => 'nullable|string|max:255',
-            'penghasilan' => 'nullable|integer|min:0',
+            'penghasilan' => 'required|integer|min:0',
         ]);
 
         $warga = Warga::findOrFail($id);

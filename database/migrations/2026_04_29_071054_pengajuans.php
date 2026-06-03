@@ -17,21 +17,19 @@ return new class extends Migration
             // Relasi ke warga
             $table->foreignId('warga_id')->constrained()->onDelete('cascade');
 
+            $table->string('pekerjaan');
             $table->integer('penghasilan');
             $table->integer('usia');
 
             // Upload & AI
             $table->string('foto_rumah');
 
-            // $table->enum('pekerjaan', ['tidak_bekerja','buruh_harian', 'pegawai/karyawan']);
-            $table->string('pekerjaan');
-
             // Hasil AI / ML
             $table->string('kondisi_rumah')->nullable();
             $table->float('skor_kelayakan')->nullable();
 
             // Status
-            $table->enum('status', ['pending', 'diproses', 'diterima', 'ditolak'])->default('pending');
+            $table->enum('status', ['diterima', 'ditolak']);
 
             $table->timestamps();
         });
