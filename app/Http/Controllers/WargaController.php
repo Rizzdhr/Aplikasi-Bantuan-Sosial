@@ -38,70 +38,40 @@ class WargaController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-
+            'provinsi' => 'nullable|string|max:255',
             'nik' => 'required|unique:wargas,nik',
-            'nama' => 'required',
-            'alamat' => 'required',
-            'kecamatan' => 'required',
-            'kota' => 'required'
-
+            'nama' => 'required|string|max:255',
+            'tempat_lahir' => 'nullable|string|max:255',
+            'tanggal_lahir' => 'nullable|date|before_or_equal:today',
+            'jenis_kelamin' => 'nullable|string|max:100',
+            'gol_darah' => 'nullable|string|max:10',
+            'alamat' => 'required|string',
+            'kel_desa' => 'nullable|string|max:255',
+            'kecamatan' => 'nullable|string|max:255',
+            'agama' => 'nullable|string|max:255',
+            'status_pernikahan' => 'nullable|string|max:255',
+            'pekerjaan' => 'nullable|string|max:255',
+            'kewarganegaraan' => 'nullable|string|max:255',
+            'penghasilan' => 'nullable|integer|min:0',
         ]);
 
-        /*
-        |--------------------------------------------------------------------------
-        | Geocoding berbasis area
-        |--------------------------------------------------------------------------
-        | Yang dikirim ke OpenStreetMap hanya:
-        | kecamatan + kota + Indonesia
-        */
-
-        $lokasiGeo =
-            $request->kecamatan . ', ' .
-            $request->kota . ', Indonesia';
-
-        $response = Http::withoutVerifying()
-            ->withHeaders([
-                'User-Agent' => 'BansosApp'
-            ])
-            ->get('https://nominatim.openstreetmap.org/search', [
-
-                'q' => $lokasiGeo,
-                'format' => 'json',
-                'limit' => 1
-
-            ]);
-
-        $data = $response->json();
-
-        // lokasi tidak ditemukan
-        if(empty($data)){
-
-            return back()
-                ->withInput()
-                ->withErrors([
-                    'alamat' => 'Lokasi tidak ditemukan'
-                ]);
-
-        }
-
-        // ambil koordinat area
-        $latitude = $data[0]['lat'];
-        $longitude = $data[0]['lon'];
-
-        // simpan data warga
-        Warga::create([
-
-            'nik' => $request->nik,
-            'nama' => $request->nama,
-
-            'alamat' => $request->alamat,
-            'kecamatan' => $request->kecamatan,
-            'kota' => $request->kota,
-
-            'latitude_rumah' => $latitude,
-            'longitude_rumah' => $longitude
-
-        ]);
+        Warga::create($request->only([
+            'provinsi',
+            'nik',
+            'nama',
+            'tempat_lahir',
+            'tanggal_lahir',
+            'jenis_kelamin',
+            'gol_darah',
+            'alamat',
+            'kel_desa',
+            'kecamatan',
+            'agama',
+            'status_pernikahan',
+            'pekerjaan',
+            'kewarganegaraan',
+            'penghasilan',
+        ]));
 
         return redirect()
             ->route('warga.index')
@@ -134,70 +104,42 @@ class WargaController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-
+            'provinsi' => 'nullable|string|max:255',
             'nik' => 'required|unique:wargas,nik,' . $id,
-            'nama' => 'required',
-            'alamat' => 'required',
-            'kecamatan' => 'required',
-            'kota' => 'required'
-
+            'nama' => 'required|string|max:255',
+            'tempat_lahir' => 'nullable|string|max:255',
+            'tanggal_lahir' => 'nullable|date|before_or_equal:today',
+            'jenis_kelamin' => 'nullable|string|max:100',
+            'gol_darah' => 'nullable|string|max:10',
+            'alamat' => 'required|string',
+            'kel_desa' => 'nullable|string|max:255',
+            'kecamatan' => 'nullable|string|max:255',
+            'agama' => 'nullable|string|max:255',
+            'status_pernikahan' => 'nullable|string|max:255',
+            'pekerjaan' => 'nullable|string|max:255',
+            'kewarganegaraan' => 'nullable|string|max:255',
+            'penghasilan' => 'nullable|integer|min:0',
         ]);
 
         $warga = Warga::findOrFail($id);
 
-        /*
-        |--------------------------------------------------------------------------
-        | Geocoding berbasis area
-        |--------------------------------------------------------------------------
-        */
-
-        $lokasiGeo =
-            $request->kecamatan . ', ' .
-            $request->kota . ', Indonesia';
-
-        $response = Http::withoutVerifying()
-            ->withHeaders([
-                'User-Agent' => 'BansosApp'
-            ])
-            ->get('https://nominatim.openstreetmap.org/search', [
-
-                'q' => $lokasiGeo,
-                'format' => 'json',
-                'limit' => 1
-
-            ]);
-
-        $data = $response->json();
-
-        // cek apakah lokasi ditemukan
-        if(empty($data)){
-
-            return back()
-                ->withInput()
-                ->withErrors([
-                    'alamat' => 'Lokasi tidak ditemukan'
-                ]);
-
-        }
-
-        // ambil koordinat
-        $latitude = $data[0]['lat'];
-        $longitude = $data[0]['lon'];
-
-        // update data warga
-        $warga->update([
-
-            'nik' => $request->nik,
-            'nama' => $request->nama,
-
-            'alamat' => $request->alamat,
-            'kecamatan' => $request->kecamatan,
-            'kota' => $request->kota,
-
-            'latitude_rumah' => $latitude,
-            'longitude_rumah' => $longitude
-
-        ]);
+        $warga->update($request->only([
+            'provinsi',
+            'nik',
+            'nama',
+            'tempat_lahir',
+            'tanggal_lahir',
+            'jenis_kelamin',
+            'gol_darah',
+            'alamat',
+            'kel_desa',
+            'kecamatan',
+            'agama',
+            'status_pernikahan',
+            'pekerjaan',
+            'kewarganegaraan',
+            'penghasilan',
+        ]));
 
         return redirect()
             ->route('warga.index')

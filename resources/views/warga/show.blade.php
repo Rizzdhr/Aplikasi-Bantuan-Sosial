@@ -23,23 +23,52 @@
 
                     <div class="grid gap-6 lg:grid-cols-3">
                         <div class="lg:col-span-2 rounded-2xl border border-gray-200 bg-gray-50 p-6 space-y-5">
-                            <div>
-                                <p class="text-sm font-medium text-gray-500">NIK</p>
-                                <p class="mt-2 text-lg font-semibold text-gray-900">{{ $warga->nik }}</p>
+                            <div class="grid gap-4 md:grid-cols-2">
+                                <div>
+                                    <p class="text-sm font-medium text-gray-500">NIK</p>
+                                    <p class="mt-2 text-lg font-semibold text-gray-900">{{ $warga->nik }}</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-500">Nama</p>
+                                    <p class="mt-2 text-lg font-semibold text-gray-900">{{ $warga->nama }}</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-500">Usia</p>
+                                    <p class="mt-2 text-lg font-semibold text-gray-900">{{ $warga->usia ?? '-' }} tahun</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-500">Pekerjaan</p>
+                                    <p class="mt-2 text-lg font-semibold text-gray-900">{{ $warga->pekerjaan }}</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-500">Penghasilan</p>
+                                    <p class="mt-2 text-lg font-semibold text-gray-900">Rp {{ number_format($warga->penghasilan, 0, ',', '.') }}</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-500">Tempat, Tanggal Lahir</p>
+                                    <p class="mt-2 text-lg font-semibold text-gray-900">{{ $warga->tempat_lahir }}, {{ $warga->tanggal_lahir?->format('d-m-Y') }}</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-500">Jenis Kelamin</p>
+                                    <p class="mt-2 text-lg font-semibold text-gray-900">{{ $warga->jenis_kelamin }}</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-500">Golongan Darah</p>
+                                    <p class="mt-2 text-lg font-semibold text-gray-900">{{ $warga->gol_darah }}</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-500">Agama</p>
+                                    <p class="mt-2 text-lg font-semibold text-gray-900">{{ $warga->agama }}</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-500">Status Pernikahan</p>
+                                    <p class="mt-2 text-lg font-semibold text-gray-900">{{ $warga->status_pernikahan }}</p>
+                                </div>
+                                <div class="md:col-span-2">
+                                    <p class="text-sm font-medium text-gray-500">Alamat</p>
+                                    <p class="mt-2 text-lg font-semibold text-gray-900">{{ $warga->alamat }}</p>
+                                </div>
                             </div>
-                            <div>
-                                <p class="text-sm font-medium text-gray-500">Nama</p>
-                                <p class="mt-2 text-lg font-semibold text-gray-900">{{ $warga->nama }}</p>
-                            </div>
-                            <div>
-                                <p class="text-sm font-medium text-gray-500">Alamat</p>
-                                <p class="mt-2 text-lg font-semibold text-gray-900">{{ $warga->alamat }}</p>
-                            </div>
-                            <div>
-                                <p class="text-sm font-medium text-gray-500">Penghasilan</p>
-                                <p class="mt-2 text-lg font-semibold text-gray-900">Rp {{ number_format($warga->penghasilan, 0, ',', '.') }}</p>
-                            </div>
-                            
                         </div>
 
                         <div class="rounded-2xl border border-gray-200 bg-white p-6 text-center">

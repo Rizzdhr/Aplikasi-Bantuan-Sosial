@@ -17,10 +17,6 @@ return new class extends Migration
             // Relasi ke warga
             $table->foreignId('warga_id')->constrained()->onDelete('cascade');
 
-            // Bantuan
-            // $table->enum('program_bantuan', ['kip', 'jkn', 'pkh', 'bpnt', 'blt']);
-
-            // Input manual
             $table->integer('penghasilan');
             $table->integer('usia');
 

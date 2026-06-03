@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 class Warga extends Model
 {
@@ -21,7 +22,18 @@ class Warga extends Model
         'status_pernikahan',
         'pekerjaan',
         'kewarganegaraan',
-        'latitude_rumah',
-        'longitude_rumah',
+        'penghasilan',
     ];
+
+    protected $casts = [
+        'tanggal_lahir' => 'date',
+        'penghasilan' => 'integer',
+    ];
+
+    public function getUsiaAttribute()
+    {
+        return $this->tanggal_lahir
+            ? Carbon::parse($this->tanggal_lahir)->age
+            : null;
+    }
 }

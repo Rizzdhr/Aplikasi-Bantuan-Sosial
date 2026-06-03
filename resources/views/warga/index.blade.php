@@ -1,10 +1,10 @@
 <x-app-layout>
-    <x-slot name="header">
+    {{-- <x-slot name="header">
         <div class="space-y-1">
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">Data Warga</h2>
             <p class="text-sm text-gray-500">Kelola data warga, lihat detail, dan lakukan edit atau hapus.</p>
         </div>
-    </x-slot>
+    </x-slot> --}}
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
@@ -40,7 +40,8 @@
                                 <tr>
                                     <th class="px-4 py-3 text-left">NIK</th>
                                     <th class="px-4 py-3 text-left">Nama</th>
-                                    <th class="px-4 py-3 text-left">Alamat</th>
+                                    <th class="px-4 py-3 text-left">Usia</th>
+                                    <th class="px-4 py-3 text-left">Pekerjaan</th>
                                     <th class="px-4 py-3 text-left">Penghasilan</th>
                                     <th class="px-4 py-3 text-center">Aksi</th>
                                 </tr>
@@ -50,7 +51,8 @@
                                     <tr class="hover:bg-gray-50">
                                         <td class="px-4 py-4 font-medium text-gray-700">{{ $w->nik }}</td>
                                         <td class="px-4 py-4 text-gray-700">{{ $w->nama }}</td>
-                                        <td class="px-4 py-4 text-gray-600">{{ $w->alamat }}</td>
+                                        <td class="px-4 py-4 text-gray-600">{{ $w->usia }}</td>
+                                        <td class="px-4 py-4 text-gray-600">{{ $w->pekerjaan }}</td>
                                         <td class="px-4 py-4 text-gray-600">Rp
                                             {{ number_format($w->penghasilan, 0, ',', '.') }}</td>
                                         <td class="px-4 py-4 text-center space-x-2">
@@ -69,7 +71,7 @@
                                     </tr>
                                 @empty
                                     <tr>
-                                        <td colspan="4" class="px-4 py-10 text-center text-gray-500">Data warga belum
+                                        <td colspan="6" class="px-4 py-10 text-center text-gray-500">Data warga belum
                                             tersedia</td>
                                     </tr>
                                 @endforelse
