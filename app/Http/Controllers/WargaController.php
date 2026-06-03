@@ -105,7 +105,12 @@ class WargaController extends Controller
             return back()->with('error', 'File import kosong atau tidak memiliki header.');
         }
 
-        $headerRow = array_map(fn($h) => strtolower(trim((string) $h)), array_values($rows[0]));
+        $firstRow = reset($rows);
+        if ($firstRow === false || !is_array($firstRow)) {
+            return back()->with('error', 'File import kosong atau tidak memiliki header.');
+        }
+
+        $headerRow = array_map(fn($h) => strtolower(trim((string) $h)), array_values($firstRow));
         $requiredColumns = ['nik', 'nama'];
         foreach ($requiredColumns as $requiredColumn) {
             if (! in_array($requiredColumn, $headerRow, true)) {
@@ -114,7 +119,7 @@ class WargaController extends Controller
         }
 
         $imported = 0;
-        foreach (array_slice($rows, 1) as $row) {
+        foreach (array_slice(array_values($rows), 1) as $row) {
             $rowValues = array_values($row);
             if (! array_filter($rowValues, fn($value) => trim((string) $value) !== '')) {
                 continue;
