@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Warga;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 use Illuminate\Support\Facades\Http;
+use Carbon\Carbon;
 
 class WargaController extends Controller
 {
@@ -76,6 +77,116 @@ class WargaController extends Controller
         return redirect()
             ->route('warga.index')
             ->with('success', 'Data warga berhasil ditambahkan');
+    }
+
+    /**
+     * Import data warga from CSV or Excel.
+     */
+    public function import(Request $request)
+    {
+        $request->validate([
+            'import_file' => 'required|file|mimes:csv,txt,xls,xlsx',
+        ]);
+
+        $file = $request->file('import_file');
+        $extension = strtolower($file->getClientOriginalExtension());
+        $rows = [];
+
+        if (in_array($extension, ['xls', 'xlsx']) && class_exists('PhpOffice\\PhpSpreadsheet\\IOFactory')) {
+            $spreadsheet = \PhpOffice\PhpSpreadsheet\IOFactory::load($file->getRealPath());
+            $rows = $spreadsheet->getActiveSheet()->toArray(null, true, true, true);
+        } elseif (in_array($extension, ['csv', 'txt'])) {
+            $rows = $this->readCsvFile($file->getRealPath());
+        } else {
+            return back()->with('error', 'Format file tidak didukung. Gunakan CSV atau XLSX.');
+        }
+
+        if (count($rows) < 2) {
+            return back()->with('error', 'File import kosong atau tidak memiliki header.');
+        }
+
+        $headerRow = array_map(fn($h) => strtolower(trim((string) $h)), array_values($rows[0]));
+        $requiredColumns = ['nik', 'nama'];
+        foreach ($requiredColumns as $requiredColumn) {
+            if (! in_array($requiredColumn, $headerRow, true)) {
+                return back()->with('error', "Header \"{$requiredColumn}\" tidak ditemukan di file import.");
+            }
+        }
+
+        $imported = 0;
+        foreach (array_slice($rows, 1) as $row) {
+            $rowValues = array_values($row);
+            if (! array_filter($rowValues, fn($value) => trim((string) $value) !== '')) {
+                continue;
+            }
+
+            $rowData = array_combine($headerRow, array_map(fn($value) => trim((string) $value), $rowValues));
+            $nik = $rowData['nik'] ?? null;
+            if (! $nik) {
+                continue;
+            }
+
+            $payload = [
+                'provinsi' => $rowData['provinsi'] ?? null,
+                'nik' => $nik,
+                'nama' => $rowData['nama'] ?? null,
+                'tempat_lahir' => $rowData['tempat_lahir'] ?? null,
+                'tanggal_lahir' => $this->normalizeDate($rowData['tanggal_lahir'] ?? null),
+                'jenis_kelamin' => $rowData['jenis_kelamin'] ?? null,
+                'gol_darah' => $rowData['gol_darah'] ?? null,
+                'alamat' => $rowData['alamat'] ?? null,
+                'kel_desa' => $rowData['kel_desa'] ?? null,
+                'kecamatan' => $rowData['kecamatan'] ?? null,
+                'agama' => $rowData['agama'] ?? null,
+                'status_pernikahan' => $rowData['status_pernikahan'] ?? null,
+                'pekerjaan' => $rowData['pekerjaan'] ?? null,
+                'kewarganegaraan' => $rowData['kewarganegaraan'] ?? null,
+                'penghasilan' => $this->normalizeNumber($rowData['penghasilan'] ?? null),
+            ];
+
+            Warga::updateOrCreate([
+                'nik' => $nik,
+            ], array_filter($payload, fn($value) => $value !== null && $value !== ''));
+            $imported++;
+        }
+
+        return back()->with('success', "Import berhasil. {$imported} baris diproses.");
+    }
+
+    private function readCsvFile(string $path): array
+    {
+        $rows = [];
+        if (($handle = fopen($path, 'r')) !== false) {
+            while (($row = fgetcsv($handle, 0, ',')) !== false) {
+                $rows[] = $row;
+            }
+            fclose($handle);
+        }
+
+        return $rows;
+    }
+
+    private function normalizeDate(?string $value): ?string
+    {
+        if (! $value) {
+            return null;
+        }
+
+        try {
+            return Carbon::parse($value)->format('Y-m-d');
+        } catch (\Throwable $e) {
+            return null;
+        }
+    }
+
+    private function normalizeNumber(?string $value): ?int
+    {
+        if ($value === null) {
+            return null;
+        }
+
+        $cleaned = preg_replace('/[^0-9-]/', '', $value);
+        return $cleaned === '' ? null : (int) $cleaned;
     }
 
     /**

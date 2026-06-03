@@ -11,22 +11,51 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200 space-y-6">
                     <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-                        <form method="GET" action="{{ route('warga.index') }}"
-                            class="flex flex-col gap-3 sm:flex-row sm:items-center">
-                            <input type="text" name="search" value="{{ request('search') }}"
-                                placeholder="Cari NIK / Nama..."
-                                class="w-full rounded-lg border border-gray-300 px-4 py-2 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-100 sm:w-80">
-                            <button type="submit"
-                                class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 transition">
-                                Cari
-                            </button>
-                        </form>
+                        <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+                            <form method="GET" action="{{ route('warga.index') }}"
+                                class="flex flex-col gap-3 sm:flex-row sm:items-center">
+                                <input type="text" name="search" value="{{ request('search') }}"
+                                    placeholder="Cari NIK / Nama..."
+                                    class="w-full rounded-lg border border-gray-300 px-4 py-2 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-100 sm:w-80">
+                                <button type="submit"
+                                    class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 transition">
+                                    Cari
+                                </button>
+                            </form>
+                        </div>
 
-                        <a href="{{ route('warga.create') }}"
-                            class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 transition">
-                            + Tambah Warga
-                        </a>
+                        <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+                            <form action="{{ route('warga.import') }}" method="POST" enctype="multipart/form-data"
+                                class="flex flex-col gap-2 sm:flex-row sm:items-center">
+                                @csrf
+                                <label class="inline-flex cursor-pointer items-center gap-2 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-700 shadow-sm hover:border-blue-500">
+                                    <span>Pilih CSV/XLSX</span>
+                                    <input type="file" name="import_file" accept=".csv,.xls,.xlsx" class="hidden">
+                                </label>
+                                <button type="submit"
+                                    class="inline-flex items-center justify-center rounded-lg bg-green-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-700 transition">
+                                    Import
+                                </button>
+                            </form>
+
+                            <a href="{{ route('warga.create') }}"
+                                class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 transition">
+                                + Tambah Warga
+                            </a>
+                        </div>
                     </div>
+
+                    @if ($errors->has('import_file'))
+                        <div class="rounded-2xl bg-red-50 border border-red-200 p-4 text-sm text-red-700">
+                            {{ $errors->first('import_file') }}
+                        </div>
+                    @endif
+
+                    @if (session('error'))
+                        <div class="rounded-2xl bg-red-50 border border-red-200 p-4 text-sm text-red-700">
+                            {{ session('error') }}
+                        </div>
+                    @endif
 
                     @if (session('success'))
                         <div class="rounded-2xl bg-green-50 border border-green-200 p-4 text-sm text-green-700">
