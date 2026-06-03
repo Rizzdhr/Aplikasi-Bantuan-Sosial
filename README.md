@@ -20,6 +20,7 @@ Karena Laravel sudah memiliki fitur HTTP Client yang dapat berkomunikasi langsun
 
 Selanjutnya, Laravel mengirim 4 fitur — penghasilan, usia, pekerjaan, dan kondisi rumah — ke Flask API yang memuat model Decision Tree (model.pkl) untuk memprediksi kelayakan bansos.
 
+```bash
 User
   ↓
 Laravel (input otomatis usia, pekerjaan, penghasilan + foto rumah)
@@ -29,6 +30,7 @@ Roboflow API (klasifikasi rumah → rumah_buruk/sedang/baik)
 Flask API (prediksi kelayakan via Decision Tree)
   ↓
 Laravel (tampilkan hasil)
+```
 
 Keputusan model bukan:
 Rumah buruk = otomatis diterima
