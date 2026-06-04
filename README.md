@@ -27,7 +27,7 @@ Laravel (input otomatis usia, pekerjaan, penghasilan + foto rumah)
   ↓
 Roboflow API (klasifikasi rumah → rumah_buruk/sedang/baik)
   ↓
-Flask API (prediksi kelayakan via Decision Tree)
+Flask API (prediksi kelayakan menggunakan algoritma Decision Tree)
   ↓
 Laravel (tampilkan hasil)
 ```
