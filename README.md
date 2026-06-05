@@ -47,8 +47,9 @@ Gaji tinggi mengurangi peluang, tapi kalau lansia + rumah buruk tetap bisa diter
 ## Fitur
 
 - CRUD Data Warga
+- Scan QR Warga
 - Pengajuan Bantuan
-- Upload Foto Rumah
+- Klasifikasi Kondisi Rumah Berdasarkan Foto Rumah
 - Sistem Skoring Kelayakan
 
 ---
