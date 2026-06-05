@@ -24,7 +24,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('warga', WargaController::class)->middleware('auth');
 
     Route::resource('pengajuan', PengajuanController::class)->middleware('auth');
-    Route::get('/scan/{nik}', [ScanController::class, 'getWarga']);
+    Route::get('/api/scan/{nik}', [ScanController::class, 'getWarga'])->middleware('auth');
 
     Route::post('/upload-foto', [PengajuanController::class, 'upload'])->name('pengajuan.upload');
 

@@ -281,7 +281,7 @@
         function onScanSuccess(decodedText) {
             html5QrcodeScanner.clear();
             document.getElementById('scannerBox')?.remove();
-            fetch('/scan/' + decodedText)
+            fetch('/api/scan/' + decodedText)
                 .then(res => res.json())
                 .then(res => {
                     if (res.status === 'success') {
