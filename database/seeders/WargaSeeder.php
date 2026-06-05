@@ -2,76 +2,75 @@
 
 namespace Database\Seeders;
 
-use App\Models\Warga;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class WargaSeeder extends Seeder
 {
-    use WithoutModelEvents;
-
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
-        $csvPath = base_path('dataset/ktp_tabular_v2.csv');
+        $path = base_path('app/dataset/ktp_tabular_v2.csv');
 
-        if (!file_exists($csvPath)) {
-            $this->command->error('ktp_tabular_v2.csv not found at ' . $csvPath);
+        if (!file_exists($path)) {
+            $this->command->error('File CSV tidak ditemukan: ' . $path);
             return;
         }
 
-        if (($handle = fopen($csvPath, 'r')) === false) {
-            $this->command->error('Unable to open ktp_tabular_v2.csv');
-            return;
-        }
+        $file = fopen($path, 'r');
 
-        $header = fgetcsv($handle);
-        if ($header === false) {
-            fclose($handle);
-            $this->command->error('ktp_tabular_v2.csv is empty');
-            return;
-        }
+        // Skip header
+        $header = fgetcsv($file);
 
-        while (($row = fgetcsv($handle)) !== false) {
-            $row = array_map('trim', $row);
+        $batch = [];
+        $count = 0;
+
+        while (($row = fgetcsv($file)) !== false) {
+            if (count($row) < count($header)) continue;
+
             $data = array_combine($header, $row);
 
-            if (empty($data['nik']) || empty($data['nama'])) {
-                continue;
-            }
+            $batch[] = [
+                'provinsi'          => $data['provinsi'] ?? null,
+                'nik'               => $data['nik'] ?? null,
+                'nama'              => $data['nama'] ?? null,
+                'jenis_kelamin'     => $data['jenis_kelamin'] ?? null,
+                'gol_darah'         => $data['gol_darah'] ?? null,
+                'alamat'            => $data['alamat'] ?? null,
+                'kel_desa'          => $data['kel_desa'] ?? null,
+                'kecamatan'         => $data['kecamatan'] ?? null,
+                'agama'             => $data['agama'] ?? null,
+                'status_pernikahan' => $data['status_pernikahan'] ?? null,
+                'pekerjaan'         => $data['pekerjaan'] ?? null,
+                'kewarganegaraan'   => $data['kewarganegaraan'] ?? null,
+                'tempat_lahir'      => $data['tempat_lahir'] ?? null,
+                'tanggal_lahir'     => !empty($data['tanggal_lahir'])
+                                        ? Carbon::parse($data['tanggal_lahir'])->format('Y-m-d')
+                                        : null,
+                'penghasilan'       => !empty($data['penghasilan'])
+                                        ? (int) $data['penghasilan']
+                                        : 0,
+                'created_at'        => now(),
+                'updated_at'        => now(),
+            ];
 
-            // Parse tanggal lahir format DD-MM-YYYY to YYYY-MM-DD
-            $tanggalLahir = null;
-            if (!empty($data['tanggal_lahir'])) {
-                try {
-                    $tanggalLahir = \DateTime::createFromFormat('d-m-Y', $data['tanggal_lahir'])?->format('Y-m-d');
-                } catch (\Exception $e) {
-                    $tanggalLahir = null;
-                }
+            // Insert per 500 baris agar tidak habis memory
+            if (count($batch) >= 500) {
+                DB::table('wargas')->insertOrIgnore($batch);
+                $count += count($batch);
+                $batch = [];
+                $this->command->info("Inserted: $count rows...");
             }
-
-            Warga::updateOrCreate(
-                ['nik' => $data['nik']],
-                [
-                    'nama' => $data['nama'],
-                    'alamat' => $data['alamat'] ?? '',
-                    'provinsi' => $data['provinsi'] ?? null,
-                    'jenis_kelamin' => $data['jenis_kelamin'] ?? null,
-                    'gol_darah' => $data['gol_darah'] ?? null,
-                    'kel_desa' => $data['kel_desa'] ?? null,
-                    'kecamatan' => $data['kecamatan'] ?? null,
-                    'agama' => $data['agama'] ?? null,
-                    'status_pernikahan' => $data['status_pernikahan'] ?? null,
-                    'pekerjaan' => $data['pekerjaan'] ?? null,
-                    'kewarganegaraan' => $data['kewarganegaraan'] ?? null,
-                    'tempat_lahir' => $data['tempat_lahir'] ?? null,
-                    'tanggal_lahir' => $tanggalLahir,
-                ]
-            );
         }
 
-        fclose($handle);
+        // Insert sisa
+        if (!empty($batch)) {
+            DB::table('wargas')->insertOrIgnore($batch);
+            $count += count($batch);
+        }
+
+        fclose($file);
+
+        $this->command->info("Selesai. Total: $count warga dimasukkan.");
     }
 }
