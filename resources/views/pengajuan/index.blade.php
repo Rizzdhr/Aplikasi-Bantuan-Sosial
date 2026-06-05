@@ -1,5 +1,5 @@
 <style>
-    #reader { padding: 16px; }
+    #reader { padding: 12px; }
     #reader__scan_region {
         display: flex;
         justify-content: center;
@@ -7,14 +7,54 @@
         min-height: 220px;
     }
     #reader__scan_region img { margin: 0 auto !important; display: block !important; }
-    #reader select, #reader button {
-        padding: 8px 14px;
+
+    /* Paksa semua elemen bawaan html5-qrcode masuk ke dalam box */
+    #reader__dashboard { width: 100%; overflow: hidden; }
+    #reader__dashboard_section { width: 100%; }
+    #reader__dashboard_section_csr { width: 100%; }
+    #reader__dashboard_section_swaplink { width: 100%; }
+
+    #reader select {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        padding: 8px 12px;
         border-radius: 10px;
         border: 1px solid #d1d5db;
-        margin: 4px;
+        margin: 4px 0;
+        box-sizing: border-box;
+        font-size: 14px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
-    #reader button { cursor: pointer; }
-    #reader a { display: inline-block; margin-top: 10px; }
+
+    #reader button {
+        display: block;
+        width: 100%;
+        padding: 8px 12px;
+        border-radius: 10px;
+        border: 1px solid #d1d5db;
+        margin: 4px 0;
+        cursor: pointer;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+
+    #reader a {
+        display: inline-block;
+        margin-top: 10px;
+        font-size: 13px;
+        word-break: break-all;
+    }
+
+    /* Bungkus video/canvas agar tidak overflow */
+    #reader__scan_region > video,
+    #reader__scan_region > canvas {
+        max-width: 100% !important;
+        height: auto !important;
+        border-radius: 12px;
+    }
 </style>
 
 <x-app-layout>
@@ -40,17 +80,17 @@
             <div class="grid gap-5 xl:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
 
                 {{-- LEFT COLUMN --}}
-                <div class="space-y-5">
+                <div class="space-y-5 min-w-0">
 
                     {{-- Scanner --}}
-                    <div id="scannerBox" class="rounded-2xl border border-gray-200 bg-white p-4 sm:p-6 shadow-sm">
+                    <div id="scannerBox" class="rounded-2xl border border-gray-200 bg-white p-4 sm:p-6 shadow-sm overflow-hidden">
                         <h3 class="text-lg font-semibold text-gray-900">Scan QR Warga</h3>
                         <p class="text-sm text-gray-500">Arahkan kamera untuk memuat data warga.</p>
-                        <div id="reader" class="mt-4 rounded-3xl border border-dashed border-gray-200 bg-gray-50 min-h-[220px]"></div>
+                        <div id="reader" class="mt-4 w-full rounded-2xl border border-dashed border-gray-200 bg-gray-50 overflow-hidden"></div>
                     </div>
 
                     {{-- Warga Card --}}
-                    <div id="wargaCard" class="hidden rounded-2xl border border-gray-200 bg-white p-4 sm:p-6 shadow-sm">
+                    <div id="wargaCard" class="hidden rounded-2xl border border-gray-200 bg-white p-4 sm:p-6 shadow-sm overflow-hidden min-w-0">
                         <h3 class="text-lg font-semibold text-gray-900">Data Warga</h3>
                         <div class="mt-4 grid grid-cols-2 gap-3">
                             <div class="rounded-xl bg-gray-50 p-3">
@@ -67,7 +107,7 @@
                     {{-- Form Pengajuan --}}
                     <form id="formPengajuan" action="{{ route('pengajuan.store') }}" method="POST"
                         enctype="multipart/form-data"
-                        class="hidden space-y-5 rounded-2xl border border-gray-200 bg-white p-4 sm:p-6 shadow-sm">
+                        class="hidden space-y-5 rounded-2xl border border-gray-200 bg-white p-4 sm:p-6 shadow-sm overflow-hidden min-w-0">
                         @csrf
                         <input type="hidden" name="warga_id" id="warga_id">
                         <input type="hidden" name="latitude_pengajuan" id="latitude_pengajuan">
@@ -113,7 +153,7 @@
                         </div>
 
                         <div class="flex flex-col gap-3">
-                            <img id="preview" class="hidden w-full max-w-xs rounded-xl border border-gray-200" alt="Preview Foto Rumah">
+                        <img id="preview" class="hidden w-full rounded-xl border border-gray-200 object-cover block" alt="Preview Foto Rumah" style="max-width:100%;">
                             <button id="btnAjukan" type="submit" disabled
                                 class="w-full inline-flex items-center justify-center rounded-2xl bg-green-600 px-4 py-3 text-sm font-semibold text-white shadow-sm hover:bg-green-700 transition disabled:opacity-50 disabled:cursor-not-allowed">
                                 Ajukan Bantuan
@@ -128,17 +168,16 @@
                     </form>
                 </div>
 
-                {{-- RIGHT COLUMN: Hasil Prediksi --}}
+                {{-- RIGHT COLUMN: Hasil Penilaian Kelayakan --}}
                 <aside>
                     <div class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
                         <div class="border-b border-gray-100 px-4 sm:px-6 py-4">
-                            <h3 class="text-lg font-semibold text-gray-900">Hasil Prediksi</h3>
-                            <p class="mt-1 text-sm text-gray-500">Hasil klasifikasi kondisi rumah berdasarkan foto yang diunggah.</p>
+                            <h3 class="text-lg font-semibold text-gray-900">Hasil Penilaian Kelayakan</h3>
+                            <p class="mt-1 text-sm text-gray-500">Hasil analisis berdasarkan data warga dan klasifikasi kondisi rumah.</p>
                         </div>
 
                         @if (session('foto_rumah'))
                             <div class="space-y-4 p-4 sm:p-5">
-
                                 <div class="grid grid-cols-2 gap-3">
                                     <div class="rounded-xl bg-gray-50 p-3">
                                         <p class="text-xs text-gray-500">Pemohon</p>
@@ -220,15 +259,15 @@
 
                                 <div class="border-t border-gray-100 pt-3">
                                     <p class="text-xs text-gray-400">
-                                        Diprediksi pada: {{ now()->timezone('Asia/Jakarta')->translatedFormat('d F Y - H:i') }} WIB
+                                        Penilaian dilakukan pada: {{ now()->timezone('Asia/Jakarta')->translatedFormat('d F Y - H:i') }} WIB
                                     </p>
                                 </div>
                             </div>
                         @else
                             <div class="p-8 sm:p-10 text-center">
                                 <div class="text-5xl">🏠</div>
-                                <h3 class="mt-4 text-lg font-semibold text-gray-800">Belum Ada Prediksi</h3>
-                                <p class="mt-2 text-sm text-gray-500">Upload dan proses foto rumah untuk melihat hasil prediksi AI.</p>
+                                <h3 class="mt-4 text-lg font-semibold text-gray-800">Belum Ada Hasil Penilaian</h3>
+                                <p class="mt-2 text-sm text-gray-500">Scan QR warga dan unggah foto rumah untuk melakukan penilaian kelayakan bantuan sosial.</p>
                             </div>
                         @endif
                     </div>
@@ -260,7 +299,10 @@
                     }
                 });
         }
-        const html5QrcodeScanner = new Html5QrcodeScanner('reader', { fps: 10, qrbox: 220 });
+        const html5QrcodeScanner = new Html5QrcodeScanner('reader', {
+            fps: 10,
+            qrbox: { width: Math.min(250, window.innerWidth - 80), height: Math.min(250, window.innerWidth - 80) }
+        });
         html5QrcodeScanner.render(onScanSuccess);
     </script>
     <script>
