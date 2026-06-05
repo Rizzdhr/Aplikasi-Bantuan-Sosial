@@ -175,7 +175,7 @@ class PengajuanController extends Controller
         // =========================
         // 6. Kirim ke ML Python
         // =========================
-        $ml = Http::post('http://127.0.0.1:5000/predict', [
+        $ml = Http::post(env('FLASK_API_URL').'/predict', [
             'penghasilan'   => (int)$penghasilan,
             'usia'  => $usia,
             'pekerjaan'     => $mapPekerjaan[$pekerjaan] ?? 0,
