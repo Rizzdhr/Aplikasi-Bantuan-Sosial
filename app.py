@@ -27,13 +27,13 @@ def generate_alasan(penghasilan, usia, pekerjaan, kondisi_rumah, status):
 
     # Pekerjaan (0=tidak bekerja, 1=buruh, 2=karyawan, 3=profesional, 4=pejabat)
     pekerjaan_label = {
-        0: ("✓", "Tidak/belum bekerja", True),
-        1: ("✓", "Pekerjaan buruh harian", True),
-        2: ("~", "Karyawan/pegawai", None),
-        3: ("✗", "Tenaga profesional", False),
-        4: ("✗", "Pengusaha/pejabat", False),
+        0: ("✓", "Kategori pekerjaan: Tidak/belum bekerja", True),
+        1: ("✓", "Kategori pekerjaan: Buruh/pekerja informal", True),
+        2: ("~", "Kategori pekerjaan: Karyawan/pegawai", None),
+        3: ("✗", "Kategori pekerjaan: Tenaga profesional", False),
+        4: ("✗", "Kategori pekerjaan: Pengusaha/pejabat", False),
     }
-    icon, teks, positif = pekerjaan_label.get(pekerjaan, ("~", "Pekerjaan tidak diketahui", None))
+    icon, teks, positif = pekerjaan_label.get(pekerjaan, ("~", "Kategori pekerjaan: Tidak diketahui", None))
     alasan.append({"icon": icon, "teks": teks, "positif": positif})
 
     # Kondisi rumah (0=buruk, 1=sedang, 2=baik)
