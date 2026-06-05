@@ -54,6 +54,29 @@ Gaji tinggi mengurangi peluang, tapi kalau lansia + rumah buruk tetap bisa diter
 
 ---
 
+## Roles & Permissions
+
+Aplikasi ini menggunakan dua role utama untuk pengaturan akses:
+
+- **admin**: Memiliki akses penuh ke seluruh fitur aplikasi. Termasuk kemampuan untuk:
+  - Melakukan CRUD (Create, Read, Update, Delete) data warga.
+  - Mengimpor data warga (CSV / XLSX).
+  - Mengelola pengajuan dan fitur lainnya.
+
+- **petugas**: Memiliki akses terbatas. Di warga Petugas hanya dapat:
+  - Melihat tabel daftar warga.
+  - Mencari warga (fitur pencarian NIK / nama).
+  - Melihat detail warga (halaman detail dan QR).
+  - Petugas **tidak** boleh: membuat, mengubah, menghapus, atau mengimpor data warga.
+
+Contoh akun yang tersedia via seeder default:
+
+- admin: `admin@gmail.com` / `rdm17`
+- petugas: `petugas@gmail.com` / `password`
+
+
+---
+
 ## Teknologi
 
 - **Backend**: PHP, Laravel 11
