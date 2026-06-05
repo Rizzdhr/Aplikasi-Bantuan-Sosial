@@ -49,6 +49,16 @@
                             {{ $errors->first('import_file') }}
                         </div>
                     @endif
+                    @if (session('import_errors'))
+                        <div class="rounded-xl bg-yellow-50 border border-yellow-200 p-4 text-sm text-yellow-800">
+                            <p class="font-semibold mb-2">Beberapa baris dilewati:</p>
+                            <ul class="list-disc list-inside space-y-1">
+                                @foreach (session('import_errors') as $err)
+                                    <li>{{ $err }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                     @if (session('error'))
                         <div class="rounded-xl bg-red-50 border border-red-200 p-4 text-sm text-red-700">
                             {{ session('error') }}

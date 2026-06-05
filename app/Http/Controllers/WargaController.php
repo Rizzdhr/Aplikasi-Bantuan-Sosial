@@ -120,43 +120,76 @@ class WargaController extends Controller
         }
 
         $imported = 0;
-        foreach (array_slice(array_values($rows), 1) as $row) {
+        $skipped = 0;
+        $errors = [];
+
+        foreach (array_slice(array_values($rows), 1) as $index => $row) {
             $rowValues = array_values($row);
             if (! array_filter($rowValues, fn($value) => trim((string) $value) !== '')) {
                 continue;
             }
 
             $rowData = array_combine($headerRow, array_map(fn($value) => trim((string) $value), $rowValues));
-            $nik = $rowData['nik'] ?? null;
-            if (! $nik) {
+            $nik = preg_replace('/\D/', '', $rowData['nik'] ?? ''); // bersihkan non-angka
+
+            // Validasi NIK kosong
+            if (!$nik) {
+                $errors[] = "Baris " . ($index + 2) . ": NIK kosong, dilewati.";
+                $skipped++;
+                continue;
+            }
+
+            // Validasi NIK harus 16 digit
+            if (strlen($nik) !== 16) {
+                $errors[] = "Baris " . ($index + 2) . ": NIK '{$nik}' tidak 16 digit, dilewati.";
+                $skipped++;
+                continue;
+            }
+
+            // Cek NIK sudah ada
+            $exists = Warga::where('nik', $nik)->exists();
+            if ($exists) {
+                $errors[] = "Baris " . ($index + 2) . ": NIK '{$nik}' sudah terdaftar, dilewati.";
+                $skipped++;
                 continue;
             }
 
             $payload = [
-                'provinsi' => $rowData['provinsi'] ?? null,
-                'nik' => $nik,
-                'nama' => $rowData['nama'] ?? null,
-                'tempat_lahir' => $rowData['tempat_lahir'] ?? null,
-                'tanggal_lahir' => $this->normalizeDate($rowData['tanggal_lahir'] ?? null),
-                'jenis_kelamin' => $rowData['jenis_kelamin'] ?? null,
-                'gol_darah' => $rowData['gol_darah'] ?? null,
-                'alamat' => $rowData['alamat'] ?? null,
-                'kel_desa' => $rowData['kel_desa'] ?? null,
-                'kecamatan' => $rowData['kecamatan'] ?? null,
-                'agama' => $rowData['agama'] ?? null,
+                'provinsi'          => $rowData['provinsi'] ?? null,
+                'nik'               => $nik,
+                'nama'              => $rowData['nama'] ?? null,
+                'tempat_lahir'      => $rowData['tempat_lahir'] ?? null,
+                'tanggal_lahir'     => $this->normalizeDate($rowData['tanggal_lahir'] ?? null),
+                'jenis_kelamin'     => $rowData['jenis_kelamin'] ?? null,
+                'gol_darah'         => $rowData['gol_darah'] ?? null,
+                'alamat'            => $rowData['alamat'] ?? null,
+                'kel_desa'          => $rowData['kel_desa'] ?? null,
+                'kecamatan'         => $rowData['kecamatan'] ?? null,
+                'agama'             => $rowData['agama'] ?? null,
                 'status_pernikahan' => $rowData['status_pernikahan'] ?? null,
-                'pekerjaan' => $rowData['pekerjaan'] ?? null,
-                'kewarganegaraan' => $rowData['kewarganegaraan'] ?? null,
-                'penghasilan' => $this->normalizeNumber($rowData['penghasilan'] ?? null),
+                'pekerjaan'         => $rowData['pekerjaan'] ?? null,
+                'kewarganegaraan'   => $rowData['kewarganegaraan'] ?? null,
+                'penghasilan'       => $this->normalizeNumber($rowData['penghasilan'] ?? null),
             ];
 
-            Warga::updateOrCreate([
-                'nik' => $nik,
-            ], array_filter($payload, fn($value) => $value !== null && $value !== ''));
+            Warga::create(array_filter($payload, fn($value) => $value !== null && $value !== ''));
             $imported++;
         }
 
-        return back()->with('success', "Import berhasil. {$imported} baris diproses.");
+        // Susun pesan hasil import
+        $message = "Import selesai. {$imported} baris berhasil diimpor.";
+        if ($skipped > 0) {
+            $message .= " {$skipped} baris dilewati.";
+        }
+
+        // Simpan detail error ke session jika ada
+        if (!empty($errors)) {
+            return back()
+                ->with('success', $message)
+                ->with('import_errors', $errors);
+        }
+
+        return back()->with('success', $message);
     }
 
     private function readCsvFile(string $path): array
