@@ -202,7 +202,7 @@ class PengajuanController extends Controller
             'status' => $hasil
         ]);
 
-        return redirect()->back()->with([
+        return redirect()->route('pengajuan.index')->with([
             'nama' => $warga->nama,
             'penghasilan' => $penghasilan,
             'usia' => $usia,
