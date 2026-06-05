@@ -7,6 +7,7 @@ use App\Models\Warga;
 use Carbon\Carbon;
 use Endroid\QrCode\Builder\Builder;
 use Endroid\QrCode\Writer\PngWriter;
+use PhpOffice\PhpSpreadsheet\Shared\Date as ExcelDate;
 
 class WargaController extends Controller
 {
@@ -40,7 +41,7 @@ class WargaController extends Controller
     {
         $request->validate([
             'provinsi' => 'nullable|string|max:255',
-            'nik' => 'required|unique:wargas,nik',
+            'nik' => 'required|digits:16|unique:wargas,nik',
             'nama' => 'required|string|max:255',
             'tempat_lahir' => 'nullable|string|max:255',
             'tanggal_lahir' => 'required|date|before_or_equal:today',
@@ -171,14 +172,21 @@ class WargaController extends Controller
         return $rows;
     }
 
-    private function normalizeDate(?string $value): ?string
+    private function normalizeDate($value): ?string
     {
-        if (! $value) {
+        if (empty($value)) {
             return null;
         }
 
         try {
-            return Carbon::parse($value)->format('Y-m-d');
+            // Jika berupa serial date Excel
+            if (is_numeric($value)) {
+                return ExcelDate::excelToDateTimeObject($value)
+                    ->format('Y-m-d');
+            }
+
+            return Carbon::parse($value)
+                ->format('Y-m-d');
         } catch (\Throwable $e) {
             return null;
         }
@@ -253,7 +261,7 @@ class WargaController extends Controller
     {
         $request->validate([
             'provinsi' => 'nullable|string|max:255',
-            'nik' => 'required|unique:wargas,nik,' . $id,
+            'nik' => 'required|digits:16|unique:wargas,nik,' . $id,
             'nama' => 'required|string|max:255',
             'tempat_lahir' => 'nullable|string|max:255',
             'tanggal_lahir' => 'required|date|before_or_equal:today',
