@@ -22,10 +22,12 @@
                                 class="flex-1 sm:flex-none inline-flex items-center justify-center rounded-xl bg-gray-100 px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-200">
                                 ← Kembali
                             </a>
-                            <a href="{{ route('warga.edit', $warga->id) }}"
-                                class="flex-1 sm:flex-none inline-flex items-center justify-center rounded-xl bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700">
-                                Edit
-                            </a>
+                            @if(auth()->user()->isAdmin())
+                                <a href="{{ route('warga.edit', $warga->id) }}"
+                                    class="flex-1 sm:flex-none inline-flex items-center justify-center rounded-xl bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700">
+                                    Edit
+                                </a>
+                            @endif
                         </div>
                     </div>
 

@@ -31,6 +31,8 @@ class WargaController extends Controller
      */
     public function create()
     {
+        abort_unless(auth()->user()->isAdmin(), 403, 'Akses ditolak.');
+
         return view('warga.create');
     }
 
@@ -39,6 +41,8 @@ class WargaController extends Controller
      */
     public function store(Request $request)
     {
+        abort_unless(auth()->user()->isAdmin(), 403, 'Akses ditolak.');
+
         $request->validate([
             'provinsi' => 'nullable|string|max:255',
             'nik' => 'required|digits:16|unique:wargas,nik',
@@ -85,6 +89,8 @@ class WargaController extends Controller
      */
     public function import(Request $request)
     {
+        abort_unless(auth()->user()->isAdmin(), 403, 'Akses ditolak.');
+
         $request->validate([
             'import_file' => 'required|file|mimes:csv,txt,xls,xlsx',
         ]);
@@ -282,6 +288,8 @@ class WargaController extends Controller
      */
     public function edit($id)
     {
+        abort_unless(auth()->user()->isAdmin(), 403, 'Akses ditolak.');
+
         $warga = Warga::findOrFail($id);
 
         return view('warga.edit', compact('warga'));
@@ -292,6 +300,8 @@ class WargaController extends Controller
      */
     public function update(Request $request, $id)
     {
+        abort_unless(auth()->user()->isAdmin(), 403, 'Akses ditolak.');
+
         $request->validate([
             'provinsi' => 'nullable|string|max:255',
             'nik' => 'required|digits:16|unique:wargas,nik,' . $id,
@@ -340,6 +350,8 @@ class WargaController extends Controller
      */
     public function destroy($id)
     {
+        abort_unless(auth()->user()->isAdmin(), 403, 'Akses ditolak.');
+
         Warga::destroy($id);
 
         return redirect()->route('warga.index');

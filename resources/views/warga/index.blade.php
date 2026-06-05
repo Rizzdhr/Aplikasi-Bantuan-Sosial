@@ -21,25 +21,27 @@
 
                         {{-- Import + Tambah --}}
                         <div class="flex flex-col gap-2 sm:flex-row sm:items-center">
-                            <form action="{{ route('warga.import') }}" method="POST"
-                                enctype="multipart/form-data"
-                                class="flex gap-2 flex-1 min-w-0">
-                                @csrf
-                                <label class="flex-1 min-w-0 inline-flex cursor-pointer items-center gap-2 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-700 shadow-sm hover:border-blue-500 truncate">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
-                                    <span class="truncate">Pilih CSV/XLSX</span>
-                                    <input type="file" name="import_file" accept=".csv,.xls,.xlsx" class="hidden">
-                                </label>
-                                <button type="submit"
-                                    class="shrink-0 inline-flex items-center justify-center rounded-lg bg-green-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-700 transition">
-                                    Import
-                                </button>
-                            </form>
+                            @if(auth()->user()->isAdmin())
+                                <form action="{{ route('warga.import') }}" method="POST"
+                                    enctype="multipart/form-data"
+                                    class="flex gap-2 flex-1 min-w-0">
+                                    @csrf
+                                    <label class="flex-1 min-w-0 inline-flex cursor-pointer items-center gap-2 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-700 shadow-sm hover:border-blue-500 truncate">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+                                        <span class="truncate">Pilih CSV/XLSX</span>
+                                        <input type="file" name="import_file" accept=".csv,.xls,.xlsx" class="hidden">
+                                    </label>
+                                    <button type="submit"
+                                        class="shrink-0 inline-flex items-center justify-center rounded-lg bg-green-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-700 transition">
+                                        Import
+                                    </button>
+                                </form>
 
-                            <a href="{{ route('warga.create') }}"
-                                class="shrink-0 inline-flex items-center justify-center rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 transition">
-                                + Tambah Warga
-                            </a>
+                                <a href="{{ route('warga.create') }}"
+                                    class="shrink-0 inline-flex items-center justify-center rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 transition">
+                                    + Tambah Warga
+                                </a>
+                            @endif
                         </div>
                     </div>
 
@@ -94,14 +96,16 @@
                                         <td class="px-4 py-4 text-center space-x-2">
                                             <a href="{{ route('warga.show', $w->id) }}"
                                                 class="inline-flex items-center rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-700 hover:bg-blue-200">Detail</a>
-                                            <a href="{{ route('warga.edit', $w->id) }}"
-                                                class="inline-flex items-center rounded-full bg-yellow-100 px-3 py-1 text-xs font-semibold text-yellow-700 hover:bg-yellow-200">Edit</a>
-                                            <form action="{{ route('warga.destroy', $w->id) }}" method="POST" class="inline">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit"
-                                                    class="inline-flex items-center rounded-full bg-red-100 px-3 py-1 text-xs font-semibold text-red-700 hover:bg-red-200">Hapus</button>
-                                            </form>
+                                            @if(auth()->user()->isAdmin())
+                                                <a href="{{ route('warga.edit', $w->id) }}"
+                                                    class="inline-flex items-center rounded-full bg-yellow-100 px-3 py-1 text-xs font-semibold text-yellow-700 hover:bg-yellow-200">Edit</a>
+                                                <form action="{{ route('warga.destroy', $w->id) }}" method="POST" class="inline">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit"
+                                                        class="inline-flex items-center rounded-full bg-red-100 px-3 py-1 text-xs font-semibold text-red-700 hover:bg-red-200">Hapus</button>
+                                                </form>
+                                            @endif
                                         </td>
                                     </tr>
                                 @empty
@@ -141,14 +145,16 @@
                                 <div class="flex gap-2 pt-1 border-t border-gray-100">
                                     <a href="{{ route('warga.show', $w->id) }}"
                                         class="flex-1 text-center rounded-lg bg-blue-50 px-3 py-1.5 text-xs font-semibold text-blue-700 hover:bg-blue-100">Detail</a>
-                                    <a href="{{ route('warga.edit', $w->id) }}"
-                                        class="flex-1 text-center rounded-lg bg-yellow-50 px-3 py-1.5 text-xs font-semibold text-yellow-700 hover:bg-yellow-100">Edit</a>
-                                    <form action="{{ route('warga.destroy', $w->id) }}" method="POST" class="flex-1">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit"
-                                            class="w-full rounded-lg bg-red-50 px-3 py-1.5 text-xs font-semibold text-red-700 hover:bg-red-100">Hapus</button>
-                                    </form>
+                                    @if(auth()->user()->isAdmin())
+                                        <a href="{{ route('warga.edit', $w->id) }}"
+                                            class="flex-1 text-center rounded-lg bg-yellow-50 px-3 py-1.5 text-xs font-semibold text-yellow-700 hover:bg-yellow-100">Edit</a>
+                                        <form action="{{ route('warga.destroy', $w->id) }}" method="POST" class="flex-1">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit"
+                                                class="w-full rounded-lg bg-red-50 px-3 py-1.5 text-xs font-semibold text-red-700 hover:bg-red-100">Hapus</button>
+                                        </form>
+                                    @endif
                                 </div>
                             </div>
                         @empty

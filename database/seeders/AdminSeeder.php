@@ -19,8 +19,17 @@ class AdminSeeder extends Seeder
             ['email' => 'admin@gmail.com'],
             [
                 'name' => 'Administrator',
-                'password' => 'password',
+                'password' => 'rdm17',
                 'role' => 'admin',
+            ]
+        );
+
+        User::updateOrCreate(
+            ['email' => 'petugas@gmail.com'],
+            [
+                'name' => 'Petugas',
+                'password' => 'password',
+                'role' => 'petugas',
             ]
         );
     }
