@@ -23,6 +23,7 @@ class Warga extends Model
         'pekerjaan',
         'kewarganegaraan',
         'penghasilan',
+        'email',
     ];
 
     protected $casts = [
@@ -35,5 +36,26 @@ class Warga extends Model
         return $this->tanggal_lahir
             ? Carbon::parse($this->tanggal_lahir)->age
             : null;
+    }
+
+    public function penerimaBantuan()
+    {
+    return $this->hasMany(PenerimaBantuan::class);
+    }
+    
+    public function pengajuans()
+    {
+    return $this->hasMany(Pengajuan::class);
+    }
+
+    public function user()
+    {
+    return $this->hasOne(User::class);
+
+    }
+    public function pengajuanTerakhir()
+    {
+    return $this->hasOne(Pengajuan::class)
+        ->latestOfMany();
     }
 }
