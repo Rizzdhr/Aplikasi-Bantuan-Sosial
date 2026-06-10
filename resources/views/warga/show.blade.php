@@ -61,6 +61,12 @@
                                     <p class="text-xs font-medium text-gray-500">Nama</p>
                                     <p class="mt-1 text-sm font-semibold text-gray-900">{{ $warga->nama }}</p>
                                 </div>
+                                 <div>
+                                    <p class="text-xs font-medium text-gray-500">Email</p>
+                                    <p class="mt-1 text-sm font-semibold text-gray-900">
+                                        {{ $warga->email ?? '-' }}
+                                    </p>
+                                </div>
                                 <div>
                                     <p class="text-xs font-medium text-gray-500">Usia</p>
                                     <p class="mt-1 text-sm font-semibold text-gray-900">{{ $warga->usia ?? '-' }} tahun</p>

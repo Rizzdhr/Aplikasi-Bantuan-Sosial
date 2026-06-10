@@ -23,6 +23,7 @@ class User extends Authenticatable
         'email',
         'password',
         'role',
+        'warga_id',
     ];
 
     /**
@@ -62,4 +63,10 @@ class User extends Authenticatable
     {
         return $this->role === 'warga';
     }
+
+    public function warga()
+    {
+    return $this->belongsTo(Warga::class);
+    }
+    
 }

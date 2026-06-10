@@ -26,11 +26,11 @@
                                     enctype="multipart/form-data"
                                     class="flex gap-2 flex-1 min-w-0">
                                     @csrf
-                                    <label class="flex-1 min-w-0 inline-flex cursor-pointer items-center gap-2 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-700 shadow-sm hover:border-blue-500 truncate">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
-                                        <span class="truncate">Pilih CSV/XLSX</span>
-                                        <input type="file" name="import_file" accept=".csv,.xls,.xlsx" class="hidden">
-                                    </label>
+                                   <input
+                                        type="file"
+                                        name="import_file"
+                                        accept=".csv,.xls,.xlsx"
+                                        class="border p-2">
                                     <button type="submit"
                                         class="shrink-0 inline-flex items-center justify-center rounded-lg bg-green-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-700 transition">
                                         Import
@@ -73,12 +73,13 @@
                     @endif
 
                     {{-- TABLE: desktop only --}}
-                    <div class="hidden md:block overflow-hidden rounded-2xl border border-gray-200">
+                   <div class="overflow-hidden rounded-2xl border border-gray-200">
                         <table class="min-w-full divide-y divide-gray-200 text-sm">
                             <thead class="bg-gray-50 text-gray-600 uppercase tracking-wide text-xs">
                                 <tr>
                                     <th class="px-4 py-3 text-left">NIK</th>
                                     <th class="px-4 py-3 text-left">Nama</th>
+                                    <th class="px-4 py-3 text-left">Email</th>
                                     <th class="px-4 py-3 text-left">Usia</th>
                                     <th class="px-4 py-3 text-left">Pekerjaan</th>
                                     <th class="px-4 py-3 text-left">Penghasilan</th>
@@ -90,6 +91,7 @@
                                     <tr class="hover:bg-gray-50">
                                         <td class="px-4 py-4 font-medium text-gray-700">{{ $w->nik }}</td>
                                         <td class="px-4 py-4 text-gray-700">{{ $w->nama }}</td>
+                                        <td class="px-4 py-4 text-gray-600">{{ $w->email ?? '-' }}</td>
                                         <td class="px-4 py-4 text-gray-600">{{ $w->usia }}</td>
                                         <td class="px-4 py-4 text-gray-600">{{ $w->pekerjaan }}</td>
                                         <td class="px-4 py-4 text-gray-600">Rp {{ number_format($w->penghasilan, 0, ',', '.') }}</td>
@@ -118,7 +120,7 @@
                     </div>
 
                     {{-- CARD LIST: mobile only --}}
-                    <div class="md:hidden space-y-3">
+                    <div class="hidden space-y-3">
                         @forelse($wargas as $w)
                             <div class="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm space-y-3">
                                 <div class="flex items-start justify-between gap-2">
