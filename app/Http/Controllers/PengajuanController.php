@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Pengajuan;
 use App\Models\Warga;
-use App\Models\PenerimaBantuan;
-use App\Models\Bantuan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
@@ -14,17 +12,11 @@ use Illuminate\Support\Facades\Http;
 class PengajuanController extends Controller
 {
     public function index()
-{
-    $pengajuans = Pengajuan::with('warga')
-        ->where('status_verifikasi','sudah_dicek')
-        ->where('status','menunggu')
-        ->latest()
-        ->get();
-    return view(
-        'pengajuan.index',
-        compact('pengajuans')
-    );
-}
+    {
+        $pengajuans = Pengajuan::with('warga')->get();
+        $wargas = Warga::all();
+        return view('pengajuan.index', compact('pengajuans', 'wargas'));
+    }
 
     public function store(Request $request)
     {
@@ -192,7 +184,7 @@ class PengajuanController extends Controller
 
         $dataML = $ml->json();
 
-        $hasil = 'menunggu';
+        $hasil = $dataML['status'] ?? 'DITOLAK';
         $skor = $dataML['skor'] ?? null;
         $alasan = $dataML['alasan'] ?? [];
 
@@ -207,11 +199,7 @@ class PengajuanController extends Controller
             'foto_rumah' => $path,
             'kondisi_rumah' => $label,
             'skor_kelayakan' => $skor,
-            
-            'status' => 'menunggu',
-
-            'status_verifikasi' => 'belum_dicek',
-            'catatan_petugas' => null,
+            'status' => $hasil
         ]);
 
         return redirect()->route('pengajuan.index')->with([
@@ -227,34 +215,11 @@ class PengajuanController extends Controller
         ]);
     }
 
- public function setujui($id)
-{
-    $pengajuan = Pengajuan::with('warga')
-        ->findOrFail($id);
-    $pengajuan->update([
-        'status' => 'diterima'
-    ]);
-    $bantuan = Bantuan::first();
-    if ($bantuan) {
-        $sudahAda = PenerimaBantuan::where(
-            'warga_id',
-            $pengajuan->warga_id
-        )->exists();
-        if (!$sudahAda) {
-            PenerimaBantuan::create([
-                'warga_id' => $pengajuan->warga_id,
-                'bantuan_id' => $bantuan->id,
-                'status' => 'belum_menerima'
-            ]);
-        }
+    public function show($id)
+    {
+        $pengajuan = Pengajuan::with('warga')->findOrFail($id);
+        return view('pengajuan.show', compact('pengajuan'));
     }
-    return redirect()
-        ->route('pengajuan.index')
-        ->with(
-            'success',
-            'Pengajuan berhasil disetujui'
-        );
-}
 
     public function update(Request $request, $id)
     {
@@ -267,29 +232,5 @@ class PengajuanController extends Controller
     {
         Pengajuan::destroy($id);
         return redirect()->back();
-    }
-
-    public function tolak($id)
-    {
-        $pengajuan = Pengajuan::findOrFail($id);
-        $pengajuan->update([
-            'status' => 'ditolak'
-        ]);
-        return redirect()
-            ->route('pengajuan.index')
-            ->with(
-                'success',
-                'Pengajuan ditolak'
-            );
-    }
-    public function show($id)
-    {
-        $pengajuan = Pengajuan::with('warga')
-            ->findOrFail($id);
-
-        return view(
-            'pengajuan.show',
-            compact('pengajuan')
-        );
     }
 }

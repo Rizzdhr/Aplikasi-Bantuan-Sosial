@@ -4,11 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Warga;
-use App\Models\User;
 use Carbon\Carbon;
 use Endroid\QrCode\Builder\Builder;
 use Endroid\QrCode\Writer\PngWriter;
-use Illuminate\Support\Facades\Hash;
 use PhpOffice\PhpSpreadsheet\Shared\Date as ExcelDate;
 
 class WargaController extends Controller
@@ -18,14 +16,14 @@ class WargaController extends Controller
      */
     public function index(Request $request)
     {
-    $search = $request->search;
+        $search = $request->search;
 
-    $wargas = Warga::when($search, function ($query) use ($search) {
-        $query->where('nik', 'like', "%{$search}%")
-              ->orWhere('nama', 'like', "%{$search}%");
-    })->paginate(10);
+        $wargas = Warga::when($search, function ($query) use ($search) {
+            $query->where('nik', 'like', "%{$search}%")
+                ->orWhere('nama', 'like', "%{$search}%");
+        })->paginate(10);
 
-    return view('warga.index', compact('wargas'));
+        return view('warga.index', compact('wargas'));
     }
 
     /**
@@ -91,8 +89,6 @@ class WargaController extends Controller
      */
     public function import(Request $request)
     {
-        set_time_limit(300);
-
         abort_unless(auth()->user()->isAdmin(), 403, 'Akses ditolak.');
 
         $request->validate([
@@ -115,7 +111,6 @@ class WargaController extends Controller
         if (count($rows) < 2) {
             return back()->with('error', 'File import kosong atau tidak memiliki header.');
         }
-        
 
         $firstRow = reset($rows);
         if ($firstRow === false || !is_array($firstRow)) {
@@ -133,7 +128,6 @@ class WargaController extends Controller
         $imported = 0;
         $skipped = 0;
         $errors = [];
-        $defaultPassword = bcrypt('123456');
 
         foreach (array_slice(array_values($rows), 1) as $index => $row) {
             $rowValues = array_values($row);
@@ -166,48 +160,26 @@ class WargaController extends Controller
                 continue;
             }
 
-              $payload = [
-                    'provinsi'          => $rowData['provinsi'] ?? null,
-                    'nik'               => $nik,
-                    'nama'              => $rowData['nama'] ?? null,
-                    'tempat_lahir'      => $rowData['tempat_lahir'] ?? null,
-                    'tanggal_lahir'     => $this->normalizeDate($rowData['tanggal_lahir'] ?? null),
-                    'jenis_kelamin'     => $rowData['jenis_kelamin'] ?? null,
-                    'gol_darah'         => $rowData['gol_darah'] ?? null,
-                    'alamat'            => $rowData['alamat'] ?? null,
-                    'kel_desa'          => $rowData['kel_desa'] ?? null,
-                    'kecamatan'         => $rowData['kecamatan'] ?? null,
-                    'agama'             => $rowData['agama'] ?? null,
-                    'status_pernikahan' => $rowData['status_pernikahan'] ?? null,
-                    'pekerjaan'         => $rowData['pekerjaan'] ?? null,
-                    'kewarganegaraan'   => $rowData['kewarganegaraan'] ?? null,
-                    'penghasilan'       => $this->normalizeNumber($rowData['penghasilan'] ?? null),
-                    'email'             => $rowData['email'] ?? null,
-                ];
+            $payload = [
+                'provinsi'          => $rowData['provinsi'] ?? null,
+                'nik'               => $nik,
+                'nama'              => $rowData['nama'] ?? null,
+                'tempat_lahir'      => $rowData['tempat_lahir'] ?? null,
+                'tanggal_lahir'     => $this->normalizeDate($rowData['tanggal_lahir'] ?? null),
+                'jenis_kelamin'     => $rowData['jenis_kelamin'] ?? null,
+                'gol_darah'         => $rowData['gol_darah'] ?? null,
+                'alamat'            => $rowData['alamat'] ?? null,
+                'kel_desa'          => $rowData['kel_desa'] ?? null,
+                'kecamatan'         => $rowData['kecamatan'] ?? null,
+                'agama'             => $rowData['agama'] ?? null,
+                'status_pernikahan' => $rowData['status_pernikahan'] ?? null,
+                'pekerjaan'         => $rowData['pekerjaan'] ?? null,
+                'kewarganegaraan'   => $rowData['kewarganegaraan'] ?? null,
+                'penghasilan'       => $this->normalizeNumber($rowData['penghasilan'] ?? null),
+            ];
 
-                $warga = Warga::create(
-            array_filter($payload, fn($value) => $value !== null && $value !== '')
-        );
-
-        // Buat akun warga otomatis jika email ada di dataset
-        if (!empty($rowData['email'])) {
-
-           User::firstOrCreate(
-            [
-                'email' => $rowData['email']
-            ],
-            [
-                'name' => $rowData['nama'],
-                'password' => Hash::make($nik),
-                'role' => 'warga',
-                'warga_id' => $warga->id,
-          
-            ]
-        
-        );
-        }
-
-        $imported++;
+            Warga::create(array_filter($payload, fn($value) => $value !== null && $value !== ''));
+            $imported++;
         }
 
         // Susun pesan hasil import
@@ -227,16 +199,18 @@ class WargaController extends Controller
     }
 
     private function readCsvFile(string $path): array
-{
-    $rows = [];
-    if (($handle = fopen($path, 'r')) !== false) {
-        while (($row = fgetcsv($handle, 0, ',')) !== false) {
-            $rows[] = $row;
+    {
+        $rows = [];
+        if (($handle = fopen($path, 'r')) !== false) {
+            while (($row = fgetcsv($handle, 0, ',')) !== false) {
+                $rows[] = $row;
+            }
+            fclose($handle);
         }
-        fclose($handle);
+
+        return $rows;
     }
-    return $rows;
-}
+
     private function normalizeDate($value): ?string
     {
         if (empty($value)) {

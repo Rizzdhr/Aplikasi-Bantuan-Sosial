@@ -8,7 +8,6 @@ class Pengajuan extends Model
 {
     protected $fillable = [
         'warga_id',
-        'bantuan_id',
         'pekerjaan',
         'penghasilan',
         'usia',
@@ -16,9 +15,6 @@ class Pengajuan extends Model
         'kondisi_rumah',
         'skor_kelayakan',
         'status',
-        'status_verifikasi',
-        'hasil_verifikasi',
-        'catatan_petugas'
     ];
 
     public function warga()
