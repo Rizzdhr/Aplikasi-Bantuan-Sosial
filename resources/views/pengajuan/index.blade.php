@@ -199,17 +199,21 @@
 
                                 <img src="{{ asset('storage/' . session('foto_rumah')) }}" alt="Foto Rumah"
                                     class="h-48 sm:h-60 w-full rounded-2xl border border-gray-200 object-cover">
-
                                 <div>
                                     <p class="text-sm text-gray-500">Kategori Rumah</p>
                                     <h2 class="mt-1 text-2xl sm:text-3xl font-bold
                                         @if (session('kondisi_rumah') == 'rumah_buruk') text-red-500
-                                        @elseif(session('kondisi_rumah') == 'rumah_sedang') text-yellow-500
-                                        @else text-green-500 @endif">
-                                        {{ ucwords(str_replace('_', ' ', session('kondisi_rumah'))) }}
+                                        @elseif (session('kondisi_rumah') == 'rumah_sedang') text-yellow-500
+                                        @elseif (session('kondisi_rumah') == 'rumah_baik') text-green-500
+                                        @else text-gray-400 @endif">
+
+                                        @if (session('kondisi_rumah') == 'bukan_rumah' || !session('kondisi_rumah'))
+                                            Bukan Rumah
+                                        @else
+                                            {{ ucwords(str_replace('_', ' ', session('kondisi_rumah'))) }}
+                                        @endif
                                     </h2>
                                 </div>
-
                                 <div>
                                     <div class="flex items-center justify-between">
                                         <p class="text-sm text-gray-500">Skor Kelayakan</p>

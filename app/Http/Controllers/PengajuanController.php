@@ -59,6 +59,12 @@ class PengajuanController extends Controller
             $label = $result['top'];
         }
 
+        // Normalisasi — kalau label tidak dikenal, paksa jadi tidak_diketahui
+        // $labelValid = ['rumah_buruk', 'rumah_sedang', 'rumah_baik'];
+        // if (!in_array($label, $labelValid)) {
+        //     $label = 'tidak_diketahui';
+        // }
+
         // =========================
         // 4. Mapping kondisi rumah
         // =========================
@@ -66,9 +72,15 @@ class PengajuanController extends Controller
             'rumah_buruk' => 0,
             'rumah_sedang' => 1,
             'rumah_baik' => 2,
+            'bukan_rumah' => 3
         ];
 
-        $kondisiRumah = $mapRumah[$label] ?? 1; // default sedang
+        $kondisiRumah = $mapRumah[$label] ?? 3; // 3 = tidak diketahui, bukan default sedang
+
+        // dd([
+        //     'label_dari_roboflow' => $label,
+        //     'kondisi_rumah_dikirim' => $kondisiRumah,
+        // ]);
 
         // =========================
         // 5. Mapping pekerjaan
